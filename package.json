@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "feather-icons": "^4.0.1",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
     "react-scripts": "1.0.17"
