@@ -14,11 +14,13 @@ const defaultProps = {
 };
 
 function Icon({ name, ...props }) {
+  const { class: className, ...attrs } = icons[name].attrs;
+
   return (
     <svg
-      {...camelcaseKeys(icons[name].attrs)}
+      {...camelcaseKeys(attrs)}
       {...props}
-      {...{ className: classnames(icons[name].attrs.class, props.className) }}
+      {...{ className: classnames(className, props.className) }}
       dangerouslySetInnerHTML={{ __html: icons[name].contents }}
     />
   );
