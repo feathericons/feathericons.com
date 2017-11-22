@@ -13,6 +13,8 @@ const propTypes = {
 };
 
 function IconTemplate({ pathContext: { name } }) {
+  const svg = icons[name].toSvg();
+
   return (
     <div>
       <Helmet>
@@ -20,15 +22,24 @@ function IconTemplate({ pathContext: { name } }) {
       </Helmet>
       <h1>{name}</h1>
       <div>
-        <Icon name={name} width={24 * 6} height={24 * 6} />
+        <Icon name={name} width={24 * 8} height={24 * 8} />
       </div>
-      <button
-        onClick={() =>
-          download(icons[name].toSvg(), `${name}.svg`, 'image/svg+xml')
-        }
-      >
+      <pre>
+        <code>{svg}</code>
+      </pre>
+      <button onClick={() => download(svg, `${name}.svg`, 'image/svg+xml')}>
         Download
       </button>
+      <pre>
+        <code>{`<i data-feather="${name}"></i>`}</code>
+      </pre>
+      <pre>
+        <code>
+          {
+            '<script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>\n<script>\n  feather.replace();\n</script>'
+          }
+        </code>
+      </pre>
     </div>
   );
 }
