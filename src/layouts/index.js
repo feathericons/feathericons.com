@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
+import Header from '../components/Header';
+
 const propTypes = {
   children: PropTypes.func.isRequired,
   data: PropTypes.shape({
@@ -24,7 +26,7 @@ function Template({
         <title>{title}</title>
         <meta name="description" content={description} />
       </Helmet>
-      <h1>Feather</h1>
+      <Header />
       {children()}
     </div>
   );

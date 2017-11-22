@@ -2,12 +2,13 @@
   "extends": ["airbnb", "prettier"],
   "plugins": ["prettier"],
   "rules": {
+    "import/no-extraneous-dependencies": "off",
+    "jsx-a11y/anchor-is-valid": "off",
     "prettier/prettier": [
       "error",
       { "singleQuote": true, "trailingComma": "all" }
     ],
-    "react/jsx-filename-extension": "off",
-    "import/no-extraneous-dependencies": "off"
+    "react/jsx-filename-extension": "off"
   },
   "env": {
     "browser": true
