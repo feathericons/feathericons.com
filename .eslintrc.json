@@ -1,0 +1,18 @@
+{
+  "extends": ["airbnb", "prettier"],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      { "singleQuote": true, "trailingComma": "all" }
+    ],
+    "react/jsx-filename-extension": "off",
+    "import/no-extraneous-dependencies": "off"
+  },
+  "env": {
+    "browser": true
+  },
+  "globals": {
+    "graphql": false
+  }
+}

@@ -4,12 +4,20 @@ import Helmet from 'react-helmet';
 
 const propTypes = {
   children: PropTypes.func.isRequired,
+  data: PropTypes.shape({
+    site: PropTypes.shape({
+      siteMetadata: PropTypes.shape({
+        title: PropTypes.string,
+        description: PropTypes.string,
+      }),
+    }),
+  }).isRequired,
 };
 
-function Template({ children, data }) {
-  const title = data.site.siteMetadata.title;
-  const description = data.site.siteMetadata.description;
-
+function Template({
+  children,
+  data: { site: { siteMetadata: { title, description } } },
+}) {
   return (
     <div>
       <Helmet>
