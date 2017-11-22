@@ -10,6 +10,6 @@ exports.createPages = ({ boundActionCreators }) => {
       path: `icon/${name}`,
       component: iconTemplate,
       context: { name },
-    }),
+    })
   );
 };

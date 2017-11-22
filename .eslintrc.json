@@ -6,7 +6,7 @@
     "jsx-a11y/anchor-is-valid": "off",
     "prettier/prettier": [
       "error",
-      { "singleQuote": true, "trailingComma": "all" }
+      { "singleQuote": true, "trailingComma": "es5" }
     ],
     "react/jsx-filename-extension": "off"
   },
