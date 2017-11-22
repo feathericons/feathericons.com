@@ -22,7 +22,7 @@ function IconTemplate({ pathContext: { name } }) {
       </Helmet>
       <h1>{name}</h1>
       <div>
-        <Icon name={name} width={24 * 8} height={24 * 8} />
+        <Icon name={name} size={24 * 8} />
       </div>
       <pre>
         <code>{svg}</code>

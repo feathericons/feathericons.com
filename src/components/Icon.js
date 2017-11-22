@@ -7,20 +7,23 @@ import { icons } from 'feather-icons';
 const propTypes = {
   name: PropTypes.string.isRequired,
   className: PropTypes.string,
+  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 const defaultProps = {
   className: '',
+  size: 24,
 };
 
-function Icon({ name, ...props }) {
-  const { class: className, ...attrs } = icons[name].attrs;
+function Icon({ className, name, size }) {
+  const { class: defaultClassName, ...attrs } = icons[name].attrs;
 
   return (
     <svg
       {...camelcaseKeys(attrs)}
-      {...props}
-      {...{ className: classnames(className, props.className) }}
+      className={classnames(defaultClassName, className)}
+      width={size}
+      height={size}
       dangerouslySetInnerHTML={{ __html: icons[name].contents }}
     />
   );
