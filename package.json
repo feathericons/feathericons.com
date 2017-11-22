@@ -1,8 +1,8 @@
 {
-  "name": "feather-icons",
+  "name": "feather",
   "description": "Simply beautiful open source icons",
   "version": "0.0.0",
-  "author": "Cole Bemis <cole@colebemis.com",
+  "author": "Cole Bemis <cole@colebemis.com>",
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
