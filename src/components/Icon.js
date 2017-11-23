@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { color, space } from 'styled-system';
+import { icons } from 'feather-icons';
 import camelcaseKeys from 'camelcase-keys';
 import classnames from 'classnames';
-import { icons } from 'feather-icons';
+
+import withSystem from '../utils/withSystem';
 
 const propTypes = {
   name: PropTypes.string.isRequired,
@@ -32,4 +35,4 @@ function Icon({ className, name, size }) {
 Icon.propTypes = propTypes;
 Icon.defaultProps = defaultProps;
 
-export default Icon;
+export default withSystem(Icon, [space, color], { color: 'gray.7' });

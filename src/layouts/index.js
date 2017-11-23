@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
+import { ThemeProvider } from 'styled-components';
 
 import './index.css';
-
+import theme from '../theme';
 import Header from '../components/Header';
 
 const propTypes = {
@@ -23,14 +24,16 @@ function Template({
   data: { site: { siteMetadata: { title, description } } },
 }) {
   return (
-    <div>
-      <Helmet>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-      </Helmet>
-      <Header />
-      {children()}
-    </div>
+    <ThemeProvider theme={theme}>
+      <div>
+        <Helmet>
+          <title>{title}</title>
+          <meta name="description" content={description} />
+        </Helmet>
+        <Header />
+        {children()}
+      </div>
+    </ThemeProvider>
   );
 }
 

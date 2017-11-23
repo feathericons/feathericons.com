@@ -20,8 +20,15 @@
     "feather-icons": "^4.0.1",
     "gatsby": "^1.9.119",
     "gatsby-link": "^1.6.28",
+    "gatsby-plugin-glamor": "^1.6.8",
     "gatsby-plugin-react-helmet": "^2.0.1",
-    "react-helmet": "^5.2.0"
+    "gatsby-plugin-styled-components": "^2.0.2",
+    "glamorous": "^4.11.0",
+    "grid-styled": "^2.0.0-11",
+    "react-css-grid": "^2.0.0-0",
+    "react-helmet": "^5.2.0",
+    "styled-components": "^2.2.3",
+    "styled-system": "^1.0.8"
   },
   "devDependencies": {
     "eslint": "^4.11.0",

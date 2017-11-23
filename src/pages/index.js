@@ -1,21 +1,20 @@
 import React from 'react';
-import Link from 'gatsby-link';
-import { icons } from 'feather-icons';
+import styled from 'styled-components';
+import { Box } from 'grid-styled';
 
-import Icon from '../components/Icon';
+import IconGrid from '../components/IconGrid';
+
+const Container = styled(Box)`
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+`;
 
 function IndexPage() {
   return (
-    <div>
-      {Object.keys(icons).map(name => (
-        <div>
-          <Link to={`icon/${name}`}>
-            <Icon name={name} />
-            {name}
-          </Link>
-        </div>
-      ))}
-    </div>
+    <Container width={0.85}>
+      <IconGrid />
+    </Container>
   );
 }
 
