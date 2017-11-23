@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from 'gatsby-link';
 import { Flex } from 'grid-styled';
 import {
   width,
@@ -12,6 +11,7 @@ import {
 } from 'styled-system';
 
 import withSystem from '../utils/withSystem';
+import Link from './Link';
 import Icon from './Icon';
 import Text from './Text';
 
