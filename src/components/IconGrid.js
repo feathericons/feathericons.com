@@ -4,7 +4,7 @@ import { icons } from 'feather-icons';
 import Grid from 'react-css-grid';
 import { width, space } from 'styled-system';
 
-import withSystem from '../utils/withSystem';
+import withSystem from '../utils/with-system';
 import IconTile from './IconTile';
 
 const propTypes = {

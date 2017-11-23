@@ -5,7 +5,7 @@ import { icons } from 'feather-icons';
 import camelcaseKeys from 'camelcase-keys';
 import classnames from 'classnames';
 
-import withSystem from '../utils/withSystem';
+import withSystem from '../utils/with-system';
 
 const propTypes = {
   name: PropTypes.string.isRequired,

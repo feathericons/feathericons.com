@@ -1,12 +1,7 @@
-import { space, fontSize, fontWeight, color, style } from 'styled-system';
+import { space, fontSize, fontWeight, color } from 'styled-system';
 
-import withSystem from '../utils/withSystem';
-
-const lineHeight = style({
-  prop: 'lineHeight',
-  cssProperty: 'lineHeight',
-  key: 'lineHeights',
-});
+import lineHeight from '../utils/line-height';
+import withSystem from '../utils/with-system';
 
 export default withSystem(
   'span',

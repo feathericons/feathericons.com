@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Box } from 'grid-styled';
 import { width } from 'styled-system';
 
-import withSystem from '../utils/withSystem';
+import withSystem from '../utils/with-system';
 
 const Container = styled(Box)`
   max-width: 1024px;

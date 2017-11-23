@@ -10,7 +10,7 @@ import {
   hover,
 } from 'styled-system';
 
-import withSystem from '../utils/withSystem';
+import withSystem from '../utils/with-system';
 import Link from './Link';
 import Icon from './Icon';
 import Text from './Text';
