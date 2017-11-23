@@ -1,11 +1,13 @@
 import React from 'react';
-import Link from 'gatsby-link';
+
+import Container from './Container';
+import Link from './Link';
 
 function Header() {
   return (
-    <h1>
+    <Container>
       <Link to="/">Feather</Link>
-    </h1>
+    </Container>
   );
 }
 
