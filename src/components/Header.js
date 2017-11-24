@@ -1,14 +1,39 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { Box } from 'grid-styled';
+import { space, borderWidth, borderColor } from 'styled-system';
 
+import withSystem from '../utils/with-system';
 import Container from './Container';
 import Link from './Link';
+import Version from './Version';
 
-function Header() {
+const propTypes = {
+  className: PropTypes.string,
+};
+
+const defaultProps = {
+  className: '',
+};
+
+function Header({ className }) {
   return (
-    <Container>
-      <Link to="/">Feather</Link>
-    </Container>
+    <Box className={className}>
+      <Container>
+        <Link to="/" fontSize={3} fontWeight="medium">
+          Feather <Version fontSize={1} fontWeight="normal" color="gray.6" />
+        </Link>
+      </Container>
+    </Box>
   );
 }
 
-export default Header;
+Header.propTypes = propTypes;
+Header.defaultProps = defaultProps;
+
+export default withSystem(Header, [space, borderWidth, borderColor], {
+  py: 4,
+  borderBottom: true,
+  borderWidth: 1,
+  borderColor: 'gray.2',
+});

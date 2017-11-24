@@ -1,6 +1,17 @@
 export default {
   space: [0, 4, 8, 12, 16, 24, 32],
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 72],
+  fontWeights: {
+    hairline: 100,
+    thin: 200,
+    light: 300,
+    normal: 400,
+    medium: 500,
+    semibold: 600,
+    bold: 700,
+    extrabold: 800,
+    black: 900,
+  },
   lineHeights: {
     none: 1,
     tight: 1.25,
