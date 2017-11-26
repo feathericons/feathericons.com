@@ -6,7 +6,7 @@ import IconGrid from '../components/IconGrid';
 function IndexPage() {
   return (
     <Container>
-      <IconGrid />
+      <IconGrid py={6} />
     </Container>
   );
 }

@@ -21,7 +21,7 @@ function Header({ className }) {
     <Box className={className}>
       <Container>
         <Link to="/" fontSize={3} fontWeight="medium">
-          Feather <Version fontSize={1} fontWeight="normal" color="gray.6" />
+          Feather <Version fontSize={1} fontWeight="light" />
         </Link>
       </Container>
     </Box>
