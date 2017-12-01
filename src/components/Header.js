@@ -23,8 +23,8 @@ function Header({ className }) {
   return (
     <Box className={className}>
       <Container>
-        <Link to="/" fontSize={4} color="gray.8">
-          Feather <Version fontSize={1} color="gray.6" />
+        <Link to="/" fontSize={4}>
+          Feather <Version />
         </Link>
         <Search
           mt={4}
