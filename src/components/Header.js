@@ -28,9 +28,8 @@ function Header({ className }) {
         </Link>
         <Search
           mt={4}
-          items={Object.values(icons)}
+          items={Object.keys(icons).map(name => icons[name])}
           keys={['name', 'tags']}
-          onChange={selectedItem => console.log(selectedItem)}
         />
       </Container>
     </Box>
