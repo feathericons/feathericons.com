@@ -20,9 +20,8 @@ function IconGrid({ className }) {
   return (
     <Grid className={className} width={224} gap={16}>
       {Object.keys(icons).map(name => (
-        <Link to={`icon/${name}`}>
+        <Link key={name} to={`icon/${name}`}>
           <IconTile
-            key={name}
             name={name}
             bg="gray.0"
             borderRadius={1}
