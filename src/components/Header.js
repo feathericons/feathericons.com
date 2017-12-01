@@ -20,8 +20,8 @@ function Header({ className }) {
   return (
     <Box className={className}>
       <Container>
-        <Link to="/" fontSize={3} fontWeight="medium">
-          Feather <Version fontSize={1} fontWeight="light" />
+        <Link to="/" fontSize={4} color="gray.8">
+          Feather <Version fontSize={1} color="gray.6" />
         </Link>
       </Container>
     </Box>
@@ -32,7 +32,7 @@ Header.propTypes = propTypes;
 Header.defaultProps = defaultProps;
 
 export default withSystem(Header, [space, borderWidth, borderColor], {
-  py: 4,
+  py: 5,
   borderBottom: true,
   borderWidth: 1,
   borderColor: 'gray.2',

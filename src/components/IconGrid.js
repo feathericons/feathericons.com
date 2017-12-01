@@ -5,6 +5,7 @@ import Grid from 'react-css-grid';
 import { width, space } from 'styled-system';
 
 import withSystem from '../utils/with-system';
+import Link from './Link';
 import IconTile from './IconTile';
 
 const propTypes = {
@@ -18,7 +19,20 @@ const defaultProps = {
 function IconGrid({ className }) {
   return (
     <Grid className={className} width={224} gap={16}>
-      {Object.keys(icons).map(name => <IconTile key={name} name={name} />)}
+      {Object.keys(icons).map(name => (
+        <Link to={`icon/${name}`}>
+          <IconTile
+            key={name}
+            name={name}
+            bg="gray.0"
+            borderRadius={1}
+            hover={{
+              backgroundColor: 'white',
+              boxShadow: 2,
+            }}
+          />
+        </Link>
+      ))}
     </Grid>
   );
 }

@@ -26,9 +26,11 @@ const defaultProps = {
 
 function IconTile({ className, name }) {
   return (
-    <Flex is={Link} className={className} to={`icon/${name}`}>
+    <Flex className={className}>
       <Icon name={name} />
-      <Text ml={4}>{name}</Text>
+      <Text ml={4} fontSize={2}>
+        {name}
+      </Text>
     </Flex>
   );
 }
@@ -42,11 +44,5 @@ export default withSystem(
   {
     width: 1,
     p: 5,
-    bg: 'gray.0',
-    borderRadius: 1,
-    hover: {
-      backgroundColor: 'white',
-      boxShadow: 2,
-    },
   }
 );
