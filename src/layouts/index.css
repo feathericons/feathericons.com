@@ -4,10 +4,12 @@
 *:before,
 *:after {
   box-sizing: inherit;
+  transition: inherit;
 }
 
 html {
   box-sizing: border-box;
+  transition: color 0.1s, background-color 0.1s, box-shadow 0.1s;
 }
 
 body {
