@@ -1,54 +1,64 @@
 import React from 'react';
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import Downshift from 'downshift';
 import { Box } from 'grid-styled';
-import { space, color, borderRadius, boxShadow } from 'styled-system';
+import { space, width, color, borderRadius, boxShadow } from 'styled-system';
 
 import withSystem from '../utils/with-system';
-import search from '../utils/search';
+import Relative from './Relative';
 import Text from './Text';
-import IconTile from './IconTile';
 import SearchInput from './SearchInput';
 
 const propTypes = {
-  items: PropTypes.arrayOf(PropTypes.any).isRequired,
-  keys: PropTypes.arrayOf(PropTypes.string).isRequired,
+  getItems: PropTypes.func.isRequired,
+  renderItem: PropTypes.func.isRequired,
   className: PropTypes.string,
+  placeholder: PropTypes.string,
 };
 
 const defaultProps = {
   className: '',
+  placeholder: '',
 };
 
-const Results = styled.div`
-  position: absolute;
-  top: 63px;
-  width: 100%;
-  ${color} ${boxShadow} ${borderRadius};
-`;
+const Results = withSystem(
+  styled.div`
+    position: absolute;
+    top: calc(51px + 16px);
+    max-height: 70vh;
+    overflow: auto;
+  `,
+  [width, color, borderRadius, boxShadow],
+  { width: 1, bg: 'white', borderRadius: 1, boxShadow: 'small' }
+);
 
-function Search({ className, items, keys }) {
+function Search({ className, placeholder, getItems, renderItem, ...props }) {
   return (
     <Downshift
-      render={({ getInputProps, getItemProps, isOpen, inputValue }) => {
-        const results = search(items, inputValue, { keys });
+      {...props}
+      render={({
+        getRootProps,
+        getInputProps,
+        getItemProps,
+        isOpen,
+        inputValue,
+        highlightedIndex,
+      }) => {
+        const items = getItems(inputValue);
         return (
-          <div className={className} style={{ position: 'relative' }}>
-            <SearchInput {...getInputProps({ placeholder: 'Search icons' })} />
+          <Relative {...getRootProps({ refKey: 'innerRef', className })}>
+            <SearchInput {...getInputProps({ placeholder })} />
             {isOpen && inputValue ? (
-              <Results bg="white" boxShadow="small" borderRadius={1}>
-                {results.length > 0 ? (
-                  results.splice(0, 10).map(item => (
-                    <IconTile
-                      key={item.name}
-                      {...getItemProps({
-                        item: item.name,
-                        name: item.name,
-                        p: 4,
-                      })}
-                    />
-                  ))
+              <Results>
+                {items.length > 0 ? (
+                  items.map((item, index) =>
+                    renderItem({
+                      getItemProps,
+                      item,
+                      isHighlighted: index === highlightedIndex,
+                    })
+                  )
                 ) : (
                   <Box p={4}>
                     <Text fontSize={1} color="gray.6">
@@ -58,7 +68,7 @@ function Search({ className, items, keys }) {
                 )}
               </Results>
             ) : null}
-          </div>
+          </Relative>
         );
       }}
     />
@@ -68,4 +78,4 @@ function Search({ className, items, keys }) {
 Search.propTypes = propTypes;
 Search.defaultProps = defaultProps;
 
-export default withSystem(Search, [space]);
+export default withSystem(Search, [space, width]);

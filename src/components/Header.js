@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { icons } from 'feather-icons';
 import { Box } from 'grid-styled';
 import { space, borderWidth, borderColor } from 'styled-system';
 
@@ -9,7 +8,7 @@ import withSystem from '../utils/with-system';
 import version from '../utils/version';
 import Text from './Text';
 import Container from './Container';
-import Search from './Search';
+import IconSearch from './IconSearch';
 import Link from './Link';
 
 const propTypes = {
@@ -27,11 +26,7 @@ function Header({ className }) {
         <Link to="/" fontSize={4}>
           Feather <Text>{version}</Text>
         </Link>
-        <Search
-          mt={4}
-          items={Object.keys(icons).map(name => icons[name])}
-          keys={['name', 'tags']}
-        />
+        <IconSearch mt={4} />
       </Container>
     </Box>
   );

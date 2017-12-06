@@ -29,10 +29,12 @@
     "grid-styled": "^2.0.0-11",
     "react-css-grid": "^2.0.0-0",
     "react-helmet": "^5.2.0",
+    "react-router": "^4.2.0",
     "styled-components": "^2.2.3",
     "styled-system": "^1.0.8"
   },
   "devDependencies": {
+    "babel-eslint": "^8.0.3",
     "eslint": "^4.11.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.8.0",

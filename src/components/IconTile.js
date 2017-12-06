@@ -16,16 +16,11 @@ import Text from './Text';
 
 const propTypes = {
   name: PropTypes.string.isRequired,
-  className: PropTypes.string,
 };
 
-const defaultProps = {
-  className: '',
-};
-
-function IconTile({ className, name }) {
+function IconTile({ name, ...props }) {
   return (
-    <Flex className={className}>
+    <Flex {...props}>
       <Icon name={name} />
       <Text ml={4} fontSize={2}>
         {name}
@@ -35,13 +30,9 @@ function IconTile({ className, name }) {
 }
 
 IconTile.propTypes = propTypes;
-IconTile.defaultProps = defaultProps;
 
 export default withSystem(
   IconTile,
   [width, space, color, borderRadius, shadow, hover],
-  {
-    width: 1,
-    p: 5,
-  }
+  { width: 1, p: 5 }
 );
