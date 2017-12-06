@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { navigateTo } from 'gatsby-link';
 import { withRouter, matchPath } from 'react-router';
 import { space } from 'styled-system';
 import { icons } from 'feather-icons';
@@ -14,9 +15,6 @@ class IconSearch extends React.Component {
     location: PropTypes.shape({
       pathname: PropTypes.string,
     }).isRequired,
-    history: PropTypes.shape({
-      push: PropTypes.func,
-    }).isRequired,
     className: PropTypes.string,
   };
 
@@ -26,7 +24,7 @@ class IconSearch extends React.Component {
 
   handleChange = selectedItem => {
     const path = selectedItem ? `/icon/${itemToString(selectedItem)}` : '/';
-    this.props.history.push(path);
+    navigateTo(path);
   };
 
   render() {
