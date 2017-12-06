@@ -6,10 +6,11 @@ import { Box } from 'grid-styled';
 import { space, borderWidth, borderColor } from 'styled-system';
 
 import withSystem from '../utils/with-system';
+import version from '../utils/version';
+import Text from './Text';
 import Container from './Container';
 import Search from './Search';
 import Link from './Link';
-import Version from './Version';
 
 const propTypes = {
   className: PropTypes.string,
@@ -24,7 +25,7 @@ function Header({ className }) {
     <Box className={className}>
       <Container>
         <Link to="/" fontSize={4}>
-          Feather <Version />
+          Feather <Text>{version}</Text>
         </Link>
         <Search
           mt={4}
