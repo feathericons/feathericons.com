@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 import { icons } from 'feather-icons';
 import download from 'downloadjs';
 
+import Container from '../components/Container';
 import Icon from '../components/Icon';
 
 const propTypes = {
@@ -20,26 +21,28 @@ function IconTemplate({ pathContext: { name } }) {
       <Helmet>
         <title>{name} | Feather</title>
       </Helmet>
-      <h1>{name}</h1>
-      <div>
-        <Icon name={name} size={24 * 8} color="gray.9" />
-      </div>
-      <pre>
-        <code>{svg}</code>
-      </pre>
-      <button onClick={() => download(svg, `${name}.svg`, 'image/svg+xml')}>
-        Download
-      </button>
-      <pre>
-        <code>{`<i data-feather="${name}"></i>`}</code>
-      </pre>
-      <pre>
-        <code>
-          {
-            '<script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>\n<script>\n  feather.replace();\n</script>'
-          }
-        </code>
-      </pre>
+      <Container>
+        <h1>{name}</h1>
+        <div>
+          <Icon name={name} size={24 * 8} color="gray.9" />
+        </div>
+        <pre>
+          <code>{svg}</code>
+        </pre>
+        <button onClick={() => download(svg, `${name}.svg`, 'image/svg+xml')}>
+          Download
+        </button>
+        <pre>
+          <code>{`<i data-feather="${name}"></i>`}</code>
+        </pre>
+        <pre>
+          <code>
+            {
+              '<script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>\n<script>\n  feather.replace();\n</script>'
+            }
+          </code>
+        </pre>
+      </Container>
     </div>
   );
 }
