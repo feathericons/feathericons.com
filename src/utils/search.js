@@ -1,6 +1,6 @@
 import Fuse from 'fuse.js';
 
-function search(options, list, searchValue) {
+function search(list, searchValue, options) {
   const fuse = new Fuse(list, {
     threshold: 0.5,
     ...options,
