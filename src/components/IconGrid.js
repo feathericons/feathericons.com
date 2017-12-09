@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { icons } from 'feather-icons';
 import Grid from 'react-css-grid';
 import { width, space } from 'styled-system';
 import { Box } from 'grid-styled';
@@ -10,6 +9,7 @@ import withSystem from '../utils/with-system';
 import IconTile from './IconTile';
 
 const propTypes = {
+  icons: PropTypes.arrayOf(PropTypes.string).isRequired,
   className: PropTypes.string,
 };
 
@@ -17,10 +17,10 @@ const defaultProps = {
   className: '',
 };
 
-function IconGrid({ className }) {
+function IconGrid({ className, icons }) {
   return (
     <Grid className={className} width={224} gap={16}>
-      {Object.keys(icons).map(name => (
+      {icons.map(name => (
         <Box is={Link} key={name} to={`/icon/${name}`}>
           <IconTile
             name={name}

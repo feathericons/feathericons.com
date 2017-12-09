@@ -1,4 +1,5 @@
 import React from 'react';
+import { icons } from 'feather-icons';
 
 import Container from '../components/Container';
 import Masthead from '../components/Masthead';
@@ -10,7 +11,7 @@ function IndexPage() {
     <Container>
       <Masthead py={7} />
       <IconSearch />
-      <IconGrid py={5} />
+      <IconGrid icons={Object.keys(icons)} py={5} />
     </Container>
   );
 }
