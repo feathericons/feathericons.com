@@ -1,12 +1,16 @@
 import Fuse from 'fuse.js';
 
-function search(list, searchValue, options) {
+function search(list, value, options) {
+  if (!value) {
+    return list;
+  }
+
   const fuse = new Fuse(list, {
-    threshold: 0.5,
+    threshold: 0.4,
     ...options,
   });
 
-  return fuse.search(searchValue.trim());
+  return fuse.search(value.trim());
 }
 
 export default search;

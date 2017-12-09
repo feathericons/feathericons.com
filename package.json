@@ -17,7 +17,6 @@
     "camelcase-keys": "^4.2.0",
     "classnames": "^2.2.5",
     "downloadjs": "^1.4.7",
-    "downshift": "^1.20.0",
     "feather-icons": "4.0.1",
     "fuse.js": "^3.2.0",
     "gatsby": "^1.9.119",
@@ -30,7 +29,6 @@
     "lodash": "^4.17.4",
     "react-css-grid": "^2.0.0-0",
     "react-helmet": "^5.2.0",
-    "react-router": "^4.2.0",
     "styled-components": "^2.2.3",
     "styled-system": "^1.0.8",
     "tag-hoc": "^1.0.0"

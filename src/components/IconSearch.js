@@ -1,20 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { navigateTo } from 'gatsby-link';
-import { withRouter, matchPath } from 'react-router';
-import { space } from 'styled-system';
 import { icons } from 'feather-icons';
+import { space } from 'styled-system';
 
 import withSystem from '../utils/with-system';
 import search from '../utils/search';
-import Search from './Search';
-import IconTile from './IconTile';
+import SearchInput from './SearchInput';
+import IconGrid from './IconGrid';
+import Text from './Text';
 
 class IconSearch extends React.Component {
   static propTypes = {
-    location: PropTypes.shape({
-      pathname: PropTypes.string,
-    }).isRequired,
     className: PropTypes.string,
   };
 
@@ -22,51 +18,39 @@ class IconSearch extends React.Component {
     className: '',
   };
 
-  handleChange = selectedItem => {
-    const path = selectedItem ? `/icon/${itemToString(selectedItem)}` : '/';
-    navigateTo(path);
+  state = {
+    inputValue: '',
   };
 
+  handleInputChange = event =>
+    this.setState({ inputValue: event.target.value });
+
   render() {
-    const { className, location } = this.props;
-
-    const match = matchPath(location.pathname, {
-      path: '/icon/:name',
-    });
-
-    const selectedItem =
-      match && match.params ? icons[match.params.name] : null;
+    const results = getResults(this.state.inputValue);
 
     return (
-      <Search
-        className={className}
-        placeholder="Search icons"
-        selectedItem={selectedItem}
-        onChange={this.handleChange}
-        getItems={getItems}
-        itemToString={itemToString}
-        renderItem={({ getItemProps, item, isHighlighted }) => (
-          <IconTile
-            {...getItemProps({
-              item,
-              name: item.name,
-              p: 4,
-              bg: isHighlighted ? 'gray.0' : 'white',
-            })}
-          />
+      <div className={this.props.className}>
+        <SearchInput
+          placeholder="Search icons"
+          value={this.state.inputValue}
+          onChange={this.handleInputChange}
+          mb={5}
+        />
+        {results.length !== 0 ? (
+          <IconGrid icons={results.map(result => result.name)} />
+        ) : (
+          <Text>
+            No results found for &ldquo;{this.state.inputValue}&rdquo;
+          </Text>
         )}
-      />
+      </div>
     );
   }
 }
 
-function getItems(value = '') {
-  const items = Object.keys(icons).map(name => icons[name]);
-  return search(items, value, { keys: ['name', 'tags'] });
+function getResults(value = '') {
+  const iconsArray = Object.keys(icons).map(name => icons[name]);
+  return search(iconsArray, value, { keys: ['name', 'tags'] });
 }
 
-function itemToString(item) {
-  return item ? item.name : '';
-}
-
-export default withSystem(withRouter(IconSearch), [space]);
+export default withSystem(IconSearch, [space]);
