@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 import { icons } from 'feather-icons';
 import Grid from 'react-css-grid';
 import { width, space } from 'styled-system';
+import { Box } from 'grid-styled';
+import Link from 'gatsby-link';
 
 import withSystem from '../utils/with-system';
-import Link from './Link';
 import IconTile from './IconTile';
 
 const propTypes = {
@@ -20,7 +21,7 @@ function IconGrid({ className }) {
   return (
     <Grid className={className} width={224} gap={16}>
       {Object.keys(icons).map(name => (
-        <Link key={name} to={`/icon/${name}`}>
+        <Box is={Link} key={name} to={`/icon/${name}`}>
           <IconTile
             name={name}
             bg="gray.0"
@@ -30,7 +31,7 @@ function IconGrid({ className }) {
               boxShadow: 'medium',
             }}
           />
-        </Link>
+        </Box>
       ))}
     </Grid>
   );

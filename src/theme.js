@@ -1,4 +1,4 @@
-const space = [0, 4, 8, 12, 16, 24, 32];
+const space = [0, 4, 8, 12, 16, 24, 32, 64];
 
 const fontSizes = [12, 14, 16, 20, 24, 32, 48, 64, 72];
 
@@ -43,7 +43,7 @@ const shadows = {
   none: 'none',
   small: '0 0 0 1px rgba(0, 0, 0, 0.1), 0 2px 8px rgba(0, 0, 0, 0.1)',
   medium: '0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 16px rgba(0, 0, 0, 0.1)',
-  outline: `0 0 0 2px ${colors.primary}`,
+  outline: `0 0 0 3px ${colors.primary}`,
 };
 
 const radii = [0, 2, 4, 8];

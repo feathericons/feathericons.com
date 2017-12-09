@@ -16,11 +16,20 @@ import Text from './Text';
 
 const propTypes = {
   name: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  onClick: PropTypes.func,
+  onMouseEnter: PropTypes.func,
 };
 
-function IconTile({ name, ...props }) {
+const defaultProps = {
+  className: '',
+  onClick: () => {},
+  onMouseEnter: () => {},
+};
+
+function IconTile({ className, name, onClick, onMouseEnter }) {
   return (
-    <Flex {...props}>
+    <Flex className={className} onClick={onClick} onMouseEnter={onMouseEnter}>
       <Icon name={name} />
       <Text ml={4} fontSize={2}>
         {name}
@@ -30,6 +39,7 @@ function IconTile({ name, ...props }) {
 }
 
 IconTile.propTypes = propTypes;
+IconTile.defaultProps = defaultProps;
 
 export default withSystem(
   IconTile,
