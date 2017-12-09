@@ -8,7 +8,6 @@ function Heading(props) {
       is="h1"
       fontSize={5}
       fontWeight="normal"
-      align="center"
       lineHeight="tight"
       my={0}
       {...props}

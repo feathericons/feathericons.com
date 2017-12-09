@@ -5,6 +5,7 @@ import { icons } from 'feather-icons';
 import download from 'downloadjs';
 
 import Container from '../components/Container';
+import Heading from '../components/Heading';
 import Icon from '../components/Icon';
 
 const propTypes = {
@@ -22,7 +23,7 @@ function IconTemplate({ pathContext: { name } }) {
         <title>{name} | Feather</title>
       </Helmet>
       <Container>
-        <h1>{name}</h1>
+        <Heading>{name}</Heading>
         <div>
           <Icon name={name} size={24 * 8} color="gray.9" />
         </div>

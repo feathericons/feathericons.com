@@ -6,7 +6,7 @@ import Heading from './Heading';
 function Masthead(props) {
   return (
     <Box {...props}>
-      <Heading>Simply beautiful open source icons</Heading>
+      <Heading align="center">Simply beautiful open source icons</Heading>
     </Box>
   );
 }
