@@ -27,11 +27,13 @@
     "gatsby-plugin-styled-components": "^2.0.2",
     "glamorous": "^4.11.0",
     "grid-styled": "^2.0.0-11",
+    "lodash": "^4.17.4",
     "react-css-grid": "^2.0.0-0",
     "react-helmet": "^5.2.0",
     "react-router": "^4.2.0",
     "styled-components": "^2.2.3",
-    "styled-system": "^1.0.8"
+    "styled-system": "^1.0.8",
+    "tag-hoc": "^1.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.0.3",
