@@ -1,14 +1,25 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { space } from 'styled-system';
 import { Box, Flex } from 'grid-styled';
 
+import withSystem from '../utils/with-system';
 import Heading from './Heading';
 import Text from './Text';
 import Button from './Button';
 import stdlibLogo from '../assets/stdlib-logo.svg';
 
-function Masthead(props) {
+const propTypes = {
+  className: PropTypes.string,
+};
+
+const defaultProps = {
+  className: '',
+};
+
+function Masthead({ className }) {
   return (
-    <Flex direction="column" align="center" {...props}>
+    <Flex className={className} direction="column" align="center">
       <Heading align="center" mt={0} mb={5}>
         Simply beautiful open source icons
       </Heading>
@@ -33,4 +44,7 @@ function Masthead(props) {
   );
 }
 
-export default Masthead;
+Masthead.propTypes = propTypes;
+Masthead.defaultProps = defaultProps;
+
+export default withSystem(Masthead, [space]);

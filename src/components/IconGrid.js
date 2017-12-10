@@ -2,14 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Grid from 'react-css-grid';
 import { width, space } from 'styled-system';
-import { Box } from 'grid-styled';
-import Link from 'gatsby-link';
+import download from 'downloadjs';
 
 import withSystem from '../utils/with-system';
 import IconTile from './IconTile';
 
 const propTypes = {
-  icons: PropTypes.arrayOf(PropTypes.string).isRequired,
+  icons: PropTypes.arrayOf(PropTypes.object).isRequired,
   className: PropTypes.string,
 };
 
@@ -20,18 +19,15 @@ const defaultProps = {
 function IconGrid({ className, icons }) {
   return (
     <Grid className={className} width={224} gap={16}>
-      {icons.map(name => (
-        <Box is={Link} key={name} to={`/icon/${name}`}>
-          <IconTile
-            name={name}
-            bg="gray.0"
-            borderRadius={1}
-            hover={{
-              backgroundColor: 'white',
-              boxShadow: 'medium',
-            }}
-          />
-        </Box>
+      {icons.map(icon => (
+        <IconTile
+          key={icon.name}
+          name={icon.name}
+          title={`Download ${icon.name}.svg`}
+          onClick={() =>
+            download(icon.toSvg(), `${icon.name}.svg`, 'image/svg+xml')
+          }
+        />
       ))}
     </Grid>
   );

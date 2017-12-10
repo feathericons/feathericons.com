@@ -37,7 +37,7 @@ class IconSearch extends React.Component {
           mb={5}
         />
         {results.length !== 0 ? (
-          <IconGrid icons={results.map(result => result.name)} />
+          <IconGrid icons={results} />
         ) : (
           <Text>
             No results found for &ldquo;{this.state.inputValue}&rdquo;
