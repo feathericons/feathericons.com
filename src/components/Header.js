@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
-import { Box } from 'grid-styled';
 import { space, borderWidth, borderColor } from 'styled-system';
 
-import withSystem from '../utils/with-system';
 import version from '../utils/version';
+import withSystem from '../utils/with-system';
+
 import Text from './Text';
 import Container from './Container';
 
@@ -19,13 +19,13 @@ const defaultProps = {
 
 function Header({ className }) {
   return (
-    <Box className={className}>
+    <div className={className}>
       <Container>
         <Text is={Link} to="/" fontSize={4}>
-          Feather <Text>v{version}</Text>
+          Feather <Text color="gray.6">v{version}</Text>
         </Text>
       </Container>
-    </Box>
+    </div>
   );
 }
 
