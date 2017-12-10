@@ -9,7 +9,6 @@ function Heading(props) {
       fontSize={5}
       fontWeight="normal"
       lineHeight="tight"
-      my={0}
       {...props}
     />
   );

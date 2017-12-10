@@ -11,5 +11,5 @@ const Container = styled(Box)`
 `;
 
 export default withSystem(Container, [width], {
-  width: 9 / 10,
+  width: 0.85,
 });
