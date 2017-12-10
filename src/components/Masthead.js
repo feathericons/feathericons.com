@@ -4,7 +4,7 @@ import { Box, Flex } from 'grid-styled';
 import Heading from './Heading';
 import Text from './Text';
 import Button from './Button';
-import stdlibLogo from '../assets/stdlib-logo-wordmark.svg';
+import stdlibLogo from '../assets/stdlib-logo.svg';
 
 function Masthead(props) {
   return (
