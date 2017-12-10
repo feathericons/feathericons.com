@@ -8,11 +8,11 @@ import {
 } from 'styled-system';
 
 import withSystem from '../utils/with-system';
-import withBase from '../utils/with-base';
+import cleanElement from '../utils/clean-element';
 import lineHeight from '../utils/line-height';
 
 export default withSystem(
-  withBase('button'),
+  cleanElement('button'),
   [space, fontSize, lineHeight, textAlign, color, borderWidth, borderRadius],
   {
     px: 5,

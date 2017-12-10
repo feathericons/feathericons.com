@@ -7,10 +7,4 @@ const propsToRemove = [
   'lineHeight',
 ];
 
-const Tag = tag(propsToRemove);
-
-function withBase(Component) {
-  return Tag(Component);
-}
-
-export default withBase;
+export default tag(propsToRemove);

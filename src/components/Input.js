@@ -10,9 +10,9 @@ import {
 } from 'styled-system';
 
 import withSystem from '../utils/with-system';
-import withBase from '../utils/with-base';
+import cleanElement from '../utils/clean-element';
 
-const Input = styled(withBase('input'))`
+const Input = styled(cleanElement('input'))`
   font-family: inherit;
   appearance: none;
   border: none;
