@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 
-function withSystem(Component, styles, defaultProps) {
-  const SystemComponent = styled(Component).apply(this, [[], ...styles]);
+function withSystem(Component, styleFunctions, defaultProps) {
+  const SystemComponent = styled(Component).apply(this, [
+    [],
+    ...styleFunctions,
+  ]);
 
   SystemComponent.defaultProps = defaultProps;
 

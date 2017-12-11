@@ -4,20 +4,8 @@ import Helmet from 'react-helmet';
 import { injectGlobal } from 'styled-components';
 import { Provider } from 'rebass';
 
-import './index.css';
 import theme from '../theme';
 import Header from '../components/Header';
-
-injectGlobal`
-  body {
-    margin: 0;
-  }
-
-  a {
-    color: 'inherit';
-    text-decoration: none;
-  }
-`;
 
 const propTypes = {
   children: PropTypes.func.isRequired,
@@ -30,6 +18,21 @@ const propTypes = {
     }),
   }).isRequired,
 };
+
+/* eslint-disable no-unused-expressions */
+
+injectGlobal`
+  body {
+    margin: 0;
+  }
+
+  a {
+    color: 'inherit';
+    text-decoration: none;
+  }
+`;
+
+/* eslint-enable no-unused-expressions */
 
 function Template({
   children,

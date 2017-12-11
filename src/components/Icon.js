@@ -35,4 +35,4 @@ function Icon({ className, name, size }) {
 Icon.propTypes = propTypes;
 Icon.defaultProps = defaultProps;
 
-export default withSystem(Icon, [space, color], { color: 'gray.7' });
+export default withSystem(Icon, [space, color], { color: 'gray9' });

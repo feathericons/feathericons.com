@@ -27,8 +27,19 @@ export const colors = {
   ...flattened,
 };
 
+export const shadows = {
+  none: 'none',
+  small: '0 0 0 1px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1)',
+  medium: '0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 16px rgba(0, 0, 0, 0.1)',
+  outline: `0 0 0 3px ${colors.base}`,
+};
+
+export const radius = 3;
+
 export default {
   space,
   weights,
   colors,
+  shadows,
+  radius,
 };

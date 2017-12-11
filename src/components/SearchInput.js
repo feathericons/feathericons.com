@@ -1,22 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { space, width } from 'styled-system';
+import { Relative } from 'rebass';
 
-import withSystem from '../utils/with-system';
-import Relative from './Relative';
 import Icon from './Icon';
 import Input from './Input';
 
 const propTypes = {
-  className: PropTypes.string,
   value: PropTypes.string,
   placeholder: PropTypes.string,
   onChange: PropTypes.func,
 };
 
 const defaultProps = {
-  className: '',
   value: '',
   placeholder: '',
   onChange: () => {},
@@ -29,15 +25,17 @@ const InputIcon = styled(Icon)`
   transform: translateY(-50%);
 `;
 
-function SearchInput({ className, value, placeholder, onChange }) {
+function SearchInput({ value, placeholder, onChange, ...props }) {
   return (
-    <Relative className={className}>
-      <InputIcon name="search" px={4} color="gray.6" />
+    <Relative {...props}>
+      <InputIcon name="search" px={4} color="gray6" />
       <Input
         value={value}
         placeholder={placeholder}
         onChange={onChange}
         type="search"
+        py={4}
+        pr={4}
         pl="56px"
       />
     </Relative>
@@ -47,4 +45,4 @@ function SearchInput({ className, value, placeholder, onChange }) {
 SearchInput.propTypes = propTypes;
 SearchInput.defaultProps = defaultProps;
 
-export default withSystem(SearchInput, [space, width]);
+export default SearchInput;

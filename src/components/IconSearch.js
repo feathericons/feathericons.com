@@ -1,23 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { Text } from 'rebass';
 import { icons } from 'feather-icons';
-import { space } from 'styled-system';
 
-import withSystem from '../utils/with-system';
 import search from '../utils/search';
 import SearchInput from './SearchInput';
 import IconGrid from './IconGrid';
-import Text from './Text';
 
 class IconSearch extends React.Component {
-  static propTypes = {
-    className: PropTypes.string,
-  };
-
-  static defaultProps = {
-    className: '',
-  };
-
   state = {
     inputValue: '',
   };
@@ -29,8 +18,9 @@ class IconSearch extends React.Component {
     const results = getResults(this.state.inputValue);
 
     return (
-      <div className={this.props.className}>
+      <div>
         <SearchInput
+          type="search"
           placeholder="Search icons"
           value={this.state.inputValue}
           onChange={this.handleInputChange}
@@ -49,8 +39,8 @@ class IconSearch extends React.Component {
 }
 
 function getResults(value = '') {
-  const iconsArray = Object.keys(icons).map(name => icons[name]);
-  return search(iconsArray, value, { keys: ['name', 'tags'] });
+  const list = Object.keys(icons).map(name => icons[name]);
+  return search(list, value, { keys: ['name', 'tags'] });
 }
 
-export default withSystem(IconSearch, [space]);
+export default IconSearch;

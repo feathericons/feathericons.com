@@ -1,5 +1,6 @@
 import React from 'react';
 import { version } from 'feather-icons/package.json';
+import GatsbyLink from 'gatsby-link';
 import { Heading, Border, Box, Flex, Button } from 'rebass';
 import Hide from 'hidden-styled';
 
@@ -13,7 +14,7 @@ function Header() {
     <Border bottom py={4}>
       <Container>
         <Flex align="center">
-          <Heading is="h1" f={4} color="gray9">
+          <Heading is={GatsbyLink} to="/" f={4} color="gray9">
             Feather
           </Heading>
 
