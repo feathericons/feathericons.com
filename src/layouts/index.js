@@ -1,11 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import { ThemeProvider } from 'styled-components';
+import { injectGlobal } from 'styled-components';
+import { Provider } from 'rebass';
 
 import './index.css';
 import theme from '../theme';
 import Header from '../components/Header';
+
+injectGlobal`
+  body {
+    margin: 0;
+  }
+
+  a {
+    color: 'inherit';
+    text-decoration: none;
+  }
+`;
 
 const propTypes = {
   children: PropTypes.func.isRequired,
@@ -24,7 +36,7 @@ function Template({
   data: { site: { siteMetadata: { title, description } } },
 }) {
   return (
-    <ThemeProvider theme={theme}>
+    <Provider theme={theme}>
       <div>
         <Helmet>
           <title>{title}</title>
@@ -33,7 +45,7 @@ function Template({
         <Header />
         {children()}
       </div>
-    </ThemeProvider>
+    </Provider>
   );
 }
 

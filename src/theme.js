@@ -1,59 +1,28 @@
-const space = [0, 4, 8, 12, 16, 24, 32, 64];
+import palx from 'palx';
 
-const fontSizes = [12, 14, 16, 20, 24, 32, 48, 64, 72];
+const palette = palx('#08f');
 
-const fontWeights = {
-  hairline: 100,
-  thin: 200,
-  light: 300,
-  normal: 400,
-  medium: 500,
-  semibold: 600,
-  bold: 700,
-  extrabold: 800,
-  black: 900,
-};
+const flattened = Object.keys(palette).reduce((accumlator, key) => {
+  const value = palette[key];
 
-const lineHeights = {
-  none: 1,
-  tight: 1.25,
-  normal: 1.5,
-  loose: 2,
-};
+  if (Array.isArray(value)) {
+    accumlator[key] = value[5];
+    value.forEach((element, i) => {
+      accumlator[key + i] = element;
+    });
+  } else {
+    accumlator[key] = value;
+  }
 
-const colors = {
-  primary: '#08f',
+  return accumlator;
+}, {});
+
+export const colors = {
   black: '#000',
   white: '#fff',
-  gray: [
-    '#f8f9fa',
-    '#f1f3f5',
-    '#e9ecef',
-    '#dee2e6',
-    '#ced4da',
-    '#adb5bd',
-    '#868e96',
-    '#495057',
-    '#343a40',
-    '#212529',
-  ],
+  ...flattened,
 };
-
-const shadows = {
-  none: 'none',
-  small: '0 0 0 1px rgba(0, 0, 0, 0.1), 0 2px 8px rgba(0, 0, 0, 0.1)',
-  medium: '0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 16px rgba(0, 0, 0, 0.1)',
-  outline: `0 0 0 3px ${colors.primary}`,
-};
-
-const radii = [0, 2, 4, 8];
 
 export default {
-  space,
-  fontSizes,
-  fontWeights,
-  lineHeights,
   colors,
-  shadows,
-  radii,
 };
