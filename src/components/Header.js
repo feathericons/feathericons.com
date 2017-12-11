@@ -1,30 +1,42 @@
 import React from 'react';
 import { version } from 'feather-icons/package.json';
-import { Text, Border, Box, Flex } from 'rebass';
+import { Heading, Border, Box, Flex, Button } from 'rebass';
 import Hide from 'hidden-styled';
 
 import Container from './Container';
 import Link from './Link';
 
-const HeaderLink = props => <Link ml={[3, 4]} {...props} />;
+const HeaderLink = props => <Link ml={[4, 5]} {...props} />;
 
 function Header() {
   return (
-    <Border bottom py={3} color="gray2">
+    <Border bottom py={4}>
       <Container>
         <Flex align="center">
-          <Text is="h1" f={4} color="gray9">
+          <Heading is="h1" f={4} color="gray9">
             Feather
-            <Text is="span" ml={2} f={2} color="gray7">
-              v{version}
-            </Text>
-          </Text>
+          </Heading>
+
+          <Button
+            is="a"
+            href="https://github.com/feathericons/feather/releases"
+            target="_blank"
+            ml={2}
+            py={1}
+            px={2}
+            color="gray8"
+            bg="gray1"
+          >
+            v{version}
+          </Button>
 
           <Box mx="auto" />
 
           <Hide xs>
             <HeaderLink
-              href="https://twitter.com/intent/tweet?text=Feather%20-%20Simply%20beautiful%20open%20source%20icons%20by%20%40colebemis%20https://feathericons.com"
+              href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
+                'Feather – Simply beautiful open source icons by @colebemis https://feathericons.com'
+              )}`}
               target="_blank"
             >
               Tweet

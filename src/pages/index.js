@@ -7,7 +7,7 @@ import IconSearch from '../components/IconSearch';
 function IndexPage() {
   return (
     <Container>
-      <Masthead py={7} />
+      <Masthead />
       <IconSearch />
     </Container>
   );

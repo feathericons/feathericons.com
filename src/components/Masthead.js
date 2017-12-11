@@ -1,50 +1,49 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { space } from 'styled-system';
-import { Box, Flex } from 'grid-styled';
+import { BlockLink, Button, ButtonOutline, Flex, Image, Text } from 'rebass';
 
-import withSystem from '../utils/with-system';
-import Heading from './Heading';
-import Text from './Text';
-import Button from './Button';
-import stdlibLogo from '../assets/stdlib-logo.svg';
+import stdlib from '../assets/stdlib-logo.svg';
 
-const propTypes = {
-  className: PropTypes.string,
-};
-
-const defaultProps = {
-  className: '',
-};
-
-function Masthead({ className }) {
+function Masthead() {
   return (
-    <Flex className={className} direction="column" align="center">
-      <Heading align="center" mt={0} mb={5}>
+    <Flex direction="column" align="center" py={7}>
+      <Text mb={5} f={5} center color="gray9">
         Simply beautiful open source icons
-      </Heading>
+      </Text>
+
       <Flex width={[1, 'auto']} direction={['column', 'row']}>
         <Button
           is="a"
           href="https://github.com/feathericons/feather#feather"
           mx={[0, 2]}
           my={[2, 0]}
+          px={5}
+          py={4}
+          f={2}
         >
           Get Started
         </Button>
-        <Button mx={[0, 2]} my={[2, 0]} bg="gray.1" color="gray.7">
+
+        <ButtonOutline
+          is="a"
+          href="#"
+          mx={[0, 2]}
+          my={[2, 0]}
+          px={5}
+          py={4}
+          f={2}
+        >
           Download
-        </Button>
+        </ButtonOutline>
       </Flex>
-      <Box is="a" href="https://stdlib.com/" target="_blank" mt={[6, 6]}>
-        <Text color="gray.6">Sponsored by</Text>
-        <Box is="img" src={stdlibLogo} mt={1} />
-      </Box>
+
+      <BlockLink href="https://stdlib.com/" target="_blank" mt={6}>
+        <Text center color="gray8">
+          Sponsored by
+        </Text>
+        <Image src={stdlib} width={112} mt={1} />
+      </BlockLink>
     </Flex>
   );
 }
 
-Masthead.propTypes = propTypes;
-Masthead.defaultProps = defaultProps;
-
-export default withSystem(Masthead, [space]);
+export default Masthead;

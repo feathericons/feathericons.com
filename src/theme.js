@@ -1,5 +1,9 @@
 import palx from 'palx';
 
+export const space = [0, 4, 8, 12, 16, 24, 32, 64];
+
+const weights = [400, 500];
+
 const palette = palx('#08f');
 
 const flattened = Object.keys(palette).reduce((accumlator, key) => {
@@ -24,5 +28,7 @@ export const colors = {
 };
 
 export default {
+  space,
+  weights,
   colors,
 };
