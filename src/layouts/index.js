@@ -6,6 +6,7 @@ import { Provider } from 'rebass';
 
 import theme from '../theme';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const propTypes = {
   children: PropTypes.func.isRequired,
@@ -47,6 +48,7 @@ function Template({
         </Helmet>
         <Header />
         {children()}
+        <Footer />
       </div>
     </Provider>
   );
