@@ -1,6 +1,6 @@
 import React from 'react';
 import { withPrefix } from 'gatsby-link';
-import { BlockLink, Button, ButtonOutline, Flex, Image, Text } from 'rebass';
+import { BlockLink, Button, Flex, Image, Text } from 'rebass';
 
 import stdlib from '../assets/stdlib-logo.svg';
 
@@ -24,7 +24,7 @@ function Masthead() {
           Get Started
         </Button>
 
-        <ButtonOutline
+        <Button
           is="a"
           href={withPrefix('/feather.zip')}
           download
@@ -33,9 +33,11 @@ function Masthead() {
           px={5}
           py={4}
           f={2}
+          color="gray9"
+          bg="gray1"
         >
           Download
-        </ButtonOutline>
+        </Button>
       </Flex>
 
       <BlockLink href="https://stdlib.com/" target="_blank" mt={6}>
