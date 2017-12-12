@@ -5,6 +5,7 @@
   "author": "Cole Bemis <cole@colebemis.com>",
   "license": "MIT",
   "scripts": {
+    "prebuild": "./bin/build-zip.sh",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "lint": "eslint .",
