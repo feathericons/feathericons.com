@@ -22,7 +22,7 @@ function Header() {
             is="a"
             href="https://github.com/feathericons/feather/releases"
             target="_blank"
-            ml={2}
+            ml={3}
             py={1}
             px={2}
             color="gray8"
