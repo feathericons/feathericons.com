@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Grid from 'react-css-grid';
 import download from 'downloadjs';
 
+import trackDownload from '../utils/track-download';
 import IconTile from './IconTile';
 
 const propTypes = {
@@ -17,9 +18,10 @@ function IconGrid({ icons }) {
           key={icon.name}
           name={icon.name}
           title={`Download ${icon.name}.svg`}
-          onClick={() =>
-            download(icon.toSvg(), `${icon.name}.svg`, 'image/svg+xml')
-          }
+          onClick={() => {
+            download(icon.toSvg(), `${icon.name}.svg`, 'image/svg+xml');
+            trackDownload(icon.name);
+          }}
         />
       ))}
     </Grid>

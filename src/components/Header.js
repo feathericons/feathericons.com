@@ -4,6 +4,7 @@ import GatsbyLink from 'gatsby-link';
 import { Text, Border, Box, Flex, Button } from 'rebass';
 import Hide from 'hidden-styled';
 
+import trackOutboundLink from '../utils/track-outbound-link';
 import Container from './Container';
 import Link from './Link';
 
@@ -22,6 +23,7 @@ function Header() {
             is="a"
             href="https://github.com/feathericons/feather/releases"
             target="_blank"
+            onClick={() => trackOutboundLink('release notes')}
             ml={3}
             py={1}
             px={2}
@@ -39,6 +41,7 @@ function Header() {
                 'Feather – Simply beautiful open source icons by @colebemis https://feathericons.com'
               )}`}
               target="_blank"
+              onClick={() => trackOutboundLink('tweet')}
             >
               Tweet
             </HeaderLink>
@@ -46,16 +49,25 @@ function Header() {
             <HeaderLink
               href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=G6CPFZ6PQRZW8&amp;lc=US&amp;item_name=Feather&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"
               target="_blank"
+              onClick={() => trackOutboundLink('donate')}
             >
               Donate
             </HeaderLink>
           </Hide>
 
-          <HeaderLink href="https://github.com/feathericons/feather#feather">
+          <HeaderLink
+            href="https://github.com/feathericons/feather#feather"
+            target="_blank"
+            onClick={() => trackOutboundLink('usage')}
+          >
             Usage
           </HeaderLink>
 
-          <HeaderLink href="https://github.com/feathericons/feather">
+          <HeaderLink
+            href="https://github.com/feathericons/feather"
+            target="_blank"
+            onClick={() => trackOutboundLink('github')}
+          >
             GitHub
           </HeaderLink>
         </Flex>

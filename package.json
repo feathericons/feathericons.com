@@ -22,20 +22,16 @@
     "fuse.js": "^3.2.0",
     "gatsby": "^1.9.119",
     "gatsby-link": "^1.6.28",
-    "gatsby-plugin-glamor": "^1.6.8",
+    "gatsby-plugin-google-analytics": "^1.0.14",
     "gatsby-plugin-react-helmet": "^2.0.1",
     "gatsby-plugin-styled-components": "^2.0.2",
-    "glamorous": "^4.11.0",
-    "grid-styled": "^2.0.0-11",
     "hidden-styled": "^1.0.0-0",
-    "lodash": "^4.17.4",
     "palx": "^1.0.2",
     "react-css-grid": "^2.0.0-0",
     "react-helmet": "^5.2.0",
     "rebass": "^1.0.4",
     "styled-components": "^2.2.3",
-    "styled-system": "^1.0.8",
-    "tag-hoc": "^1.0.0"
+    "styled-system": "^1.1.1"
   },
   "devDependencies": {
     "babel-eslint": "^8.0.3",
