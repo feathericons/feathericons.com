@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Button, Flex, Text } from 'rebass';
+import { Button, Flex, Truncate } from 'rebass';
 
 import { colors, shadows } from '../theme';
 import Icon from './Icon';
@@ -12,6 +12,8 @@ const propTypes = {
 
 const IconButton = styled(Button)`
   cursor: pointer;
+  text-align: left;
+  line-height: 1.5;
 
   &:hover {
     background-color: ${colors.white};
@@ -28,9 +30,9 @@ function IconTile({ name, ...props }) {
     <IconButton px={5} py={5} color="gray9" bg="gray0" {...props}>
       <Flex align="center">
         <Icon name={name} />
-        <Text ml={4} fontSize={2}>
+        <Truncate ml={4} fontSize={2}>
           {name}
-        </Text>
+        </Truncate>
       </Flex>
     </IconButton>
   );

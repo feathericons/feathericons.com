@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Grid from 'react-css-grid';
 import download from 'downloadjs';
+import { Flex, Box } from 'rebass';
 
 import trackDownload from '../utils/track-download';
 import IconTile from './IconTile';
@@ -12,19 +12,22 @@ const propTypes = {
 
 function IconGrid({ icons }) {
   return (
-    <Grid width={224} gap={16}>
+    <Flex wrap mx={-2}>
       {icons.map(icon => (
-        <IconTile
-          key={icon.name}
-          name={icon.name}
-          title={`Download ${icon.name}.svg`}
-          onClick={() => {
-            download(icon.toSvg(), `${icon.name}.svg`, 'image/svg+xml');
-            trackDownload(icon.name);
-          }}
-        />
+        <Box p={2} w={[1, 1 / 2, 1 / 3, 1 / 4]}>
+          <IconTile
+            key={icon.name}
+            name={icon.name}
+            w={1}
+            title={`Download ${icon.name}.svg`}
+            onClick={() => {
+              download(icon.toSvg(), `${icon.name}.svg`, 'image/svg+xml');
+              trackDownload(icon.name);
+            }}
+          />
+        </Box>
       ))}
-    </Grid>
+    </Flex>
   );
 }
 
