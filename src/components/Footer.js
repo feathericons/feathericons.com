@@ -1,7 +1,7 @@
 import React from 'react';
 import { Flex } from 'rebass';
 
-import trackOutboundLink from '../utils/track-outbound-link';
+import logOutboundLink from '../utils/log-outbound-link';
 import Link from './Link';
 
 function Footer() {
@@ -10,7 +10,7 @@ function Footer() {
       <Link
         href="https://twitter.com/colebemis"
         target="_blank"
-        onClick={() => trackOutboundLink('made by @colebemis')}
+        onClick={() => logOutboundLink('made by @colebemis')}
       >
         Made by @colebemis
       </Link>

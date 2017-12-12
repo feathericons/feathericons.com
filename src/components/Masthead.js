@@ -3,8 +3,8 @@ import { withPrefix } from 'gatsby-link';
 import { BlockLink, Button, Flex, Image, Text } from 'rebass';
 
 import stdlib from '../assets/stdlib-logo.svg';
-import trackOutboundLink from '../utils/track-outbound-link';
-import trackDownload from '../utils/track-download';
+import logOutboundLink from '../utils/log-outbound-link';
+import logDownload from '../utils/log-download';
 
 function Masthead() {
   return (
@@ -17,7 +17,7 @@ function Masthead() {
         <Button
           is="a"
           href="https://github.com/feathericons/feather#feather"
-          onClick={() => trackOutboundLink('get started')}
+          onClick={() => logOutboundLink('get started')}
           mx={[0, 2]}
           my={[2, 0]}
           px={5}
@@ -30,7 +30,7 @@ function Masthead() {
         <Button
           is="a"
           href={withPrefix('/feather.zip')}
-          onClick={() => trackDownload('all')}
+          onClick={() => logDownload('all')}
           download
           mx={[0, 2]}
           my={[2, 0]}
@@ -47,7 +47,7 @@ function Masthead() {
       <BlockLink
         href="https://stdlib.com/"
         target="_blank"
-        onClick={() => trackOutboundLink('stdlib')}
+        onClick={() => logOutboundLink('stdlib')}
         mt={7}
       >
         <Text center color="gray8">

@@ -1,11 +1,11 @@
-function trackOutboundLink(label) {
+function logDownload(label) {
   if (typeof window.ga === 'function') {
     window.ga('send', 'event', {
-      eventCategory: 'outbound link',
+      eventCategory: 'download',
       eventAction: 'click',
       eventLabel: label,
     });
   }
 }
 
-export default trackOutboundLink;
+export default logDownload;

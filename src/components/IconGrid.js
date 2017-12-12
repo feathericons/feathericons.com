@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import download from 'downloadjs';
 import { Flex, Box } from 'rebass';
 
-import trackDownload from '../utils/track-download';
+import logDownload from '../utils/log-download';
 import IconTile from './IconTile';
 
 const propTypes = {
@@ -22,7 +22,7 @@ function IconGrid({ icons }) {
             title={`Download ${icon.name}.svg`}
             onClick={() => {
               download(icon.toSvg(), `${icon.name}.svg`, 'image/svg+xml');
-              trackDownload(icon.name);
+              logDownload(icon.name);
             }}
           />
         </Box>
