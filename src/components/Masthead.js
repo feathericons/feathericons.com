@@ -40,7 +40,7 @@ function Masthead() {
         </Button>
       </Flex>
 
-      <BlockLink href="https://stdlib.com/" target="_blank" mt={6}>
+      <BlockLink href="https://stdlib.com/" target="_blank" mt={7}>
         <Text center color="gray8">
           Sponsored by
         </Text>

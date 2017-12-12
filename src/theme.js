@@ -2,7 +2,9 @@ import palx from 'palx';
 
 export const space = [0, 4, 8, 12, 16, 24, 32, 64];
 
-const weights = [400, 500];
+export const font = '"Inter UI", -apple-system, BlinkMacSystemFont, sans-serif';
+
+export const weights = [400, 500];
 
 const palette = palx('#08f');
 
@@ -38,6 +40,7 @@ export const radius = 3;
 
 export default {
   space,
+  font,
   weights,
   colors,
   shadows,

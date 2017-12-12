@@ -1,7 +1,7 @@
 import React from 'react';
 import { version } from 'feather-icons/package.json';
 import GatsbyLink from 'gatsby-link';
-import { Heading, Border, Box, Flex, Button } from 'rebass';
+import { Text, Border, Box, Flex, Button } from 'rebass';
 import Hide from 'hidden-styled';
 
 import Container from './Container';
@@ -11,12 +11,12 @@ const HeaderLink = props => <Link ml={[4, 5]} {...props} />;
 
 function Header() {
   return (
-    <Border bottom py={4}>
+    <Border bottom py={5}>
       <Container>
         <Flex align="center">
-          <Heading is={GatsbyLink} to="/" f={4} color="gray9">
+          <Text is={GatsbyLink} to="/" f={4} color="gray9">
             Feather
-          </Heading>
+          </Text>
 
           <Button
             is="a"

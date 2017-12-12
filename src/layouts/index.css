@@ -1,30 +1,9 @@
-/* @import url('https://rsms.me/inter/inter-ui.css');
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-  transition: inherit;
-}
+@import url('https://rsms.me/inter/inter-ui.css');
 
 body {
-  box-sizing: border-box;
   margin: 0;
-  font-family: 'Inter UI', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-    'Segoe UI Symbol';
-  transition: color 0.1s, background-color 0.1s, opacity 0.1s, box-shadow 0.1s;
 }
 
 a {
-  color: currentColor;
   text-decoration: none;
 }
-
-button {
-  cursor: pointer;
-  margin: 0;
-  padding: 0;
-  background: transparent;
-  border: none;
-} */
