@@ -2,6 +2,9 @@ import palx from 'palx';
 
 export const space = [0, 4, 8, 12, 16, 24, 32, 64];
 
+export const font =
+  '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"';
+
 export const weights = [400, 500];
 
 export const lineHeights = {
@@ -45,6 +48,7 @@ export const radius = 3;
 
 export default {
   space,
+  font,
   weights,
   lineHeights,
   colors,
