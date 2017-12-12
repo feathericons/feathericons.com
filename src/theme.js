@@ -6,6 +6,13 @@ export const font = '"Inter UI", -apple-system, BlinkMacSystemFont, sans-serif';
 
 export const weights = [400, 500];
 
+export const lineHeights = {
+  none: 1,
+  tight: 1.25,
+  normal: 1.5,
+  loose: 2,
+};
+
 const palette = palx('#08f');
 
 const flattened = Object.keys(palette).reduce((accumlator, key) => {
@@ -42,6 +49,7 @@ export default {
   space,
   font,
   weights,
+  lineHeights,
   colors,
   shadows,
   radius,

@@ -1,11 +1,12 @@
 import React from 'react';
 import { version } from 'feather-icons/package.json';
 import GatsbyLink from 'gatsby-link';
-import { Text, Border, Box, Flex, Button } from 'rebass';
+import { Border, Box, Flex, Button } from 'rebass';
 import Hide from 'hidden-styled';
 
 import logOutboundLink from '../utils/log-outbound-link';
 import Container from './Container';
+import Text from './Text';
 import Link from './Link';
 
 const HeaderLink = props => <Link ml={[4, 5]} {...props} />;
