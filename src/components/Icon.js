@@ -1,32 +1,33 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { color, space } from 'styled-system';
+import { number, oneOfType, string } from 'prop-types';
 import { icons } from 'feather-icons';
-import camelcaseKeys from 'camelcase-keys';
 import classnames from 'classnames';
 
-import withSystem from '../utils/with-system';
+import kebabToCamelKeys from '../utils/kebab-to-camel';
 
 const propTypes = {
-  name: PropTypes.string.isRequired,
-  className: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  name: string.isRequired,
+  className: string,
+  size: oneOfType([string, number]),
+  color: string,
 };
 
 const defaultProps = {
   className: '',
   size: 24,
+  color: 'inherit',
 };
 
-function Icon({ className, name, size }) {
+function Icon({ className, name, size, color }) {
   const { class: defaultClassName, ...attrs } = icons[name].attrs;
 
   return (
     <svg
-      {...camelcaseKeys(attrs)}
+      {...kebabToCamelKeys(attrs)}
       className={classnames(defaultClassName, className)}
       width={size}
       height={size}
+      color={color}
       dangerouslySetInnerHTML={{ __html: icons[name].contents }}
     />
   );
@@ -35,4 +36,4 @@ function Icon({ className, name, size }) {
 Icon.propTypes = propTypes;
 Icon.defaultProps = defaultProps;
 
-export default withSystem(Icon, [space, color], { color: 'gray9' });
+export default Icon;

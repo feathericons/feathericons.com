@@ -15,7 +15,6 @@
     "*.js": "eslint"
   },
   "dependencies": {
-    "camelcase-keys": "^4.2.0",
     "classnames": "^2.2.5",
     "downloadjs": "^1.4.7",
     "feather-icons": "4.0.1",

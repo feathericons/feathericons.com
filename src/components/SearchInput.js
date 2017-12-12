@@ -1,15 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { func, string } from 'prop-types';
 import styled from 'styled-components';
-import { Relative } from 'rebass';
+import { Absolute, Flex, Relative } from 'rebass';
 
+import { colors } from '../theme';
 import Icon from './Icon';
 import Input from './Input';
 
 const propTypes = {
-  value: PropTypes.string,
-  placeholder: PropTypes.string,
-  onChange: PropTypes.func,
+  value: string,
+  placeholder: string,
+  onChange: func,
 };
 
 const defaultProps = {
@@ -18,17 +19,19 @@ const defaultProps = {
   onChange: () => {},
 };
 
-const InputIcon = styled(Icon)`
-  box-sizing: content-box;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+const Fill = styled(Flex)`
+  width: 100%;
+  height: 100%;
 `;
 
 function SearchInput({ value, placeholder, onChange, ...props }) {
   return (
     <Relative {...props}>
-      <InputIcon name="search" px={4} color="gray6" />
+      <Absolute top bottom left>
+        <Fill align="center" px={4}>
+          <Icon name="search" color={colors.gray6} />
+        </Fill>
+      </Absolute>
       <Input
         value={value}
         placeholder={placeholder}
