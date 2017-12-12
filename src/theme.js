@@ -2,8 +2,6 @@ import palx from 'palx';
 
 export const space = [0, 4, 8, 12, 16, 24, 32, 64];
 
-export const font = '"Inter UI", -apple-system, BlinkMacSystemFont, sans-serif';
-
 export const weights = [400, 500];
 
 export const lineHeights = {
@@ -47,7 +45,6 @@ export const radius = 3;
 
 export default {
   space,
-  font,
   weights,
   lineHeights,
   colors,

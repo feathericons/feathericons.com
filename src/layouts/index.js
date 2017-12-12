@@ -1,24 +1,38 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { func, shape, string } from 'prop-types';
 import Helmet from 'react-helmet';
+import { injectGlobal } from 'styled-components';
 import { Provider } from 'rebass';
 
-import './index.css';
 import theme from '../theme';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 const propTypes = {
-  children: PropTypes.func.isRequired,
-  data: PropTypes.shape({
-    site: PropTypes.shape({
-      siteMetadata: PropTypes.shape({
-        title: PropTypes.string,
-        description: PropTypes.string,
+  children: func.isRequired,
+  data: shape({
+    site: shape({
+      siteMetadata: shape({
+        title: string,
+        description: string,
       }),
     }),
   }).isRequired,
 };
+
+/* eslint-disable no-unused-expressions */
+
+injectGlobal`
+  body {
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+`;
+
+/* eslint-enable no-unused-expressions */
 
 function Template({
   children,

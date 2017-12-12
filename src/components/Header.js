@@ -16,7 +16,7 @@ function Header() {
     <Border bottom py={5}>
       <Container>
         <Flex align="center">
-          <Text is={GatsbyLink} to="/" f={4} color="gray9">
+          <Text is={GatsbyLink} to="/" f={4} bold color="gray9">
             Feather
           </Text>
 
