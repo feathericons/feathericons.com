@@ -1,10 +1,10 @@
 import React from 'react';
-import { Text } from 'rebass';
 import { icons } from 'feather-icons';
 
 import search from '../utils/search';
 import SearchInput from './SearchInput';
 import IconGrid from './IconGrid';
+import NoResults from './NoResults';
 
 class IconSearch extends React.Component {
   state = {
@@ -29,9 +29,7 @@ class IconSearch extends React.Component {
         {results.length !== 0 ? (
           <IconGrid icons={results} />
         ) : (
-          <Text>
-            No results found for &ldquo;{this.state.inputValue}&rdquo;
-          </Text>
+          <NoResults value={this.state.inputValue} />
         )}
       </div>
     );
