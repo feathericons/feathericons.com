@@ -25,7 +25,7 @@ function Header() {
             href="https://github.com/feathericons/feather/releases"
             target="_blank"
             onClick={() => logOutboundLink('release notes')}
-            ml={3}
+            ml={2}
             py={1}
             px={2}
             color="gray8"
