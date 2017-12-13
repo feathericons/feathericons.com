@@ -15,6 +15,7 @@ const propTypes = {
       siteMetadata: shape({
         title: string,
         description: string,
+        siteUrl: string,
       }),
     }),
   }).isRequired,
