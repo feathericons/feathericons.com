@@ -24,6 +24,7 @@ function Header() {
             is="a"
             href="https://github.com/feathericons/feather/releases"
             target="_blank"
+            rel="noopener noreferrer"
             onClick={() => logOutboundLink('release notes')}
             ml={2}
             py={1}
@@ -42,6 +43,7 @@ function Header() {
                 'Feather – Simply beautiful open source icons by @colebemis https://feathericons.com'
               )}`}
               target="_blank"
+              rel="noopener noreferrer"
               onClick={() => logOutboundLink('tweet')}
             >
               Tweet
@@ -50,6 +52,7 @@ function Header() {
             <HeaderLink
               href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=G6CPFZ6PQRZW8&amp;lc=US&amp;item_name=Feather&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"
               target="_blank"
+              rel="noopener noreferrer"
               onClick={() => logOutboundLink('donate')}
             >
               Donate
@@ -59,6 +62,7 @@ function Header() {
           <HeaderLink
             href="https://github.com/feathericons/feather#feather"
             target="_blank"
+            rel="noopener noreferrer"
             onClick={() => logOutboundLink('usage')}
           >
             Usage
@@ -67,6 +71,7 @@ function Header() {
           <HeaderLink
             href="https://github.com/feathericons/feather"
             target="_blank"
+            rel="noopener noreferrer"
             onClick={() => logOutboundLink('github')}
           >
             GitHub

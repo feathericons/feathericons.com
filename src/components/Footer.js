@@ -10,6 +10,7 @@ function Footer() {
       <Link
         href="https://twitter.com/colebemis"
         target="_blank"
+        rel="noopener noreferrer"
         onClick={() => logOutboundLink('made by @colebemis')}
       >
         Made by @colebemis

@@ -18,6 +18,7 @@ function Masthead() {
           is="a"
           href="https://github.com/feathericons/feather#feather"
           target="_blank"
+          rel="noopener noreferrer"
           onClick={() => logOutboundLink('get started')}
           mx={[0, 2]}
           my={[2, 0]}
@@ -48,6 +49,7 @@ function Masthead() {
       <BlockLink
         href="https://stdlib.com/"
         target="_blank"
+        rel="noopener noreferrer"
         onClick={() => logOutboundLink('stdlib')}
         mt={7}
       >
