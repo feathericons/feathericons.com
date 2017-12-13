@@ -44,7 +44,7 @@ export const shadows = {
   outline: `0 0 0 3px ${colors.base}`,
 };
 
-export const radius = 3;
+export const radius = 4;
 
 export default {
   space,
