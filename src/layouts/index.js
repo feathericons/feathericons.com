@@ -57,7 +57,7 @@ function Template({
           <meta property="og:description" content={description} />
           <meta property="og:image" content={`${siteUrl}/feather-og.png`} />
 
-          <meta name="twitter:card" content="summary" />
+          <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:creator" content="@colebemis" />
 
           <link
