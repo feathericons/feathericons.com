@@ -48,25 +48,27 @@ function Header() {
             >
               Tweet
             </HeaderLink>
-
-            <HeaderLink
-              href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=G6CPFZ6PQRZW8&amp;lc=US&amp;item_name=Feather&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => logOutboundLink('donate')}
-            >
-              Donate
-            </HeaderLink>
           </Hide>
 
           <HeaderLink
-            href="https://github.com/feathericons/feather#feather"
+            href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=G6CPFZ6PQRZW8&amp;lc=US&amp;item_name=Feather&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"
             target="_blank"
             rel="noopener noreferrer"
-            onClick={() => logOutboundLink('usage')}
+            onClick={() => logOutboundLink('donate')}
           >
-            Usage
+            Donate
           </HeaderLink>
+
+          <Hide xs>
+            <HeaderLink
+              href="https://github.com/feathericons/feather#feather"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => logOutboundLink('usage')}
+            >
+              Usage
+            </HeaderLink>
+          </Hide>
 
           <HeaderLink
             href="https://github.com/feathericons/feather"
