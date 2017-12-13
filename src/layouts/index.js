@@ -43,7 +43,7 @@ injectGlobal`
 
 function Template({
   children,
-  data: { site: { siteMetadata: { title, description } } },
+  data: { site: { siteMetadata: { title, description, siteUrl } } },
 }) {
   return (
     <Provider theme={theme}>
@@ -55,6 +55,7 @@ function Template({
 
           <meta property="og:title" content={title} />
           <meta property="og:description" content={description} />
+          <meta property="og:image" content={`${siteUrl}/feather-og.png`} />
 
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:creator" content="@colebemis" />
@@ -77,6 +78,7 @@ export const query = graphql`
       siteMetadata {
         title
         description
+        siteUrl
       }
     }
   }
