@@ -1,8 +1,7 @@
 import React from 'react';
-import { withPrefix } from 'gatsby-link';
 import { BlockLink, Button, Flex, Image } from 'rebass';
 
-import stdlib from '../assets/stdlib-logo.svg';
+import stdlib from '../images/stdlib-logo.svg';
 import logOutboundLink from '../utils/log-outbound-link';
 import logDownload from '../utils/log-download';
 import Text from './Text';
@@ -30,7 +29,7 @@ function Masthead() {
 
         <Button
           is="a"
-          href={withPrefix('/feather.zip')}
+          href="/feather.zip"
           onClick={() => logDownload('all')}
           download
           mx={[0, 2]}
