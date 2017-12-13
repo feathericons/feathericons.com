@@ -56,7 +56,7 @@ function Masthead() {
         <Text center color="gray8">
           Sponsored by
         </Text>
-        <Image src={stdlib} width={112} mt={1} />
+        <Image src={stdlib} width={112} mt={2} />
       </BlockLink>
     </Flex>
   );
