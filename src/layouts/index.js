@@ -23,8 +23,15 @@ const propTypes = {
 /* eslint-disable no-unused-expressions */
 
 injectGlobal`
+  *,
+  *:before,
+  *:after {
+    transition: inherit;
+  }
+
   body {
     margin: 0;
+    transition: color 0.15s, background-color 0.15s, box-shadow 0.15s;
   }
 
   a {
