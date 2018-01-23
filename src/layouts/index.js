@@ -5,6 +5,7 @@ import { injectGlobal } from 'styled-components';
 import { Provider } from 'rebass';
 
 import theme from '../theme';
+import ProductHuntBanner from '../components/ProductHuntBanner';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -74,6 +75,7 @@ function Template({
             sizes="16x16"
           />
         </Helmet>
+        <ProductHuntBanner />
         <Header />
         {children()}
         <Footer />
