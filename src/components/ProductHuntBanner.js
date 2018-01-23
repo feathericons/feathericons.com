@@ -30,7 +30,7 @@ function ProductHuntBanner() {
           <Flex flex="0 0 auto">
             <Button
               is="a"
-              href="https://www.producthunt.com/golden-kitty-awards-2017/#sideproject"
+              href="https://www.producthunt.com/posts/feather-9"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => logOutboundLink('upvote on product hunt')}
