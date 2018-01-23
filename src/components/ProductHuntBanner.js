@@ -1,6 +1,7 @@
 import React from 'react';
 import { Flex, Button, Box } from 'rebass';
 
+import logOutboundLink from '../utils/log-outbound-link';
 import Container from './Container';
 import Text from './Text';
 
@@ -32,6 +33,7 @@ function ProductHuntBanner() {
               href="https://www.producthunt.com/golden-kitty-awards-2017/#sideproject"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => logOutboundLink('upvote on product hunt')}
               bg="#da552f"
             >
               Upvote on Product Hunt
