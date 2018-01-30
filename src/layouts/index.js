@@ -73,6 +73,8 @@ function Template({
             href="favicon-16x16.png"
             sizes="16x16"
           />
+    
+          <link rel="apple-touch-icon" href="/apple-touch-icon-80x80.png" sizes="80x80" />
         </Helmet>
         <Header />
         {children()}
