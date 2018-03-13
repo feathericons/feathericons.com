@@ -27,7 +27,7 @@ const IconButton = styled(Button)`
 
 function IconTile({ name, ...props }) {
   return (
-    <IconButton px={5} py={5} color="gray9" bg="gray0" {...props}>
+    <IconButton id={name} px={5} py={5} color="gray9" bg="gray0" {...props}>
       <Flex align="center">
         <Icon name={name} color={colors.gray9} />
         <Truncate ml={4} fontSize={2}>
