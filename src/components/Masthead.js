@@ -25,6 +25,8 @@ function Masthead() {
           px={5}
           py={4}
           f={2}
+          color="white"
+          bg="base"
         >
           Get Started
         </Button>
