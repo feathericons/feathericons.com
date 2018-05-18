@@ -1,8 +1,11 @@
 function kebabToCamelKeys(object) {
-  return Object.keys(object).reduce((accumulator, key) => {
-    accumulator[kebabToCamel(key)] = object[key];
-    return accumulator;
-  }, {});
+  return Object.keys(object).reduce(
+    (accumulator, key) => ({
+      ...accumulator,
+      [kebabToCamel(key)]: object[key],
+    }),
+    {}
+  );
 }
 
 function kebabToCamel(string) {
