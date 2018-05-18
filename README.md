@@ -4,7 +4,7 @@ This repo contains the source code for [feathericons.com](https://feathericons.c
 
 ## Project Setup
 
-```
+```shell
 # Download the repo
 git clone https://github.com/feathericons/feathericons.com.git
 
