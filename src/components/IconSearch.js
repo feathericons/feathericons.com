@@ -20,8 +20,8 @@ class IconSearch extends React.Component {
     return (
       <div>
         <SearchInput
-          type="search"
           placeholder="Search icons"
+          label="Search"
           value={this.state.inputValue}
           onChange={this.handleInputChange}
           mb={5}

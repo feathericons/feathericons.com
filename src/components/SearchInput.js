@@ -10,12 +10,14 @@ import Input from './Input';
 const propTypes = {
   value: string,
   placeholder: string,
+  label: string,
   onChange: func,
 };
 
 const defaultProps = {
   value: '',
   placeholder: '',
+  label: '',
   onChange: () => {},
 };
 
@@ -24,7 +26,7 @@ const Fill = styled(Flex)`
   height: 100%;
 `;
 
-function SearchInput({ value, placeholder, onChange, ...props }) {
+function SearchInput({ value, placeholder, label, onChange, ...props }) {
   return (
     <Relative {...props}>
       <Absolute top bottom left>
@@ -37,6 +39,7 @@ function SearchInput({ value, placeholder, onChange, ...props }) {
         placeholder={placeholder}
         onChange={onChange}
         type="search"
+        aria-label={label}
         py={4}
         pr={4}
         pl="56px"
