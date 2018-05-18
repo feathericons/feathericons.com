@@ -77,7 +77,7 @@ function Template({
           />
         </Helmet>
         <Header />
-        {children()}
+        <main>{children()}</main>
         <Footer />
       </div>
     </Provider>
