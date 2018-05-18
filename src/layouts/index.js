@@ -50,6 +50,8 @@ function Template({
     <Provider theme={theme}>
       <div>
         <Helmet>
+          <html lang="en" />
+
           <title>{title}</title>
 
           <meta name="description" content={description} />
