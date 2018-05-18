@@ -14,7 +14,7 @@ export const lineHeights = {
   loose: 2,
 };
 
-const palette = palx('#08f');
+const palette = palx('#06f');
 
 const flattened = Object.keys(palette).reduce((accumlator, key) => {
   const value = palette[key];
