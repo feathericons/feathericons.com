@@ -1,20 +1,34 @@
-const space = [0, 4, 8, 12, 16, 24, 32, 64, 128, 256, 512]
+export const space = [0, 4, 8, 12, 16, 24, 32, 64, 128, 256, 512]
 
-const font =
-  '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
+export const fonts = {
+  sans: [
+    'system-ui',
+    '-apple-system',
+    'BlinkMacSystemFont',
+    '"Segoe UI"',
+    '"Roboto"',
+    '"Oxygen"',
+    '"Ubuntu"',
+    '"Cantarell"',
+    '"Fira Sans"',
+    '"Droid Sans"',
+    '"Helvetica Neue"',
+    'sans-serif',
+  ].join(', '),
+}
 
-const fontSizes = [12, 14, 16, 20, 24, 32, 48, 64]
+export const fontSizes = [12, 14, 16, 20, 24, 32, 48, 64]
 
-const weights = [400, 500]
+export const weights = [400, 500]
 
-const lineHeights = {
+export const lineHeights = {
   none: 1,
   tight: 1.25,
   normal: 1.5,
   loose: 2,
 }
 
-const colors = {
+export const colors = {
   base: '#06f',
   black: '#000',
   white: '#fff',
@@ -32,18 +46,18 @@ const colors = {
   gray9: '#393f49',
 }
 
-const shadows = {
+export const shadows = {
   none: 'none',
   small: '0 0 0 1px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1)',
   medium: '0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 16px rgba(0, 0, 0, 0.1)',
   outline: `0 0 0 3px ${colors.base}`,
 }
 
-const radius = 4
+export const radius = 4
 
 export default {
   space,
-  font,
+  fonts,
   fontSizes,
   weights,
   lineHeights,

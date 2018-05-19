@@ -1,12 +1,11 @@
-import React from 'react'
 import { func, shape, string } from 'prop-types'
+import React from 'react'
 import Helmet from 'react-helmet'
-import { injectGlobal } from 'styled-components'
-import { Provider } from 'rebass'
-
-import theme from '../theme'
-import Header from '../components/Header'
+import { ThemeProvider } from 'styled-components'
 import Footer from '../components/Footer'
+import Header from '../components/Header'
+import '../globalCss'
+import theme from '../theme'
 
 const propTypes = {
   children: func.isRequired,
@@ -21,33 +20,12 @@ const propTypes = {
   }).isRequired,
 }
 
-/* eslint-disable no-unused-expressions */
-
-injectGlobal`
-  *,
-  *:before,
-  *:after {
-    transition: inherit;
-  }
-
-  body {
-    margin: 0;
-    transition: color 0.15s, background-color 0.15s, box-shadow 0.15s;
-  }
-
-  a {
-    text-decoration: none;
-  }
-`
-
-/* eslint-enable no-unused-expressions */
-
 function Template({
   children,
   data: { site: { siteMetadata: { title, description, siteUrl } } },
 }) {
   return (
-    <Provider theme={theme}>
+    <ThemeProvider theme={theme}>
       <div>
         <Helmet>
           <html lang="en" />
@@ -80,7 +58,7 @@ function Template({
         <main>{children()}</main>
         <Footer />
       </div>
-    </Provider>
+    </ThemeProvider>
   )
 }
 
