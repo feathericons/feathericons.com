@@ -16,7 +16,8 @@
         "semi": false
       }
     ],
-    "react/jsx-filename-extension": "off"
+    "react/jsx-filename-extension": "off",
+    "react/no-typos": "off"
   },
   "env": {
     "browser": true

@@ -7,19 +7,6 @@ import Header from '../components/Header'
 import '../globalCss'
 import theme from '../theme'
 
-const propTypes = {
-  children: func.isRequired,
-  data: shape({
-    site: shape({
-      siteMetadata: shape({
-        title: string,
-        description: string,
-        siteUrl: string,
-      }),
-    }),
-  }).isRequired,
-}
-
 function Template({
   children,
   data: { site: { siteMetadata: { title, description, siteUrl } } },
@@ -62,7 +49,18 @@ function Template({
   )
 }
 
-Template.propTypes = propTypes
+Template.propTypes = {
+  children: func.isRequired,
+  data: shape({
+    site: shape({
+      siteMetadata: shape({
+        title: string.isRequired,
+        description: string.isRequired,
+        siteUrl: string.isRequired,
+      }).isRequired,
+    }).isRequired,
+  }).isRequired,
+}
 
 export default Template
 
