@@ -3,6 +3,8 @@ const space = [0, 4, 8, 12, 16, 24, 32, 64, 128, 256, 512]
 const font =
   '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
 
+const fontSizes = [12, 14, 16, 20, 24, 32, 48, 64]
+
 const weights = [400, 500]
 
 const lineHeights = {
@@ -42,6 +44,7 @@ const radius = 4
 export default {
   space,
   font,
+  fontSizes,
   weights,
   lineHeights,
   colors,
