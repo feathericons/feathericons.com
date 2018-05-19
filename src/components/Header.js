@@ -1,15 +1,15 @@
-import React from 'react';
-import { version } from 'feather-icons/package.json';
-import GatsbyLink from 'gatsby-link';
-import { Border, Box, Flex, Button } from 'rebass';
-import Hide from 'hidden-styled';
+import React from 'react'
+import { version } from 'feather-icons/package.json'
+import GatsbyLink from 'gatsby-link'
+import { Border, Box, Flex, Button } from 'rebass'
+import Hide from 'hidden-styled'
 
-import logOutboundLink from '../utils/log-outbound-link';
-import Container from './Container';
-import Text from './Text';
-import Link from './Link';
+import logOutboundLink from '../utils/log-outbound-link'
+import Container from './Container'
+import Text from './Text'
+import Link from './Link'
 
-const HeaderLink = props => <Link ml={[4, 5]} {...props} />;
+const HeaderLink = props => <Link ml={[4, 5]} {...props} />
 
 function Header() {
   return (
@@ -40,7 +40,7 @@ function Header() {
           <Hide xs>
             <HeaderLink
               href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
-                'Feather – Simply beautiful open source icons by @colebemis https://feathericons.com'
+                'Feather – Simply beautiful open source icons by @colebemis https://feathericons.com',
               )}`}
               target="_blank"
               rel="noopener noreferrer"
@@ -79,7 +79,7 @@ function Header() {
         </Flex>
       </Container>
     </Border>
-  );
+  )
 }
 
-export default Header;
+export default Header

@@ -1,10 +1,10 @@
-import React from 'react';
-import { BlockLink, Button, Flex, Image } from 'rebass';
+import React from 'react'
+import { BlockLink, Button, Flex, Image } from 'rebass'
 
-import stdlib from '../images/stdlib-logo.svg';
-import logOutboundLink from '../utils/log-outbound-link';
-import logDownload from '../utils/log-download';
-import Text from './Text';
+import stdlib from '../images/stdlib-logo.svg'
+import logOutboundLink from '../utils/log-outbound-link'
+import logDownload from '../utils/log-download'
+import Text from './Text'
 
 function Masthead() {
   return (
@@ -61,7 +61,7 @@ function Masthead() {
         <Image src={stdlib} width={112} mt={2} alt="StdLib Logo" />
       </BlockLink>
     </Flex>
-  );
+  )
 }
 
-export default Masthead;
+export default Masthead

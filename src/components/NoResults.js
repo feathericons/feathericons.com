@@ -1,26 +1,26 @@
-import React from 'react';
-import { string } from 'prop-types';
-import styled from 'styled-components';
-import { Flex } from 'rebass';
+import React from 'react'
+import { string } from 'prop-types'
+import styled from 'styled-components'
+import { Flex } from 'rebass'
 
-import { radius } from '../theme';
-import Text from './Text';
+import { radius } from '../theme'
+import Text from './Text'
 
 const propTypes = {
   value: string,
-};
+}
 
 const defaultProps = {
   value: '',
-};
+}
 
 const Rounded = styled(Flex)`
   border-radius: ${radius}px;
-`;
+`
 
 const BreakWord = styled(Text)`
   word-break: break-word;
-`;
+`
 
 function NoResults({ value }) {
   return (
@@ -29,10 +29,10 @@ function NoResults({ value }) {
         No results found {value && `for "${value}"`}
       </BreakWord>
     </Rounded>
-  );
+  )
 }
 
-NoResults.propTypes = propTypes;
-NoResults.defaultProps = defaultProps;
+NoResults.propTypes = propTypes
+NoResults.defaultProps = defaultProps
 
-export default NoResults;
+export default NoResults

@@ -1,9 +1,9 @@
-import React from 'react';
-import Helmet from 'react-helmet';
-import { Heading } from 'rebass';
+import React from 'react'
+import Helmet from 'react-helmet'
+import { Heading } from 'rebass'
 
-import Container from '../components/Container';
-import Text from '../components/Text';
+import Container from '../components/Container'
+import Text from '../components/Text'
 
 function NotFoundPage() {
   return (
@@ -20,7 +20,7 @@ function NotFoundPage() {
         </Text>
       </Container>
     </div>
-  );
+  )
 }
 
-export default NotFoundPage;
+export default NotFoundPage

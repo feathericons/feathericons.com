@@ -1,14 +1,14 @@
-import React from 'react';
-import { arrayOf, shape, string, func } from 'prop-types';
-import download from 'downloadjs';
-import { Flex, Box } from 'rebass';
+import React from 'react'
+import { arrayOf, shape, string, func } from 'prop-types'
+import download from 'downloadjs'
+import { Flex, Box } from 'rebass'
 
-import logDownload from '../utils/log-download';
-import IconTile from './IconTile';
+import logDownload from '../utils/log-download'
+import IconTile from './IconTile'
 
 const propTypes = {
   icons: arrayOf(shape({ name: string, toSvg: func })).isRequired,
-};
+}
 
 function IconGrid({ icons }) {
   return (
@@ -19,17 +19,17 @@ function IconGrid({ icons }) {
             name={icon.name}
             title={`Download ${icon.name}.svg`}
             onClick={() => {
-              download(icon.toSvg(), `${icon.name}.svg`, 'image/svg+xml');
-              logDownload(icon.name);
+              download(icon.toSvg(), `${icon.name}.svg`, 'image/svg+xml')
+              logDownload(icon.name)
             }}
             w={1}
           />
         </Box>
       ))}
     </Flex>
-  );
+  )
 }
 
-IconGrid.propTypes = propTypes;
+IconGrid.propTypes = propTypes
 
-export default IconGrid;
+export default IconGrid

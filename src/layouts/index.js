@@ -1,12 +1,12 @@
-import React from 'react';
-import { func, shape, string } from 'prop-types';
-import Helmet from 'react-helmet';
-import { injectGlobal } from 'styled-components';
-import { Provider } from 'rebass';
+import React from 'react'
+import { func, shape, string } from 'prop-types'
+import Helmet from 'react-helmet'
+import { injectGlobal } from 'styled-components'
+import { Provider } from 'rebass'
 
-import theme from '../theme';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import theme from '../theme'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 const propTypes = {
   children: func.isRequired,
@@ -19,7 +19,7 @@ const propTypes = {
       }),
     }),
   }).isRequired,
-};
+}
 
 /* eslint-disable no-unused-expressions */
 
@@ -38,7 +38,7 @@ injectGlobal`
   a {
     text-decoration: none;
   }
-`;
+`
 
 /* eslint-enable no-unused-expressions */
 
@@ -81,12 +81,12 @@ function Template({
         <Footer />
       </div>
     </Provider>
-  );
+  )
 }
 
-Template.propTypes = propTypes;
+Template.propTypes = propTypes
 
-export default Template;
+export default Template
 
 export const query = graphql`
   query LayoutQuery {
@@ -98,4 +98,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`

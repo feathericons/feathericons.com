@@ -1,30 +1,30 @@
-import React from 'react';
-import { func, string } from 'prop-types';
-import styled from 'styled-components';
-import { Absolute, Flex, Relative } from 'rebass';
+import React from 'react'
+import { func, string } from 'prop-types'
+import styled from 'styled-components'
+import { Absolute, Flex, Relative } from 'rebass'
 
-import { colors } from '../theme';
-import Icon from './Icon';
-import Input from './Input';
+import { colors } from '../theme'
+import Icon from './Icon'
+import Input from './Input'
 
 const propTypes = {
   value: string,
   placeholder: string,
   label: string,
   onChange: func,
-};
+}
 
 const defaultProps = {
   value: '',
   placeholder: '',
   label: '',
   onChange: () => {},
-};
+}
 
 const Fill = styled(Flex)`
   width: 100%;
   height: 100%;
-`;
+`
 
 function SearchInput({ value, placeholder, label, onChange, ...props }) {
   return (
@@ -45,10 +45,10 @@ function SearchInput({ value, placeholder, label, onChange, ...props }) {
         pl="56px"
       />
     </Relative>
-  );
+  )
 }
 
-SearchInput.propTypes = propTypes;
-SearchInput.defaultProps = defaultProps;
+SearchInput.propTypes = propTypes
+SearchInput.defaultProps = defaultProps
 
-export default SearchInput;
+export default SearchInput

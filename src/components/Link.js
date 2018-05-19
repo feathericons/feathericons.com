@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import { Link } from 'rebass';
+import styled from 'styled-components'
+import { Link } from 'rebass'
 
-import { colors } from '../theme';
+import { colors } from '../theme'
 
 export default styled(Link)`
   color: ${colors.gray9};
@@ -9,4 +9,4 @@ export default styled(Link)`
   &:hover {
     color: ${colors.base};
   }
-`;
+`

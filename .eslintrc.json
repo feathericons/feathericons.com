@@ -10,7 +10,11 @@
     "prefer-destructuring": ["error", { "object": true, "array": false }],
     "prettier/prettier": [
       "error",
-      { "singleQuote": true, "trailingComma": "es5" }
+      {
+        "singleQuote": true,
+        "trailingComma": "all",
+        "semi": false
+      }
     ],
     "react/jsx-filename-extension": "off"
   },

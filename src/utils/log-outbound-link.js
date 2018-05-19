@@ -4,8 +4,8 @@ function logOutboundLink(label) {
       eventCategory: 'outbound link',
       eventAction: 'click',
       eventLabel: label,
-    });
+    })
   }
 }
 
-export default logOutboundLink;
+export default logOutboundLink

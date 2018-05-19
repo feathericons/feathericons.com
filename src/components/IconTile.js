@@ -1,14 +1,14 @@
-import React from 'react';
-import { string } from 'prop-types';
-import styled from 'styled-components';
-import { Button, Flex, Truncate } from 'rebass';
+import React from 'react'
+import { string } from 'prop-types'
+import styled from 'styled-components'
+import { Button, Flex, Truncate } from 'rebass'
 
-import { colors, shadows } from '../theme';
-import Icon from './Icon';
+import { colors, shadows } from '../theme'
+import Icon from './Icon'
 
 const propTypes = {
   name: string.isRequired,
-};
+}
 
 const IconButton = styled(Button)`
   cursor: pointer;
@@ -23,7 +23,7 @@ const IconButton = styled(Button)`
   &:focus {
     box-shadow: ${shadows.outline};
   }
-`;
+`
 
 function IconTile({ name, ...props }) {
   return (
@@ -35,9 +35,9 @@ function IconTile({ name, ...props }) {
         </Truncate>
       </Flex>
     </IconButton>
-  );
+  )
 }
 
-IconTile.propTypes = propTypes;
+IconTile.propTypes = propTypes
 
-export default IconTile;
+export default IconTile

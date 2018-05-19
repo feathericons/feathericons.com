@@ -1,8 +1,8 @@
-import React from 'react';
-import { Flex } from 'rebass';
+import React from 'react'
+import { Flex } from 'rebass'
 
-import logOutboundLink from '../utils/log-outbound-link';
-import Link from './Link';
+import logOutboundLink from '../utils/log-outbound-link'
+import Link from './Link'
 
 function Footer() {
   return (
@@ -16,7 +16,7 @@ function Footer() {
         Made by @colebemis
       </Link>
     </Flex>
-  );
+  )
 }
 
-export default Footer;
+export default Footer
