@@ -1,22 +1,8 @@
-import React from 'react'
-import { number, oneOfType, string } from 'prop-types'
-import { icons } from 'feather-icons'
 import classnames from 'classnames'
-
+import { icons } from 'feather-icons'
+import { number, oneOfType, string } from 'prop-types'
+import React from 'react'
 import kebabToCamelKeys from '../utils/kebab-to-camel'
-
-const propTypes = {
-  name: string.isRequired,
-  className: string,
-  size: oneOfType([string, number]),
-  color: string,
-}
-
-const defaultProps = {
-  className: '',
-  size: 24,
-  color: 'inherit',
-}
 
 function Icon({ className, name, size, color }) {
   const { class: defaultClassName, ...attrs } = icons[name].attrs
@@ -33,7 +19,17 @@ function Icon({ className, name, size, color }) {
   )
 }
 
-Icon.propTypes = propTypes
-Icon.defaultProps = defaultProps
+Icon.propTypes = {
+  name: string.isRequired,
+  className: string,
+  size: oneOfType([string, number]),
+  color: string,
+}
+
+Icon.defaultProps = {
+  className: '',
+  size: 24,
+  color: 'inherit',
+}
 
 export default Icon
