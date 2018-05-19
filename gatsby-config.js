@@ -9,10 +9,21 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: 'gatsby-plugin-google-analytics',
       options: {
         trackingId: 'UA-63028889-4',
         anonymize: true,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'Feather',
+        short_name: 'Feather',
+        description: 'Simply beautiful open source icons',
+        start_url: '/',
+        theme_color: `#06f`,
+        background_color: `#fff`,
       },
     },
   ],
