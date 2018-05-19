@@ -32,7 +32,6 @@ const flattened = Object.keys(palette).reduce((accumlator, key) => {
 }, {});
 
 export const colors = {
-  black: '#000',
   white: '#fff',
   ...flattened,
 };
