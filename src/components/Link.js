@@ -1,12 +1,15 @@
-import styled from 'styled-components'
-import { Link } from 'rebass'
+import system from 'system-components'
 
-import { colors } from '../theme'
+const Link = system(
+  {
+    is: 'a',
+    color: 'gray9',
 
-export default styled(Link)`
-  color: ${colors.gray9};
+    hover: {
+      color: 'base',
+    },
+  },
+  'space',
+)
 
-  &:hover {
-    color: ${colors.base};
-  }
-`
+export default Link
