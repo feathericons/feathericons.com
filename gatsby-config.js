@@ -9,13 +9,6 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: 'UA-63028889-4',
-        anonymize: true,
-      },
-    },
-    {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'Feather',
@@ -24,6 +17,13 @@ module.exports = {
         start_url: '/',
         theme_color: `#06f`,
         background_color: `#fff`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'UA-63028889-4',
+        anonymize: true,
       },
     },
   ],
