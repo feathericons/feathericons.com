@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-expressions */
 import { injectGlobal } from 'styled-components'
-import { fonts } from './theme'
+import { fonts, colors } from './theme'
 
 injectGlobal`
   *,
@@ -21,5 +21,15 @@ injectGlobal`
 
   button::-moz-focus-inner {
     border: 0;
+  }
+
+  ::selection {
+    color: ${colors.white};
+    background-color: ${colors.base};
+  }
+
+  ::-moz-selection {
+    color: ${colors.white};
+    background-color: ${colors.base};
   }
 `
