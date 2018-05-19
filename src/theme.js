@@ -1,3 +1,5 @@
+export const breakpoints = ['32em', '48em', '64em', '80em']
+
 export const space = [0, 4, 8, 12, 16, 24, 32, 64, 128, 256, 512]
 
 export const fonts = {
@@ -56,6 +58,7 @@ export const shadows = {
 export const radius = 4
 
 export default {
+  breakpoints,
   space,
   fonts,
   fontSizes,

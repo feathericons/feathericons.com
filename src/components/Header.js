@@ -1,13 +1,14 @@
-import React from 'react'
 import { version } from 'feather-icons/package.json'
 import GatsbyLink from 'gatsby-link'
-import { Border, Box, Flex, Button } from 'rebass'
 import Hide from 'hidden-styled'
-
+import React from 'react'
+import { Border, Button } from 'rebass'
 import logOutboundLink from '../utils/log-outbound-link'
+import Box from './Box'
 import Container from './Container'
-import Text from './Text'
+import Flex from './Flex'
 import Link from './Link'
+import Text from './Text'
 
 const HeaderLink = props => <Link ml={[4, 5]} {...props} />
 
@@ -15,7 +16,7 @@ function Header() {
   return (
     <Border bottom py={5}>
       <Container>
-        <Flex align="center">
+        <Flex alignItems="center">
           <Text is={GatsbyLink} to="/" f={4} color="gray9">
             Feather
           </Text>

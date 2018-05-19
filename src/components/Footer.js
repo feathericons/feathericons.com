@@ -1,12 +1,11 @@
 import React from 'react'
-import { Flex } from 'rebass'
-
 import logOutboundLink from '../utils/log-outbound-link'
+import Flex from './Flex'
 import Link from './Link'
 
 function Footer() {
   return (
-    <Flex is="footer" direction="column" align="center" py={7}>
+    <Flex is="footer" flexDirection="column" alignItems="center" py={7}>
       <Link
         href="https://twitter.com/colebemis"
         target="_blank"

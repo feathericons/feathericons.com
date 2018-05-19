@@ -1,8 +1,7 @@
 import React from 'react'
 import { string } from 'prop-types'
 import styled from 'styled-components'
-import { Flex } from 'rebass'
-
+import Flex from './Flex'
 import { radius } from '../theme'
 import Text from './Text'
 

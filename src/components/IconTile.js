@@ -1,8 +1,8 @@
 import React from 'react'
 import { string } from 'prop-types'
 import styled from 'styled-components'
-import { Button, Flex, Truncate } from 'rebass'
-
+import { Button, Truncate } from 'rebass'
+import Flex from './Flex'
 import { colors, shadows } from '../theme'
 import Icon from './Icon'
 
@@ -28,7 +28,7 @@ const IconButton = styled(Button)`
 function IconTile({ name, ...props }) {
   return (
     <IconButton id={name} px={5} py={5} color="gray9" bg="gray0" {...props}>
-      <Flex align="center">
+      <Flex alignItems="center">
         <Icon name={name} color={colors.gray9} />
         <Truncate ml={4} fontSize={2}>
           {name}

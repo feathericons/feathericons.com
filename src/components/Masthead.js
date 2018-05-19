@@ -1,19 +1,19 @@
 import React from 'react'
-import { BlockLink, Button, Flex, Image } from 'rebass'
-
+import { BlockLink, Button, Image } from 'rebass'
 import stdlib from '../images/stdlib-logo.svg'
-import logOutboundLink from '../utils/log-outbound-link'
 import logDownload from '../utils/log-download'
+import logOutboundLink from '../utils/log-outbound-link'
+import Flex from './Flex'
 import Text from './Text'
 
 function Masthead() {
   return (
-    <Flex direction="column" align="center" py={7}>
+    <Flex flexDirection="column" alignItems="center" py={7}>
       <Text mb={5} f={5} center color="gray9">
         Simply beautiful open source icons
       </Text>
 
-      <Flex width={[1, 'auto']} direction={['column', 'row']}>
+      <Flex width={[1, 'auto']} flexDirection={['column', 'row']}>
         <Button
           is="a"
           href="https://github.com/feathericons/feather#feather"

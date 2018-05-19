@@ -1,8 +1,8 @@
 import React from 'react'
 import { func, string } from 'prop-types'
 import styled from 'styled-components'
-import { Absolute, Flex, Relative } from 'rebass'
-
+import { Absolute, Relative } from 'rebass'
+import Flex from './Flex'
 import { colors } from '../theme'
 import Icon from './Icon'
 import Input from './Input'
