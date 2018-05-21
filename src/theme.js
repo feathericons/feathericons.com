@@ -48,14 +48,14 @@ export const colors = {
   gray9: '#393f49',
 }
 
-export const shadows = {
-  none: 'none',
-  small: '0 0 0 1px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1)',
-  medium: '0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 16px rgba(0, 0, 0, 0.1)',
-  outline: `0 0 0 3px ${colors.base}`,
-}
+// TODO: add alpha grays
+export const shadows = [
+  'none',
+  `0 0 0 1px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1)`,
+  `0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 16px rgba(0, 0, 0, 0.1)`,
+]
 
-export const radius = 4
+export const radii = [0, 4]
 
 export default {
   breakpoints,
@@ -66,5 +66,5 @@ export default {
   lineHeights,
   colors,
   shadows,
-  radius,
+  radii,
 }

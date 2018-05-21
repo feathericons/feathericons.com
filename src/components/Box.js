@@ -2,7 +2,24 @@ import system from 'system-components'
 
 const Box = system(
   'width',
+  'height',
   'space',
+  'fontSize',
+  'color',
+  'zIndex',
+
+  // position
+  'top',
+  'bottom',
+  'left',
+  'right',
+
+  // borders
+  'borders',
+  'borderColor',
+  'borderRadius',
+
+  // flexbox
   'flexDirection',
   'alignItems',
   'flexWrap',
@@ -13,8 +30,6 @@ const Box = system(
   'order',
   'alignSelf',
   'justifySelf',
-  'fontSize',
-  'color',
 )
 
 export default Box
