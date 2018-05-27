@@ -1,5 +1,6 @@
 import React from 'react'
-import { BlockLink, Button, Image } from 'rebass'
+import { BlockLink, Image } from 'rebass'
+import Button from './Button'
 import stdlib from '../images/stdlib-logo.svg'
 import logDownload from '../utils/log-download'
 import logOutboundLink from '../utils/log-outbound-link'
@@ -22,11 +23,6 @@ function Masthead() {
           onClick={() => logOutboundLink('get started')}
           mx={[0, 2]}
           my={[2, 0]}
-          px={5}
-          py={4}
-          f={2}
-          color="white"
-          bg="base"
         >
           Get Started
         </Button>
@@ -38,11 +34,6 @@ function Masthead() {
           download
           mx={[0, 2]}
           my={[2, 0]}
-          px={5}
-          py={4}
-          f={2}
-          color="gray9"
-          bg="gray1"
         >
           Download
         </Button>

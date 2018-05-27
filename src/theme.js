@@ -21,7 +21,7 @@ export const fonts = {
 
 export const fontSizes = [12, 14, 16, 20, 24, 32, 48, 64]
 
-export const weights = [400, 500]
+export const fontWeights = { normal: 400, medium: 500 }
 
 export const lineHeights = {
   none: 1,
@@ -48,23 +48,15 @@ export const colors = {
   gray9: '#393f49',
 }
 
-// TODO: add alpha grays
-export const shadows = [
-  'none',
-  `0 0 0 1px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1)`,
-  `0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 16px rgba(0, 0, 0, 0.1)`,
-]
-
-export const radii = [0, 4]
+export const radii = [0, 5]
 
 export default {
   breakpoints,
   space,
   fonts,
   fontSizes,
-  weights,
+  fontWeights,
   lineHeights,
   colors,
-  shadows,
   radii,
 }
