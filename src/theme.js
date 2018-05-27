@@ -48,7 +48,7 @@ export const colors = {
   gray9: '#393f49',
 }
 
-export const radii = [0, 5]
+export const radii = [0, 4]
 
 export default {
   breakpoints,
