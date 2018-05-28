@@ -24,6 +24,7 @@ function Icon({ className, name, size, ...props }) {
     <Svg
       {...kebabToCamelKeys(attrs)}
       className={classnames(defaultClassName, className)}
+      aria-hidden
       width={size}
       height={size}
       dangerouslySetInnerHTML={{ __html: icons[name].contents }}
