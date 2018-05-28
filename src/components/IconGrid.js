@@ -22,7 +22,7 @@ function IconGrid({ icons }) {
               download(icon.toSvg(), `${icon.name}.svg`, 'image/svg+xml')
               logDownload(icon.name)
             }}
-            w={1}
+            w="100%"
           />
         </Box>
       ))}
