@@ -34,6 +34,8 @@ function Masthead() {
           download
           mx={[0, 2]}
           my={[2, 0]}
+          color="gray9"
+          bg="gray1"
         >
           Download
         </Button>
