@@ -1,4 +1,6 @@
 import system from 'system-components'
+import { themeGet } from 'styled-system'
+import { rgba } from 'polished'
 
 const Link = system(
   {
@@ -11,6 +13,12 @@ const Link = system(
       color: 'base',
     },
   },
+  props => ({
+    '&:focus': {
+      outline: `3px solid ${rgba(themeGet('colors.base')(props), 0.5)}`,
+      outlineOffset: '2px',
+    },
+  }),
   'space',
 )
 
