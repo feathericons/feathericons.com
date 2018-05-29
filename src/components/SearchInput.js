@@ -19,7 +19,6 @@ const Input = system(
     lineHeight: 'none',
     border: 0,
     borderRadius: 1,
-    boxShadow: 1,
   },
   props => ({
     fontFamily: 'inherit',
