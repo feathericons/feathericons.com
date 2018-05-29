@@ -10,6 +10,7 @@ function IconTile({ name, ...props }) {
   return (
     <Button
       id={name}
+      width={1}
       px={5}
       py={5}
       fontWeight="normal"
