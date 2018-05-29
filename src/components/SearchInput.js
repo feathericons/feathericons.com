@@ -1,3 +1,4 @@
+import { rgba } from 'polished'
 import { func, string } from 'prop-types'
 import React from 'react'
 import { themeGet } from 'styled-system'
@@ -25,7 +26,7 @@ const Input = system(
     outline: 0,
 
     '&:focus': {
-      boxShadow: `0 0 0 3px ${themeGet('colors.base')(props)}`,
+      boxShadow: `0 0 0 3px ${rgba(themeGet('colors.base')(props), 0.5)}`,
     },
   }),
 )
