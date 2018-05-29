@@ -3,6 +3,7 @@ import system from 'system-components'
 const Box = system(
   'width',
   'height',
+  'display',
   'space',
   'fontSize',
   'color',

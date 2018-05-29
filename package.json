@@ -25,7 +25,6 @@
     "gatsby-plugin-manifest": "^1.0.22",
     "gatsby-plugin-react-helmet": "2.0.1",
     "gatsby-plugin-styled-components": "2.0.4",
-    "hidden-styled": "1.0.0-0",
     "react-helmet": "5.2.0",
     "rebass": "1.0.4",
     "styled-components": "^3.3.0",

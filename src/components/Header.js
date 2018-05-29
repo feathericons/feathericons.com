@@ -1,10 +1,9 @@
 import { version } from 'feather-icons/package.json'
 import GatsbyLink from 'gatsby-link'
-import Hide from 'hidden-styled'
 import React from 'react'
-import { Button } from 'rebass'
 import logOutboundLink from '../utils/log-outbound-link'
 import Box from './Box'
+import Button from './Button'
 import Container from './Container'
 import Flex from './Flex'
 import Link from './Link'
@@ -16,7 +15,7 @@ function Header() {
     <Box py={5} borderBottom="1px solid" borderColor="gray2">
       <Container>
         <Flex alignItems="center">
-          <Link is={GatsbyLink} to="/" fontSize={4} fontWeight="medium">
+          <Link is={GatsbyLink} to="/" fontSize={4}>
             Feather
           </Link>
 
@@ -29,6 +28,7 @@ function Header() {
             ml={2}
             py={1}
             px={2}
+            fontSize={1}
             color="gray8"
             bg="gray1"
           >
@@ -37,7 +37,7 @@ function Header() {
 
           <Box mx="auto" />
 
-          <Hide xs>
+          <Box display={['none', 'block']}>
             <HeaderLink
               href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
                 'Feather – Simply beautiful open source icons by @colebemis https://feathericons.com',
@@ -66,7 +66,7 @@ function Header() {
             >
               Usage
             </HeaderLink>
-          </Hide>
+          </Box>
 
           <HeaderLink
             href="https://github.com/feathericons/feather"
