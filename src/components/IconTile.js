@@ -1,7 +1,6 @@
 import { string } from 'prop-types'
 import React from 'react'
 import { Truncate } from 'rebass'
-import { colors } from '../theme'
 import Button from './Button'
 import Flex from './Flex'
 import Icon from './Icon'
@@ -18,7 +17,6 @@ function IconTile({ name, ...props }) {
       color="gray9"
       bg="gray0"
       hover={{ backgroundColor: 'white' }}
-      focus={{ outline: 0, boxShadow: `0 0 0 3px ${colors.base}` }}
       {...props}
     >
       <Flex alignItems="center">
