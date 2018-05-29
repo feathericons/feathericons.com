@@ -8,7 +8,6 @@ import Box from './Box'
 import Container from './Container'
 import Flex from './Flex'
 import Link from './Link'
-import Text from './Text'
 
 const HeaderLink = props => <Link ml={[4, 5]} {...props} />
 
@@ -17,9 +16,9 @@ function Header() {
     <Box py={5} borderBottom="1px solid" borderColor="gray2">
       <Container>
         <Flex alignItems="center">
-          <Text is={GatsbyLink} to="/" f={4} color="gray9">
+          <Link is={GatsbyLink} to="/" fontSize={4} fontWeight="medium">
             Feather
-          </Text>
+          </Link>
 
           <Button
             is="a"
