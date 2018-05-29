@@ -3,7 +3,7 @@ import { icons } from 'feather-icons'
 import { number, oneOfType, string } from 'prop-types'
 import React from 'react'
 import system from 'system-components'
-import kebabToCamelKeys from '../utils/kebab-to-camel'
+import kebabToCamelKeys from '../utils/kebabToCamelKeys'
 
 const Svg = system(
   {

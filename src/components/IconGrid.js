@@ -1,7 +1,7 @@
 import download from 'downloadjs'
 import { arrayOf, func, shape, string } from 'prop-types'
 import React from 'react'
-import logDownload from '../utils/log-download'
+import logDownload from '../utils/logDownload'
 import Box from './Box'
 import Flex from './Flex'
 import IconTile from './IconTile'

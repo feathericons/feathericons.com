@@ -1,7 +1,7 @@
 import { version } from 'feather-icons/package.json'
 import GatsbyLink from 'gatsby-link'
 import React from 'react'
-import logOutboundLink from '../utils/log-outbound-link'
+import logOutboundLink from '../utils/logOutboundLink'
 import Box from './Box'
 import Button from './Button'
 import Container from './Container'

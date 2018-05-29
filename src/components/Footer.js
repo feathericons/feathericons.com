@@ -1,5 +1,5 @@
 import React from 'react'
-import logOutboundLink from '../utils/log-outbound-link'
+import logOutboundLink from '../utils/logOutboundLink'
 import Flex from './Flex'
 import Link from './Link'
 
