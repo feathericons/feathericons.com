@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-expressions */
+import { rgba } from 'polished'
 import { injectGlobal } from 'styled-components'
-import { fonts, colors } from './theme'
+import { colors, fonts } from './theme'
 
 injectGlobal`
   *,
@@ -24,12 +25,10 @@ injectGlobal`
   }
 
   ::selection {
-    color: ${colors.white};
-    background-color: ${colors.base};
+    background-color: ${rgba(colors.base, 1 / 4)};
   }
 
   ::-moz-selection {
-    color: ${colors.white};
-    background-color: ${colors.base};
+    background-color: ${rgba(colors.base, 1 / 4)};
   }
 `
