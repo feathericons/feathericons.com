@@ -20,6 +20,9 @@ const Link = system(
     },
   }),
   'space',
+  'width',
 )
+
+Link.displayName = 'Link'
 
 export default Link

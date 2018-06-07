@@ -1,11 +1,12 @@
 import React from 'react'
-import { BlockLink, Image } from 'rebass'
+import { Image } from 'rebass'
 import Button from './Button'
 import stdlib from '../images/stdlib-logo.svg'
 import logDownload from '../utils/logDownload'
 import logOutboundLink from '../utils/logOutboundLink'
 import Flex from './Flex'
 import Text from './Text'
+import BlockLink from './BlockLink'
 
 function Masthead() {
   return (
