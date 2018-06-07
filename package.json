@@ -27,7 +27,7 @@
     "gatsby-plugin-styled-components": "2.0.4",
     "polished": "^1.9.2",
     "react-helmet": "5.2.0",
-    "styled-components": "^3.3.0",
+    "styled-components": "^3.3.2",
     "styled-system": "^2.2.5",
     "system-components": "^2.0.3"
   },
