@@ -14,6 +14,8 @@ const Link = system(
     },
   },
   props => ({
+    textDecoration: 'none',
+
     '&:focus': {
       outline: `3px solid ${rgba(themeGet('colors.base')(props), 0.5)}`,
       outlineOffset: '2px',
