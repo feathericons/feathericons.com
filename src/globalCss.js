@@ -6,12 +6,14 @@ import { colors, fonts } from './theme'
 injectGlobal({
   '*, *:before, *:after': {
     boxSizing: 'inherit',
+    transition: 'inherit',
   },
 
   body: {
     boxSizing: 'border-box',
     margin: 0,
     fontFamily: fonts.sans,
+    transition: 'all 150ms',
   },
 
   'button::-moz-focus-inner': {
