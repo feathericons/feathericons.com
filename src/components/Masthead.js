@@ -1,19 +1,20 @@
 import React from 'react'
 import { Image } from 'rebass'
-import Button from './Button'
 import stdlib from '../images/stdlib-logo.svg'
 import logDownload from '../utils/logDownload'
 import logOutboundLink from '../utils/logOutboundLink'
+import BlockLink from './BlockLink'
+import Button from './Button'
 import Flex from './Flex'
 import Text from './Text'
-import BlockLink from './BlockLink'
+import Heading from './Heading'
 
 function Masthead() {
   return (
     <Flex flexDirection="column" alignItems="center" py={7}>
-      <Text mb={5} lineHeight="tight" fontSize={5} textAlign="center">
+      <Heading mb={5} textAlign="center">
         Simply beautiful open source icons
-      </Text>
+      </Heading>
 
       <Flex width={[1, 'auto']} flexDirection={['column', 'row']}>
         <Button
