@@ -33,4 +33,6 @@ const Box = system(
   'justifySelf',
 )
 
+Box.displayName = 'Box'
+
 export default Box

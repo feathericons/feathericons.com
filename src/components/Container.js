@@ -6,4 +6,6 @@ const Container = system({
   mx: 'auto',
 })
 
+Container.displayName = 'Container'
+
 export default Container

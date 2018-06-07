@@ -38,4 +38,6 @@ const Button = system(
   'focus',
 )
 
+Button.displayName = 'Button'
+
 export default Button
