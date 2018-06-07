@@ -1,13 +1,13 @@
 import React from 'react'
-import { Image } from 'rebass'
-import stdlib from '../images/stdlib-logo.svg'
+import stdlibLogo from '../images/stdlib-logo.svg'
 import logDownload from '../utils/logDownload'
 import logOutboundLink from '../utils/logOutboundLink'
 import BlockLink from './BlockLink'
 import Button from './Button'
 import Flex from './Flex'
-import Text from './Text'
 import Heading from './Heading'
+import Image from './Image'
+import Text from './Text'
 
 function Masthead() {
   return (
@@ -53,7 +53,7 @@ function Masthead() {
         <Text width={1} textAlign="center" lineHeight="none" color="gray8">
           Sponsored by
         </Text>
-        <Image src={stdlib} width={112} mt={2} alt="StdLib Logo" />
+        <Image src={stdlibLogo} width={112} mt={2} alt="StdLib Logo" />
       </BlockLink>
     </Flex>
   )
