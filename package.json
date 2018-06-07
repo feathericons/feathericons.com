@@ -32,7 +32,7 @@
     "system-components": "^2.0.3"
   },
   "devDependencies": {
-    "babel-eslint": "8.2.1",
+    "babel-eslint": "8.2.3",
     "eslint": "4.11.0",
     "eslint-config-airbnb": "16.1.0",
     "eslint-config-prettier": "2.8.0",
