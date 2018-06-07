@@ -20,10 +20,17 @@ const Input = system(
     lineHeight: 'none',
     border: 0,
     borderRadius: 1,
+    boxShadow: 1,
   },
   props => ({
     fontFamily: 'inherit',
+    appearance: 'none',
     outline: 0,
+
+    // Removes the extra left padding added to search inputs on Safari
+    '::-webkit-search-decoration': {
+      display: 'none',
+    },
 
     '&:focus': {
       boxShadow: `0 0 0 3px ${rgba(themeGet('colors.base')(props), 0.5)}`,

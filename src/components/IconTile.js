@@ -16,7 +16,7 @@ function IconTile({ name, ...props }) {
       textAlign="left"
       color="gray9"
       bg="gray0"
-      hover={{ backgroundColor: 'white' }}
+      hover={{ backgroundColor: 'white', boxShadow: 2 }}
       {...props}
     >
       <Flex alignItems="center">

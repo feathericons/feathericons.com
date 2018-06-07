@@ -50,6 +50,12 @@ export const colors = {
 
 export const radii = [0, 4]
 
+export const shadows = [
+  'none',
+  '0 0 0 1px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.1)',
+  '0 0 0 1px rgba(0,0,0,0.1), 0 4px 16px rgba(0,0,0,0.1)',
+]
+
 export default {
   breakpoints,
   space,
@@ -59,4 +65,5 @@ export default {
   lineHeights,
   colors,
   radii,
+  shadows,
 }
