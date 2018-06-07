@@ -4,8 +4,8 @@ function logDownload(label) {
       eventCategory: 'download',
       eventAction: 'click',
       eventLabel: label,
-    });
+    })
   }
 }
 
-export default logDownload;
+export default logDownload

@@ -1,10 +1,21 @@
-import styled from 'styled-components';
-import { Text } from 'rebass';
-import { textAlign } from 'styled-system';
+import system from 'system-components'
 
-import lineHeight from '../utils/line-height';
+const Text = system(
+  {
+    is: 'span',
+    display: 'inline-block',
+    fontSize: 2,
+    lineHeight: 'normal',
+    color: 'gray9',
+  },
+  'space',
+  'width',
+  'textAlign',
+  'lineHeight',
+  'fontWeight',
+  'letterSpacing',
+)
 
-export default styled(Text)`
-  ${textAlign};
-  ${lineHeight};
-`;
+Text.displayName = 'Text'
+
+export default Text

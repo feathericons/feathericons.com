@@ -1,39 +1,47 @@
-import React from 'react';
-import { number, oneOfType, string } from 'prop-types';
-import { icons } from 'feather-icons';
-import classnames from 'classnames';
+import classnames from 'classnames'
+import { icons } from 'feather-icons'
+import { number, oneOfType, string } from 'prop-types'
+import React from 'react'
+import system from 'system-components'
+import kebabToCamelKeys from '../utils/kebabToCamelKeys'
 
-import kebabToCamelKeys from '../utils/kebab-to-camel';
+const Svg = system(
+  {
+    is: 'svg',
+  },
+  {
+    boxSizing: 'content-box',
+    verticalAlign: 'middle',
+  },
+  'space',
+  'color',
+)
 
-const propTypes = {
+function Icon({ className, name, size, ...props }) {
+  const { class: defaultClassName, ...attrs } = icons[name].attrs
+
+  return (
+    <Svg
+      {...kebabToCamelKeys(attrs)}
+      className={classnames(defaultClassName, className)}
+      aria-hidden
+      width={size}
+      height={size}
+      dangerouslySetInnerHTML={{ __html: icons[name].contents }}
+      {...props}
+    />
+  )
+}
+
+Icon.propTypes = {
   name: string.isRequired,
   className: string,
   size: oneOfType([string, number]),
-  color: string,
-};
-
-const defaultProps = {
-  className: '',
-  size: 24,
-  color: 'inherit',
-};
-
-function Icon({ className, name, size, color }) {
-  const { class: defaultClassName, ...attrs } = icons[name].attrs;
-
-  return (
-    <svg
-      {...kebabToCamelKeys(attrs)}
-      className={classnames(defaultClassName, className)}
-      width={size}
-      height={size}
-      color={color}
-      dangerouslySetInnerHTML={{ __html: icons[name].contents }}
-    />
-  );
 }
 
-Icon.propTypes = propTypes;
-Icon.defaultProps = defaultProps;
+Icon.defaultProps = {
+  className: '',
+  size: 24,
+}
 
-export default Icon;
+export default Icon
