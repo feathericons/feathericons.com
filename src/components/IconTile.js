@@ -1,9 +1,9 @@
 import { string } from 'prop-types'
 import React from 'react'
-import { Truncate } from 'rebass'
 import Button from './Button'
 import Flex from './Flex'
 import Icon from './Icon'
+import Truncate from './Truncate'
 
 function IconTile({ name, ...props }) {
   return (
@@ -21,9 +21,7 @@ function IconTile({ name, ...props }) {
     >
       <Flex alignItems="center">
         <Icon name={name} color="gray9" />
-        <Truncate ml={4} fontSize={2}>
-          {name}
-        </Truncate>
+        <Truncate ml={4}>{name}</Truncate>
       </Flex>
     </Button>
   )

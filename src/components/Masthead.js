@@ -10,7 +10,7 @@ import Text from './Text'
 function Masthead() {
   return (
     <Flex flexDirection="column" alignItems="center" py={7}>
-      <Text mb={5} f={5} center color="gray9">
+      <Text mb={5} lineHeight="tight" fontSize={5} textAlign="center">
         Simply beautiful open source icons
       </Text>
 
@@ -48,7 +48,7 @@ function Masthead() {
         onClick={() => logOutboundLink('stdlib')}
         mt={7}
       >
-        <Text center color="gray8">
+        <Text width={1} textAlign="center" lineHeight="none" color="gray8">
           Sponsored by
         </Text>
         <Image src={stdlib} width={112} mt={2} alt="StdLib Logo" />

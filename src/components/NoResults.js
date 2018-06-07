@@ -1,12 +1,11 @@
 import { string } from 'prop-types'
 import React from 'react'
-import styled from 'styled-components'
 import Flex from './Flex'
 import Text from './Text'
 
-const BreakWord = styled(Text)`
-  word-break: break-word;
-`
+const BreakWord = Text.extend({
+  wordBreak: 'break-word',
+})
 
 function NoResults({ value }) {
   return (
@@ -18,7 +17,7 @@ function NoResults({ value }) {
       bg="gray0"
       borderRadius={1}
     >
-      <BreakWord f={3} lineHeight="normal" color="gray8" center>
+      <BreakWord width={1} fontSize={3} color="gray8" textAlign="center">
         No results found for &ldquo;{value}&rdquo;
       </BreakWord>
     </Flex>
