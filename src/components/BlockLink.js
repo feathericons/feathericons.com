@@ -1,19 +1,14 @@
-import system from 'system-components'
-import { themeGet } from 'styled-system'
 import { rgba } from 'polished'
+import { themeGet } from 'styled-system'
+import system from 'system-components'
 
-const Link = system(
+const BlockLink = system(
   {
     is: 'a',
-    fontSize: 2,
-    fontWeight: 'normal',
-    color: 'gray9',
-
-    hover: {
-      color: 'base',
-    },
+    color: 'inherit',
   },
   props => ({
+    display: 'block',
     textDecoration: 'none',
 
     '&:focus': {
@@ -25,6 +20,6 @@ const Link = system(
   'width',
 )
 
-Link.displayName = 'Link'
+BlockLink.displayName = 'BlockLink'
 
-export default Link
+export default BlockLink

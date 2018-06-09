@@ -1,19 +1,22 @@
-import React from 'react';
-import { BlockLink, Button, Flex, Image } from 'rebass';
-
-import stdlib from '../images/stdlib-logo.svg';
-import logOutboundLink from '../utils/log-outbound-link';
-import logDownload from '../utils/log-download';
-import Text from './Text';
+import React from 'react'
+import stdlibLogo from '../images/stdlib-logo.svg'
+import logDownload from '../utils/logDownload'
+import logOutboundLink from '../utils/logOutboundLink'
+import BlockLink from './BlockLink'
+import Button from './Button'
+import Flex from './Flex'
+import Heading from './Heading'
+import Image from './Image'
+import Text from './Text'
 
 function Masthead() {
   return (
-    <Flex direction="column" align="center" py={7}>
-      <Text mb={5} f={5} center color="gray9">
+    <Flex flexDirection="column" alignItems="center" py={7}>
+      <Heading mb={5} textAlign="center">
         Simply beautiful open source icons
-      </Text>
+      </Heading>
 
-      <Flex width={[1, 'auto']} direction={['column', 'row']}>
+      <Flex width={[1, 'auto']} flexDirection={['column', 'row']}>
         <Button
           is="a"
           href="https://github.com/feathericons/feather#feather"
@@ -22,11 +25,6 @@ function Masthead() {
           onClick={() => logOutboundLink('get started')}
           mx={[0, 2]}
           my={[2, 0]}
-          px={5}
-          py={4}
-          f={2}
-          color="white"
-          bg="base"
         >
           Get Started
         </Button>
@@ -38,9 +36,6 @@ function Masthead() {
           download
           mx={[0, 2]}
           my={[2, 0]}
-          px={5}
-          py={4}
-          f={2}
           color="gray9"
           bg="gray1"
         >
@@ -55,13 +50,13 @@ function Masthead() {
         onClick={() => logOutboundLink('stdlib')}
         mt={7}
       >
-        <Text center color="gray8">
+        <Text width={1} textAlign="center" lineHeight="none" color="gray8">
           Sponsored by
         </Text>
-        <Image src={stdlib} width={112} mt={2} alt="StdLib Logo" />
+        <Image src={stdlibLogo} width={112} mt={2} alt="StdLib Logo" />
       </BlockLink>
     </Flex>
-  );
+  )
 }
 
-export default Masthead;
+export default Masthead

@@ -1,4 +1,11 @@
-import React from 'react';
-import { Container } from 'rebass';
+import system from 'system-components'
 
-export default props => <Container width={0.85} px={0} {...props} />;
+const Container = system({
+  width: 0.85,
+  maxWidth: 1024,
+  mx: 'auto',
+})
+
+Container.displayName = 'Container'
+
+export default Container

@@ -4,8 +4,8 @@ function kebabToCamelKeys(object) {
       ...accumulator,
       [kebabToCamel(key)]: object[key],
     }),
-    {}
-  );
+    {},
+  )
 }
 
 function kebabToCamel(string) {
@@ -13,9 +13,9 @@ function kebabToCamel(string) {
     .split('-')
     .map(
       (word, index) =>
-        index > 0 ? word[0].toUpperCase() + word.slice(1) : word
+        index > 0 ? word[0].toUpperCase() + word.slice(1) : word,
     )
-    .join('');
+    .join('')
 }
 
-export default kebabToCamelKeys;
+export default kebabToCamelKeys
