@@ -61,3 +61,4 @@ typings/
 public
 *.zip
 yarn-error.log
+.vscode
