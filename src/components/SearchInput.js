@@ -53,6 +53,7 @@ function SearchInput({ value, placeholder, label, onChange, ...props }) {
         aria-label={label}
         onChange={onChange}
         pl={56}
+        autoFocus
       />
     </Relative>
   )
