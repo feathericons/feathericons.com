@@ -35,9 +35,8 @@ class IconSearch extends React.Component {
   }
 }
 
-function getResults(value = '') {
-  const list = Object.keys(icons).map(name => icons[name])
-  return search(list, value, { keys: ['name', 'tags'] })
+function getResults(value) {
+  return search(Object.values(icons), value, { keys: ['name', 'tags'] })
 }
 
 export default IconSearch
