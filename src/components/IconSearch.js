@@ -6,6 +6,8 @@ import SearchInput from './SearchInput'
 import IconGrid from './IconGrid'
 import NoResults from './NoResults'
 
+const ICON_COUNT = Object.keys(icons).length
+
 class IconSearch extends React.Component {
   state = {
     inputValue: '',
@@ -19,7 +21,7 @@ class IconSearch extends React.Component {
     return (
       <div>
         <SearchInput
-          placeholder="Search icons"
+          placeholder={`Search ${ICON_COUNT} icons`}
           label="Search"
           value={this.state.inputValue}
           onChange={this.handleInputChange}
