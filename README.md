@@ -1,5 +1,7 @@
 # feathericons.com
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3c1945b2-05df-47a2-a2c6-af04dd3802f4/deploy-status)](https://app.netlify.com/sites/feather/deploys)
+
 This repo contains the source code for [feathericons.com](https://feathericons.com).
 
 ## Project Setup
