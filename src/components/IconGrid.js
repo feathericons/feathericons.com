@@ -1,7 +1,9 @@
 import download from 'downloadjs'
+import copy from 'copy-to-clipboard'
 import { arrayOf, func, shape, string } from 'prop-types'
 import React from 'react'
 import logDownload from '../utils/logDownload'
+import logCopy from '../utils/logCopy'
 import Box from './Box'
 import Flex from './Flex'
 import IconTile from './IconTile'
@@ -14,9 +16,14 @@ function IconGrid({ icons }) {
           <IconTile
             name={icon.name}
             title={`Download ${icon.name}.svg`}
-            onClick={() => {
-              download(icon.toSvg(), `${icon.name}.svg`, 'image/svg+xml')
-              logDownload(icon.name)
+            onClick={event => {
+              if (event.shiftKey) {
+                copy(icon.toSvg())
+                logCopy(icon.name)
+              } else {
+                download(icon.toSvg(), `${icon.name}.svg`, 'image/svg+xml')
+                logDownload(icon.name)
+              }
             }}
           />
         </Box>
