@@ -17,7 +17,7 @@
   "dependencies": {
     "classnames": "2.2.5",
     "downloadjs": "1.4.7",
-    "feather-icons": "^4.16.0",
+    "feather-icons": "^4.17.0",
     "fuse.js": "3.2.0",
     "gatsby": "1.9.261",
     "gatsby-link": "1.6.28",
