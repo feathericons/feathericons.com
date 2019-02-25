@@ -50,7 +50,7 @@ function Header() {
             </HeaderLink>
 
             <HeaderLink
-              href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=G6CPFZ6PQRZW8&amp;lc=US&amp;item_name=Feather&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"
+              href="https://www.paypal.me/colebemis/5"
               onClick={() => logOutboundLink('donate')}
             >
               Donate
