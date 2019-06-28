@@ -1,35 +1,29 @@
 import { string } from 'prop-types'
-import React from 'react'
-import Flex from './Flex'
-import Text from './Text'
+import theme from '../theme'
 
-const BreakWord = Text.extend({
-  wordBreak: 'break-word',
-})
-
-function NoResults({ value }) {
+function NoResults({ query }) {
   return (
-    <Flex
-      direction="column"
-      align="center"
-      px={6}
-      py={7}
-      bg="gray0"
-      borderRadius={1}
+    <div
+      css={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        padding: `${theme.space[7]} ${theme.space[6]}`,
+        margin: theme.space[6],
+        backgroundColor: theme.colors.gray[2],
+        wordBreak: 'break-word',
+        fontSize: theme.fontSizes[3],
+        textAlign: 'center',
+        borderRadius: theme.radii[1],
+      }}
     >
-      <BreakWord width={1} fontSize={3} color="gray8" textAlign="center">
-        No results found for &ldquo;{value}&rdquo;
-      </BreakWord>
-    </Flex>
+      No results found for &ldquo;{query}&rdquo;
+    </div>
   )
 }
 
 NoResults.propTypes = {
-  value: string,
-}
-
-NoResults.defaultProps = {
-  value: '',
+  query: string.isRequired,
 }
 
 export default NoResults

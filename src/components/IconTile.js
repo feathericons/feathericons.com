@@ -1,29 +1,48 @@
+import { rgba } from 'polished'
 import { string } from 'prop-types'
-import React from 'react'
-import Button from './Button'
-import Flex from './Flex'
+import theme from '../theme'
 import Icon from './Icon'
-import Truncate from './Truncate'
 
 function IconTile({ name, ...props }) {
   return (
-    <Button
-      id={name}
-      width={1}
-      px={5}
-      py={5}
-      fontWeight="normal"
-      textAlign="left"
-      color="gray9"
-      bg="gray0"
-      hover={{ backgroundColor: 'white', boxShadow: 2 }}
+    <button
+      css={{
+        display: 'flex',
+        flexDirection: 'column',
+        textAlign: 'center',
+        alignItems: 'stretch',
+        padding: 0,
+        background: 'transparent',
+        border: 0,
+        appearance: 'none',
+        cursor: 'pointer',
+        outline: 0,
+        '&:hover .icon-container': {
+          boxShadow: theme.shadows[2],
+        },
+        '&:focus .icon-container': {
+          boxShadow: `0 0 0 3px ${rgba(theme.colors.primary[0], 0.5)}`,
+        },
+      }}
       {...props}
     >
-      <Flex alignItems="center">
-        <Icon name={name} color="gray9" />
-        <Truncate ml={4}>{name}</Truncate>
-      </Flex>
-    </Button>
+      <div
+        className="icon-container"
+        css={{
+          width: '100%',
+          padding: '24px 0',
+          backgroundColor: theme.colors.white,
+          borderRadius: 4,
+          marginBottom: 8,
+          boxShadow: theme.shadows[1],
+        }}
+      >
+        <Icon name={name} />
+      </div>
+      <span css={{ fontSize: theme.fontSizes[1], color: theme.colors.gray[8] }}>
+        {name}
+      </span>
+    </button>
   )
 }
 
