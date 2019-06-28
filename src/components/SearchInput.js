@@ -25,6 +25,7 @@ function SearchInput({ placeholder, value, onChange, ...props }) {
         onChange={onChange}
         css={{
           width: '100%',
+          margin: 0,
           padding: theme.space[4],
           paddingLeft: '3.25rem',
           fontSize: 'inherit',
@@ -34,6 +35,7 @@ function SearchInput({ placeholder, value, onChange, ...props }) {
           background: theme.colors.white,
           boxShadow: theme.shadows[1],
           border: 0,
+          borderRadius: 0,
           appearance: 'none',
           outline: 0,
           // Removes the extra left padding added to search inputs on Safari

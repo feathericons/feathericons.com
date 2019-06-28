@@ -9,6 +9,7 @@ function IconTile({ name, ...props }) {
       css={{
         display: 'flex',
         flexDirection: 'column',
+        fontFamily: 'inherit',
         textAlign: 'center',
         alignItems: 'stretch',
         padding: 0,
@@ -17,6 +18,7 @@ function IconTile({ name, ...props }) {
         appearance: 'none',
         cursor: 'pointer',
         outline: 0,
+        overflow: 'visible',
         '&:hover .icon-container': {
           boxShadow: theme.shadows[2],
         },

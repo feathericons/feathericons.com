@@ -34,6 +34,7 @@ function Header() {
           marginLeft: theme.space[2],
           fontSize: theme.fontSizes[1],
           lineHeight: theme.lineHeights.tight,
+          fontWeight: theme.fontWeights.medium,
           textDecoration: 'none',
           color: theme.colors.gray[7],
           backgroundColor: theme.colors.gray[1],
