@@ -1,32 +1,18 @@
-import classnames from 'classnames'
 import { icons } from 'feather-icons'
-import { number, oneOfType, string } from 'prop-types'
-import React from 'react'
-import system from 'system-components'
-import kebabToCamelKeys from '../utils/kebabToCamelKeys'
+import { string } from 'prop-types'
 
-const Svg = system(
-  {
-    is: 'svg',
-  },
-  {
-    boxSizing: 'content-box',
-    verticalAlign: 'middle',
-  },
-  'space',
-  'color',
-)
-
-function Icon({ className, name, size, ...props }) {
-  const { class: defaultClassName, ...attrs } = icons[name].attrs
-
+function Icon({ name, ...props }) {
   return (
-    <Svg
-      {...kebabToCamelKeys(attrs)}
-      className={classnames(defaultClassName, className)}
-      aria-hidden
-      width={size}
-      height={size}
+    <svg
+      viewBox="0 0 24 24"
+      width={24}
+      height={24}
+      stroke="currentColor"
+      strokeWidth={2}
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      css={{ verticalAlign: 'text-bottom' }}
       dangerouslySetInnerHTML={{ __html: icons[name].contents }}
       {...props}
     />
@@ -35,13 +21,6 @@ function Icon({ className, name, size, ...props }) {
 
 Icon.propTypes = {
   name: string.isRequired,
-  className: string,
-  size: oneOfType([string, number]),
-}
-
-Icon.defaultProps = {
-  className: '',
-  size: 24,
 }
 
 export default Icon

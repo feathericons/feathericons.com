@@ -1,30 +1,27 @@
-import system from 'system-components'
-import { themeGet } from 'styled-system'
-import { rgba } from 'polished'
+import { func, oneOf, string } from 'prop-types'
+import theme from '../theme'
 
-const Link = system(
-  {
-    is: 'a',
-    fontSize: 2,
-    fontWeight: 'normal',
-    color: 'gray9',
+function Link({ as: Component, ...props }) {
+  return (
+    <Component
+      css={{
+        color: 'inherit',
+        textDecoration: 'none',
+        '&:hover': {
+          color: theme.colors.primary[0],
+        },
+      }}
+      {...props}
+    />
+  )
+}
 
-    hover: {
-      color: 'base',
-    },
-  },
-  props => ({
-    textDecoration: 'none',
+Link.propTypes = {
+  as: oneOf([func, string]),
+}
 
-    '&:focus': {
-      outline: `3px solid ${rgba(themeGet('colors.base')(props), 0.5)}`,
-      outlineOffset: '2px',
-    },
-  }),
-  'space',
-  'width',
-)
-
-Link.displayName = 'Link'
+Link.defaultProps = {
+  as: 'a',
+}
 
 export default Link

@@ -1,43 +1,38 @@
-import { rgba } from 'polished'
-import { themeGet } from 'styled-system'
-import system from 'system-components'
+import { func, oneOf, string } from 'prop-types'
+import theme from '../theme'
 
-const Button = system(
-  {
-    is: 'button',
-    m: 0,
-    px: 5,
-    py: 4,
-    fontSize: 2,
-    fontWeight: 'medium',
-    lineHeight: 'tight',
-    color: 'white',
-    bg: 'base',
-    borderRadius: 1,
-    border: 0,
-    textAlign: 'center',
-    hover: {
-      boxShadow: 'inset 0 0 0 999px rgba(0, 0, 0, 0.1)',
-    },
-  },
-  props => ({
-    fontFamily: 'inherit',
-    display: 'inline-block',
-    verticalAlign: 'middle',
-    textDecoration: 'none',
-    appearance: 'none',
-    cursor: 'pointer',
+function Button({ as: Component, ...props }) {
+  return (
+    <Component
+      css={{
+        display: 'inline-block',
+        margin: 0,
+        padding: `${theme.space[4]} ${theme.space[5]}`,
+        fontSize: theme.fontSizes[2],
+        fontWeight: theme.fontWeights.medium,
+        fontFamily: 'inherit',
+        lineHeight: theme.lineHeights.none,
+        textDecoration: 'none',
+        border: 0,
+        borderRadius: theme.radii[1],
+        appearance: 'none',
+        cursor: 'pointer',
+        '&:disabled': {
+          opacity: 0.5,
+          cursor: 'default',
+        },
+      }}
+      {...props}
+    />
+  )
+}
 
-    '&:focus': {
-      outline: 0,
-      boxShadow: `0 0 0 3px ${rgba(themeGet('colors.base')(props), 1 / 2)}`,
-    },
-  }),
-  'width',
-  'hover',
-  'focus',
-)
+Button.propTypes = {
+  as: oneOf([func, string]),
+}
 
-Button.displayName = 'Button'
+Button.defaultProps = {
+  as: 'button',
+}
 
 export default Button
