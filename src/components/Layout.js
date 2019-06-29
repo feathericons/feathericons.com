@@ -30,7 +30,7 @@ function Layout({ children }) {
         <meta property="og:description" content={description} />
         <meta
           property="og:image"
-          content={`${data.site.host}/feather-og-image.png`}
+          content="https://feathericons.com/feather-og.png"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content="@colebemis" />
