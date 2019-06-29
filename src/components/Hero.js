@@ -2,6 +2,7 @@ import React from 'react'
 import theme from '../theme'
 import logDownload from '../utils/logDownload'
 import logOutboundLink from '../utils/logOutboundLink'
+import mediaQuery from '../utils/mediaQuery'
 import Button from './Button'
 import OutboundLink from './OutboundLink'
 
@@ -12,9 +13,12 @@ function Hero() {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        padding: `${theme.space[9]} ${theme.space[5]} ${theme.space[11]}`,
+        padding: `${theme.space[8]} ${theme.space[5]} ${theme.space[9]}`,
         backgroundColor: theme.colors.white,
         borderBottom: `1px solid ${theme.colors.gray[2]}`,
+        [mediaQuery(theme.breakpoints.small)]: {
+          padding: `${theme.space[9]} ${theme.space[5]} ${theme.space[11]}`,
+        },
       }}
     >
       <h1
@@ -29,7 +33,24 @@ function Hero() {
         Simply beautiful open source icons
       </h1>
 
-      <div css={{ '& > :not(:last-child)': { marginRight: theme.space[4] } }}>
+      <div
+        css={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          width: '100%',
+          '& > :not(:last-child)': {
+            marginBottom: theme.space[4],
+          },
+          [mediaQuery(theme.breakpoints.small)]: {
+            flexDirection: 'row',
+            '& > :not(:last-child)': {
+              marginRight: theme.space[4],
+              marginBottom: 0,
+            },
+          },
+        }}
+      >
         <Button
           as={OutboundLink}
           href="https://github.com/feathericons/feather#feather"
