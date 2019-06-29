@@ -15,6 +15,7 @@ function NotFoundPage() {
           flexDirection: 'column',
           alignItems: 'center',
           padding: `${theme.space[9]} ${theme.space[5]}`,
+          borderTop: `1px solid ${theme.colors.gray[2]}`,
         }}
       >
         <h1
