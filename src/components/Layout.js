@@ -9,7 +9,6 @@ function Layout({ children }) {
   const data = useStaticQuery(graphql`
     {
       site {
-        host
         siteMetadata {
           title
           description
