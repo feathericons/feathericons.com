@@ -1,25 +1,29 @@
 import { rgba } from 'polished'
-import { string } from 'prop-types'
+import { string, func } from 'prop-types'
 import theme from '../theme'
 import Icon from './Icon'
 
-function IconTile({ name, ...props }) {
+function IconTile({ name, onClick, ...props }) {
   return (
-    <button
+    <div
+      role="button"
+      tabIndex={0}
+      onClick={onClick}
+      onKeyDown={event => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault()
+          onClick(event)
+        }
+      }}
       css={{
         display: 'flex',
         flexDirection: 'column',
-        fontFamily: 'inherit',
         textAlign: 'center',
         alignItems: 'stretch',
-        padding: 0,
-        background: 'transparent',
-        border: 0,
-        appearance: 'none',
         cursor: 'pointer',
         outline: 0,
-        overflow: 'visible',
         '&:hover .icon-container': {
+          color: theme.colors.primary[0],
           boxShadow: theme.shadows[2],
         },
         '&:focus .icon-container': {
@@ -44,12 +48,13 @@ function IconTile({ name, ...props }) {
       <span css={{ fontSize: theme.fontSizes[1], color: theme.colors.gray[8] }}>
         {name}
       </span>
-    </button>
+    </div>
   )
 }
 
 IconTile.propTypes = {
   name: string.isRequired,
+  onClick: func.isRequired,
 }
 
 export default IconTile
