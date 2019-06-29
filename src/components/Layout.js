@@ -9,6 +9,7 @@ function Layout({ children }) {
   const data = useStaticQuery(graphql`
     {
       site {
+        host
         siteMetadata {
           title
           description
@@ -27,7 +28,10 @@ function Layout({ children }) {
         <meta name="description" content={description} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content="feather-og-image.png" />
+        <meta
+          property="og:image"
+          content={`${data.site.host}/feather-og-image.png`}
+        />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content="@colebemis" />
         <link
