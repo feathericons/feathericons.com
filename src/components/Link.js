@@ -1,4 +1,4 @@
-import { func, oneOf, string } from 'prop-types'
+import { any } from 'prop-types'
 import theme from '../theme'
 
 function Link({ as: Component, ...props }) {
@@ -17,7 +17,7 @@ function Link({ as: Component, ...props }) {
 }
 
 Link.propTypes = {
-  as: oneOf([func, string]),
+  as: any,
 }
 
 Link.defaultProps = {

@@ -1,4 +1,4 @@
-import { func, oneOf, string } from 'prop-types'
+import { any } from 'prop-types'
 import theme from '../theme'
 
 function Button({ as: Component, ...props }) {
@@ -28,7 +28,7 @@ function Button({ as: Component, ...props }) {
 }
 
 Button.propTypes = {
-  as: oneOf([func, string]),
+  as: any,
 }
 
 Button.defaultProps = {
