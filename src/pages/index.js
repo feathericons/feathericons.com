@@ -16,7 +16,9 @@ function IndexPage() {
     <Layout>
       <Hero />
       <SearchInput
-        placeholder={`Search ${Object.keys(icons).length} icons`}
+        placeholder={`Search ${
+          Object.keys(icons).length
+        } icons (Press "/" to focus)`}
         value={query}
         onChange={event => setQuery(event.target.value)}
         css={{

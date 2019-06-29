@@ -1,9 +1,24 @@
 import { rgba } from 'polished'
 import { func, string } from 'prop-types'
+import React from 'react'
 import theme from '../theme'
 import Icon from './Icon'
 
 function SearchInput({ placeholder, value, onChange, ...props }) {
+  const inputElement = React.useRef(null)
+
+  function handleKeyDown(event) {
+    if (event.key === '/' && inputElement.current !== document.activeElement) {
+      event.preventDefault()
+      inputElement.current.focus()
+    }
+  }
+
+  React.useEffect(() => {
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [])
+
   return (
     <div css={{ position: 'relative' }} {...props}>
       <div
@@ -19,6 +34,7 @@ function SearchInput({ placeholder, value, onChange, ...props }) {
         <Icon name="search" color={theme.colors.gray[6]} />
       </div>
       <input
+        ref={inputElement}
         type="search"
         placeholder={placeholder}
         value={value}
@@ -54,11 +70,7 @@ function SearchInput({ placeholder, value, onChange, ...props }) {
 SearchInput.propTypes = {
   value: string.isRequired,
   onChange: func.isRequired,
-  placeholder: string,
-}
-
-SearchInput.defaultProps = {
-  placeholder: 'Search',
+  placeholder: string.isRequired,
 }
 
 export default SearchInput
