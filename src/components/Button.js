@@ -12,6 +12,7 @@ function Button({ as: Component, ...props }) {
         fontWeight: theme.fontWeights.medium,
         fontFamily: 'inherit',
         lineHeight: theme.lineHeights.none,
+        textAlign: 'center',
         textDecoration: 'none',
         border: 0,
         borderRadius: theme.radii[1],
