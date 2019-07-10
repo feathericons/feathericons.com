@@ -1,5 +1,6 @@
 import { icons } from 'feather-icons'
 import React from 'react'
+import { parse } from 'serialize-query-params'
 import { StringParam, useQueryParam } from 'use-query-params'
 import Footer from '../components/Footer'
 import Hero from '../components/Hero'
@@ -9,8 +10,12 @@ import NoResults from '../components/NoResults'
 import SearchInput from '../components/SearchInput'
 import useSearch from '../utils/useSearch'
 
-function IndexPage() {
-  const [query, setQuery] = useQueryParam('query', StringParam)
+function IndexPage({ location }) {
+  const [query, setQuery] = useQueryParam(
+    'query',
+    StringParam,
+    parse(location.search),
+  )
   const results = useSearch(query || '')
 
   return (
