@@ -8,7 +8,7 @@ function NoResults({ query }) {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        padding: `${theme.space[7]} ${theme.space[6]}`,
+        padding: `${theme.space[9]} ${theme.space[6]}`,
         backgroundColor: theme.colors.gray[2],
         wordBreak: 'break-word',
         fontSize: theme.fontSizes[3],
