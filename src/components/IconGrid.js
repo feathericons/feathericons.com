@@ -16,9 +16,7 @@ function IconGrid({ icons }) {
         rowGap: theme.space[5],
         columnGap: theme.space[4],
         margin: '0 auto',
-        padding: theme.space[4],
         [mediaQuery(theme.breakpoints.large)]: {
-          padding: theme.space[6],
           columnGap: theme.space[5],
         },
       }}
