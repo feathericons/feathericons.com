@@ -35,7 +35,7 @@
     "use-query-params": "^0.3.3"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.1",
+    "babel-eslint": "^9.0.0",
     "eslint": "^4.11.0",
     "eslint-config-prettier": "2.8.0",
     "eslint-config-react-app": "^4.0.1",
