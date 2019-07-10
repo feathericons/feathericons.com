@@ -1,5 +1,7 @@
 import { icons } from 'feather-icons'
 import React from 'react'
+import { parse } from 'serialize-query-params'
+import { StringParam, useQueryParam } from 'use-query-params'
 import Footer from '../components/Footer'
 import Hero from '../components/Hero'
 import IconGrid from '../components/IconGrid'
@@ -8,9 +10,13 @@ import NoResults from '../components/NoResults'
 import SearchInput from '../components/SearchInput'
 import useSearch from '../utils/useSearch'
 
-function IndexPage() {
-  const [query, setQuery] = React.useState('')
-  const results = useSearch(query)
+function IndexPage({ location }) {
+  const [query, setQuery] = useQueryParam(
+    'query',
+    StringParam,
+    parse(location.search),
+  )
+  const results = useSearch(query || '')
 
   return (
     <Layout>
@@ -19,7 +25,7 @@ function IndexPage() {
         placeholder={`Search ${
           Object.keys(icons).length
         } icons (Press "/" to focus)`}
-        value={query}
+        value={query || ''}
         onChange={event => setQuery(event.target.value)}
         css={{
           position: 'sticky',
