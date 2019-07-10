@@ -54,12 +54,13 @@ function SearchInput({ placeholder, value, onChange, ...props }) {
           borderRadius: 0,
           appearance: 'none',
           outline: 0,
+          borderRadius: theme.radii[1],
           // Removes the extra left padding added to search inputs on Safari
           '::-webkit-search-decoration': {
             display: 'none',
           },
           '&:focus': {
-            boxShadow: `inset 0 0 0 3px ${rgba(theme.colors.primary[0], 0.5)}`,
+            boxShadow: `0 0 0 3px ${rgba(theme.colors.primary[0], 0.5)}`,
           },
         }}
       />
