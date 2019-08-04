@@ -5,6 +5,7 @@ import logOutboundLink from '../utils/logOutboundLink'
 import mediaQuery from '../utils/mediaQuery'
 import Button from './Button'
 import OutboundLink from './OutboundLink'
+import CarbonAd from './CarbonAd'
 
 function Hero() {
   return (
@@ -17,7 +18,7 @@ function Hero() {
         backgroundColor: theme.colors.white,
         borderBottom: `1px solid ${theme.colors.gray[2]}`,
         [mediaQuery(theme.breakpoints.small)]: {
-          padding: `${theme.space[9]} ${theme.space[5]} ${theme.space[11]}`,
+          padding: `${theme.space[9]} ${theme.space[5]} ${theme.space[10]}`,
         },
       }}
     >
@@ -65,7 +66,6 @@ function Hero() {
         >
           Get Started
         </Button>
-
         <Button
           as={OutboundLink}
           href="/feather.zip"
@@ -83,6 +83,7 @@ function Hero() {
           Download All
         </Button>
       </div>
+      <CarbonAd />
     </div>
   )
 }
