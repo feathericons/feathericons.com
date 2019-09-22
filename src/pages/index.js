@@ -11,6 +11,7 @@ import NoResults from '../components/NoResults'
 import SearchInput from '../components/SearchInput'
 import theme from '../theme'
 import useSearch from '../utils/useSearch'
+import hexToRgba from 'hex-to-rgba'
 
 function IndexPage({ location }) {
   const [query, setQuery] = useQueryParam(
@@ -27,8 +28,9 @@ function IndexPage({ location }) {
         css={{
           position: 'sticky',
           top: 0,
-          background: `linear-gradient(0deg, transparent, ${
-            theme.colors.gray[0]
+          background: `linear-gradient(0deg, ${
+            hexToRgba(theme.colors.gray[0], 0) }, ${
+            hexToRgba(theme.colors.gray[0], 1)
           })`,
         }}
       >
