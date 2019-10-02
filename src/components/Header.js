@@ -63,8 +63,6 @@ function Header() {
             href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
               'Feather – Simply beautiful open source icons by @colebemis https://feathericons.com',
             )}`}
-            target="_blank"
-            rel="noopener noreferrer"
             onClick={() => logOutboundLink('tweet')}
           >
             Tweet
