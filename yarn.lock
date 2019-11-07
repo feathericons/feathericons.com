@@ -631,7 +631,7 @@
     "@babel/helper-plugin-utils" "^7.0.0"
     "@babel/plugin-syntax-jsx" "^7.2.0"
 
-"@babel/plugin-transform-react-jsx@^7.0.0", "@babel/plugin-transform-react-jsx@^7.3.0", "@babel/plugin-transform-react-jsx@^7.7.0":
+"@babel/plugin-transform-react-jsx@^7.0.0", "@babel/plugin-transform-react-jsx@^7.7.0":
   version "7.7.0"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-jsx/-/plugin-transform-react-jsx-7.7.0.tgz#834b0723ba78cd4d24d7d629300c2270f516d0b7"
   integrity sha512-mXhBtyVB1Ujfy+0L6934jeJcSXj/VCg6whZzEcgiiZHNS0PGC7vUCsZDQCxxztkpIdF+dY1fUMcjAgEOC3ZOMQ==
@@ -859,23 +859,6 @@
     esutils "^2.0.2"
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
-
-"@emotion/babel-plugin-jsx-pragmatic@^0.1.4":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@emotion/babel-plugin-jsx-pragmatic/-/babel-plugin-jsx-pragmatic-0.1.4.tgz#12fd120ecb202c6110dc98d3edabddafda1515f1"
-  integrity sha512-5LfpS5JWi0e+ss9nQdLByslCSjM2Gl72+WnUg60lJFvGk2ecr0tL86f5z8FbvlhpIhoIIIRBpFKMLr0BuIaLWg==
-  dependencies:
-    "@babel/plugin-syntax-jsx" "^7.2.0"
-
-"@emotion/babel-preset-css-prop@^10.0.22":
-  version "10.0.23"
-  resolved "https://registry.yarnpkg.com/@emotion/babel-preset-css-prop/-/babel-preset-css-prop-10.0.23.tgz#7c21a36c97c3ce9e96f5896b56f68b9bbac800bd"
-  integrity sha512-XG1s1SQF8twf/ufh+j3EdVjQW7SjcAPOdPZDxEsVVahoR1mF2/nWl4adc5ROppSr/P84QJEdquA6lmyZWcnaBQ==
-  dependencies:
-    "@babel/plugin-transform-react-jsx" "^7.3.0"
-    "@babel/runtime" "^7.5.5"
-    "@emotion/babel-plugin-jsx-pragmatic" "^0.1.4"
-    babel-plugin-emotion "^10.0.23"
 
 "@emotion/cache@^10.0.17":
   version "10.0.19"
@@ -1909,7 +1892,7 @@ babel-plugin-dynamic-import-node@^2.3.0:
   dependencies:
     object.assign "^4.1.0"
 
-babel-plugin-emotion@^10.0.22, babel-plugin-emotion@^10.0.23:
+babel-plugin-emotion@^10.0.22:
   version "10.0.23"
   resolved "https://registry.yarnpkg.com/babel-plugin-emotion/-/babel-plugin-emotion-10.0.23.tgz#040d40bf61dcab6d31dd6043d10e180240b8515b"
   integrity sha512-1JiCyXU0t5S2xCbItejCduLGGcKmF3POT0Ujbexog2MI4IlRcIn/kWjkYwCUZlxpON0O5FC635yPl/3slr7cKQ==
@@ -3980,12 +3963,12 @@ escape-string-regexp@1.0.5, escape-string-regexp@^1.0.2, escape-string-regexp@^1
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
   integrity sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
 
-eslint-config-prettier@2.8.0:
-  version "2.8.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-2.8.0.tgz#929861a11de0249677686eba908118175d1a26bc"
-  integrity sha512-XuCvdsC+n4jYPXxEyleaTF9wQR/rv5ofbrhTJiVAv+a91O9EcroicK74XHtbAYeopkF7i2EAH2GNLU48PnRIqw==
+eslint-config-prettier@6.5.0:
+  version "6.5.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-6.5.0.tgz#aaf9a495e2a816865e541bfdbb73a65cc162b3eb"
+  integrity sha512-cjXp8SbO9VFGW/Z7mbTydqS9to8Z58E5aYhj3e1+Hx7lS9s6gL5ILKNpCqZAFOVYRcSkWPFYljHrEh8QFEK5EQ==
   dependencies:
-    get-stdin "^5.0.1"
+    get-stdin "^6.0.0"
 
 eslint-config-react-app@^4.0.1:
   version "4.0.1"
@@ -5040,14 +5023,6 @@ gatsby-page-utils@^0.0.28:
     micromatch "^3.1.10"
     slash "^3.0.0"
 
-gatsby-plugin-emotion@^4.1.0:
-  version "4.1.13"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-emotion/-/gatsby-plugin-emotion-4.1.13.tgz#303411b3ab9812e45039cee3e2904a54fc128036"
-  integrity sha512-NzH1y5pceX5wgqX2logCEBGcpAHz52quY0vUK4ZnzmmNkejEuQojbCSZAASbDLN5xGqFEI/ySNj9+xSjkCWQRw==
-  dependencies:
-    "@babel/runtime" "^7.6.3"
-    "@emotion/babel-preset-css-prop" "^10.0.22"
-
 gatsby-plugin-google-analytics@^2.1.12:
   version "2.1.24"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-2.1.24.tgz#ab1aa59503d236d61873a1b14205976d89ddabb3"
@@ -5310,10 +5285,10 @@ get-port@^3.0.0:
   resolved "https://registry.yarnpkg.com/get-port/-/get-port-3.2.0.tgz#dd7ce7de187c06c8bf353796ac71e099f0980ebc"
   integrity sha1-3Xzn3hh8Bsi/NTeWrHHgmfCYDrw=
 
-get-stdin@^5.0.1:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/get-stdin/-/get-stdin-5.0.1.tgz#122e161591e21ff4c52530305693f20e6393a398"
-  integrity sha1-Ei4WFZHiH/TFJTAwVpPyDmOTo5g=
+get-stdin@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/get-stdin/-/get-stdin-6.0.0.tgz#9e09bf712b360ab9225e812048f71fde9c89657b"
+  integrity sha512-jp4tHawyV7+fkkSKyvjuLZswblUtz+SQKzSWnBbii16BuZksJlU1wuBYXY75r+duh/llF1ur6oNwi+2ZzjKZ7g==
 
 get-stream@3.0.0, get-stream@^3.0.0:
   version "3.0.0"
