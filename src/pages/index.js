@@ -28,7 +28,7 @@ function IndexPage({ location }) {
           gridGap: 6,
           paddingY: 4,
           paddingX: 5,
-          mx: 'auto',
+          marginX: 'auto',
           maxWidth: 1200,
         }}
       >
