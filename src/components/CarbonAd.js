@@ -37,7 +37,7 @@ function CarbonAd(props) {
           alignItems: 'flex-start',
         },
         '.carbon-img': {
-          display: 'flex',
+          lineHeight: 0,
         },
         '.carbon-text': {
           marginLeft: 4,
