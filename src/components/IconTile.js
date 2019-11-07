@@ -17,9 +17,9 @@ function IconTile({ name, onClick, ...props }) {
         }
       }}
       sx={{
+        paddingBottom: 4,
         display: 'flex',
         flexDirection: 'column',
-        textAlign: 'center',
         alignItems: 'center',
         cursor: 'pointer',
         backgroundColor: 'background',
@@ -52,7 +52,6 @@ function IconTile({ name, onClick, ...props }) {
         sx={{
           fontSize: 1,
           paddingX: 4,
-          paddingBottom: 4,
           whiteSpace: 'nowrap',
           overflow: 'hidden',
           textOverflow: 'ellipsis',
