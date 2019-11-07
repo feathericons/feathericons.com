@@ -1,6 +1,7 @@
 import { rgba } from 'polished'
-import { string, func } from 'prop-types'
+import { func, string } from 'prop-types'
 import theme from '../theme'
+import AspectRatioBox from './AspectRatioBox'
 import Icon from './Icon'
 
 function IconTile({ name, onClick, ...props }) {
@@ -19,33 +20,44 @@ function IconTile({ name, onClick, ...props }) {
         display: 'flex',
         flexDirection: 'column',
         textAlign: 'center',
-        alignItems: 'stretch',
+        alignItems: 'center',
         cursor: 'pointer',
         outline: 0,
-        '&:hover .icon-container': {
-          color: theme.colors.primary[0],
+        backgroundColor: theme.colors.white,
+        borderRadius: theme.radii[1],
+        boxShadow: theme.shadows[1],
+        '&:hover': {
           boxShadow: theme.shadows[2],
         },
-        '&:focus .icon-container': {
+        '&:focus': {
           boxShadow: `0 0 0 3px ${rgba(theme.colors.primary[0], 0.5)}`,
         },
       }}
       {...props}
     >
-      <div
-        className="icon-container"
+      <AspectRatioBox ratio={2 / 3}>
+        <div
+          css={{
+            width: '100%',
+            height: '100%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          <Icon name={name} />
+        </div>
+      </AspectRatioBox>
+      <span
         css={{
-          width: '100%',
-          padding: '24px 0',
-          backgroundColor: theme.colors.white,
-          borderRadius: 4,
-          marginBottom: 8,
-          boxShadow: theme.shadows[1],
+          fontSize: theme.fontSizes[1],
+          color: theme.colors.gray[8],
+          padding: ` 0 ${theme.space[4]} ${theme.space[4]}`,
+          whiteSpace: 'nowrap',
+          overflow: 'hidden',
+          textOverflow: 'ellipsis',
         }}
       >
-        <Icon name={name} />
-      </div>
-      <span css={{ fontSize: theme.fontSizes[1], color: theme.colors.gray[8] }}>
         {name}
       </span>
     </div>

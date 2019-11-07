@@ -83,7 +83,7 @@ function Hero() {
           Download All
         </Button>
       </div>
-      <CarbonAd />
+      <CarbonAd css={{ marginTop: theme.space[8] }} />
     </div>
   )
 }

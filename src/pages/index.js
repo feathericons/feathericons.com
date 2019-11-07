@@ -23,25 +23,22 @@ function IndexPage({ location }) {
   return (
     <Layout>
       <Hero />
-      <div
+      <Container
         css={{
           position: 'sticky',
           top: 0,
-          background: `linear-gradient(0deg, transparent, ${
-            theme.colors.gray[0]
-          })`,
+          boxShadow: `inset 0 16px 16px ${theme.colors.gray[0]}`,
+          zIndex: 1,
         }}
       >
-        <Container>
-          <SearchInput
-            placeholder={`Search ${
-              Object.keys(icons).length
-            } icons (Press "/" to focus)`}
-            value={query || ''}
-            onChange={event => setQuery(event.target.value)}
-          />
-        </Container>
-      </div>
+        <SearchInput
+          placeholder={`Search ${
+            Object.keys(icons).length
+          } icons (Press "/" to focus)`}
+          value={query || ''}
+          onChange={event => setQuery(event.target.value)}
+        />
+      </Container>
       <Container>
         {results.length > 0 ? (
           <IconGrid icons={results} />

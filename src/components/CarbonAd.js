@@ -1,7 +1,7 @@
 import React from 'react'
 import theme from '../theme'
 
-function CarbonAd() {
+function CarbonAd(props) {
   const containerRef = React.useRef(null)
 
   React.useEffect(() => {
@@ -16,12 +16,13 @@ function CarbonAd() {
     <div
       ref={containerRef}
       css={{
+        width: 400,
+        minHeight: 132,
+        padding: theme.space[4],
+        backgroundColor: theme.colors.gray[1],
+        borderRadius: theme.radii[1],
         '#carbonads': {
-          maxWidth: 400,
-          padding: theme.space[4],
-          marginTop: theme.space[8],
-          backgroundColor: theme.colors.gray[1],
-          borderRadius: theme.radii[1],
+          width: '100%',
           fontSize: theme.fontSizes[1],
           position: 'relative',
         },
@@ -39,10 +40,11 @@ function CarbonAd() {
         },
         '.carbon-poweredby': {
           position: 'absolute',
-          right: theme.space[4],
-          bottom: theme.space[4],
+          right: 0,
+          bottom: 0,
         },
       }}
+      {...props}
     />
   )
 }

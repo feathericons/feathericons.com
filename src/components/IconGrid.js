@@ -1,24 +1,18 @@
 import copy from 'copy-to-clipboard'
 import download from 'downloadjs'
 import { arrayOf, func, shape, string } from 'prop-types'
+import theme from '../theme'
 import logCopy from '../utils/logCopy'
 import logDownload from '../utils/logDownload'
 import IconTile from './IconTile'
-import mediaQuery from '../utils/mediaQuery'
-import theme from '../theme'
 
 function IconGrid({ icons }) {
   return (
     <div
       css={{
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fill, minmax(100px, 1fr))',
-        rowGap: theme.space[5],
-        columnGap: theme.space[4],
-        margin: '0 auto',
-        [mediaQuery(theme.breakpoints.large)]: {
-          columnGap: theme.space[5],
-        },
+        gridTemplateColumns: 'repeat(auto-fill, minmax(150px, 1fr))',
+        gridGap: theme.space[4],
       }}
     >
       {icons.map(icon => (
