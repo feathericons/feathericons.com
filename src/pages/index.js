@@ -26,8 +26,8 @@ function IndexPage({ location }) {
         sx={{
           display: 'grid',
           gridGap: 6,
-          py: 4,
-          px: 5,
+          paddingY: 4,
+          paddingX: 5,
           mx: 'auto',
           maxWidth: 1200,
         }}
@@ -36,7 +36,7 @@ function IndexPage({ location }) {
           sx={{
             position: 'sticky',
             top: 0,
-            pt: 4,
+            paddingTop: 4,
             boxShadow: theme => `inset 0 16px 16px ${theme.colors.muted}`,
             zIndex: 1,
           }}

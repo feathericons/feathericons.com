@@ -6,7 +6,7 @@ import OutboundLink from './OutboundLink'
 
 function Footer() {
   return (
-    <footer sx={{ py: 4, borderTop: '1px solid', borderColor: 'border' }}>
+    <footer sx={{ paddingY: 4, borderTop: '1px solid', borderColor: 'border' }}>
       <Link
         as={OutboundLink}
         href="https://twitter.com/colebemis"

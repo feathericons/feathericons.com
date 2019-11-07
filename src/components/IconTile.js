@@ -22,7 +22,7 @@ function IconTile({ name, onClick, ...props }) {
         textAlign: 'center',
         alignItems: 'center',
         cursor: 'pointer',
-        bg: 'background',
+        backgroundColor: 'background',
         borderRadius: 1,
         boxShadow: 1,
         outline: 0,
@@ -51,8 +51,8 @@ function IconTile({ name, onClick, ...props }) {
       <span
         sx={{
           fontSize: 1,
-          px: 4,
-          pb: 4,
+          paddingX: 4,
+          paddingBottom: 4,
           whiteSpace: 'nowrap',
           overflow: 'hidden',
           textOverflow: 'ellipsis',

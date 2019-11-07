@@ -8,8 +8,8 @@ function Button({ as: Component, ...props }) {
       sx={{
         display: 'inline-block',
         margin: 0,
-        py: 4,
-        px: 5,
+        paddingY: 4,
+        paddingX: 5,
         fontSize: 2,
         fontWeight: 'medium',
         fontFamily: 'inherit',

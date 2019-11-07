@@ -48,12 +48,11 @@ function SearchInput({ placeholder, value, onChange, ...props }) {
           lineHeight: 'none',
           fontFamily: 'inherit',
           color: 'inherit',
-          bg: 'white',
+          backgroundColor: 'background',
           boxShadow: 1,
           border: 0,
           appearance: 'none',
           outline: 0,
-          bg: 'background',
           borderRadius: 1,
           // Removes the extra left padding added to search inputs on Safari
           '::-webkit-search-decoration': {

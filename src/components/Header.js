@@ -14,8 +14,8 @@ function Header() {
   return (
     <header
       sx={{
-        py: 4,
-        px: 5,
+        paddingY: 4,
+        paddingX: 5,
         display: 'flex',
         alignItems: 'center',
       }}
@@ -28,9 +28,9 @@ function Header() {
         href="https://github.com/feathericons/feather/releases"
         onClick={() => logOutboundLink('release notes')}
         sx={{
-          py: 1,
-          px: 2,
-          ml: 2,
+          paddingY: 1,
+          paddingX: 2,
+          marginLeft: 2,
           fontSize: 1,
           lineHeight: 'tight',
           fontWeight: 'medium',
@@ -40,14 +40,15 @@ function Header() {
           borderColor: 'border',
           borderRadius: 1,
           '&:hover': {
-            bg: 'background',
+            backgroundColor: 'background',
           },
         }}
       >
         v{version}
       </OutboundLink>
 
-      <div sx={{ mx: 'auto' }} />
+      {/* Spacer */}
+      <div sx={{ marginX: 'auto' }} />
 
       <Link
         as={OutboundLink}
@@ -58,14 +59,14 @@ function Header() {
       </Link>
 
       <Button
-        onClick={e => {
+        onClick={() => {
           setColorMode(colorMode === 'default' ? 'dark' : 'default')
         }}
         sx={{
-          bg: 'transparent',
-          p: 1,
+          backgroundColor: 'transparent',
+          padding: 1,
           color: 'icon',
-          ml: 4,
+          marginLeft: 4,
         }}
       >
         {colorMode === 'default' ? (

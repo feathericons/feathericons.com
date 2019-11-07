@@ -12,14 +12,14 @@ function Hero() {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        py: [8, 9],
-        px: 5,
+        paddingY: [8, 9],
+        paddingX: 5,
       }}
     >
       <h1
         sx={{
-          mt: 0,
-          mb: 5,
+          marginTop: 0,
+          marginBottom: 5,
           fontSize: 6,
           fontWeight: 'normal',
           lineHeight: 'tight',
@@ -47,7 +47,7 @@ function Hero() {
           onClick={() => logOutboundLink('get started')}
           sx={{
             color: 'white',
-            bg: 'primary',
+            backgroundColor: 'primary',
           }}
         >
           Get started
@@ -61,7 +61,7 @@ function Hero() {
             bg: 'transparent',
             boxShadow: theme => `inset 0 0 0 1px ${theme.colors.border}`,
             '&:hover': {
-              bg: 'background',
+              backgroundColor: 'background',
             },
           }}
         >

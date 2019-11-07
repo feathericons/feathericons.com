@@ -11,9 +11,9 @@ function NotFoundPage() {
       </Helmet>
       <h1
         sx={{
-          py: 9,
-          px: 5,
-          m: 0,
+          paddingY: 9,
+          paddingX: 5,
+          margin: 0,
           fontSize: 6,
           fontWeight: 'normal',
           textAlign: 'center',
