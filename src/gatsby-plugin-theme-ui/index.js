@@ -1,6 +1,13 @@
 import { colors } from '@primer/primitives'
 
 export default {
+  colors: {
+    primary: '#0066ff',
+    text: colors.gray[8],
+    background: colors.white,
+    muted: colors.gray[1],
+    border: colors.gray[2],
+  },
   space: [0, 4, 8, 12, 16, 24, 32, 40, 48, 64, 80, 96],
   fonts: {
     sansSerif:
@@ -20,13 +27,6 @@ export default {
     tight: 1.25,
     normal: 1.5,
     loose: 2,
-  },
-  colors: {
-    primary: '#0066ff',
-    text: colors.gray[8],
-    background: colors.gray[1],
-    elevated: colors.white,
-    border: colors.gray[2],
   },
   radii: [0, 4],
   shadows: [

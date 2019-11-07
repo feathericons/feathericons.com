@@ -22,7 +22,7 @@ function IconTile({ name, onClick, ...props }) {
         textAlign: 'center',
         alignItems: 'center',
         cursor: 'pointer',
-        bg: 'elevated',
+        bg: 'background',
         borderRadius: 1,
         boxShadow: 1,
         outline: 0,

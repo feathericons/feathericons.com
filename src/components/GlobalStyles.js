@@ -14,7 +14,7 @@ function GlobalStyles() {
           fontFamily: theme.fonts.sansSerif,
           lineHeight: theme.lineHeights.normal,
           color: theme.colors.text,
-          backgroundColor: theme.colors.background,
+          backgroundColor: theme.colors.muted,
         },
       })}
     />

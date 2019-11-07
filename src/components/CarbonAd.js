@@ -23,7 +23,7 @@ function CarbonAd(props) {
           padding: 4,
           maxWidth: 400,
           fontSize: 1,
-          bg: 'background',
+          bg: 'muted',
           borderRadius: 1,
         },
         '.carbon-wrap': {

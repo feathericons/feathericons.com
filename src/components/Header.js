@@ -14,7 +14,7 @@ function Header() {
         px: 5,
         display: 'flex',
         alignItems: 'center',
-        backgroundColor: 'elevated',
+        backgroundColor: 'background',
       }}
     >
       <Link as={GatsbyLink} to="/" sx={{ fontSize: 4 }}>
@@ -33,7 +33,7 @@ function Header() {
           fontWeight: 'medium',
           textDecoration: 'none',
           color: 'inherit',
-          bg: 'background',
+          bg: 'muted',
           borderRadius: 1,
         }}
       >

@@ -16,7 +16,7 @@ function Hero() {
         pt: [8, 9],
         px: 5,
         pb: [9, 10],
-        bg: 'elevated',
+        bg: 'background',
         borderBottom: '1px solid',
         borderColor: 'border',
       }}
