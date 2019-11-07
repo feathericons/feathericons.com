@@ -1,7 +1,8 @@
+/** @jsx jsx */
 import copy from 'copy-to-clipboard'
 import download from 'downloadjs'
 import { arrayOf, func, shape, string } from 'prop-types'
-import theme from '../theme'
+import { jsx } from 'theme-ui'
 import logCopy from '../utils/logCopy'
 import logDownload from '../utils/logDownload'
 import IconTile from './IconTile'
@@ -9,10 +10,10 @@ import IconTile from './IconTile'
 function IconGrid({ icons }) {
   return (
     <div
-      css={{
+      sx={{
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fill, minmax(150px, 1fr))',
-        gridGap: theme.space[4],
+        gridGap: 4,
       }}
     >
       {icons.map(icon => (

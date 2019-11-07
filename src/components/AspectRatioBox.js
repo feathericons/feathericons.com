@@ -1,14 +1,18 @@
-function AspectRatioBox({ ratio, children }) {
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
+
+function AspectRatioBox({ ratio, children, ...props }) {
   return (
     <div
-      css={{
+      sx={{
         width: '100%',
         position: 'relative',
         paddingTop: `${ratio * 100}%`,
       }}
+      {...props}
     >
       <div
-        css={{
+        sx={{
           position: 'absolute',
           top: 0,
           left: 0,

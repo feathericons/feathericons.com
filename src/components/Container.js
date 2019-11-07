@@ -1,12 +1,14 @@
-import theme from '../theme'
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
 
 function Container(props) {
   return (
     <div
-      css={{
+      sx={{
         maxWidth: 1200,
         margin: 'auto',
-        padding: `${theme.space[4]} ${theme.space[5]}`,
+        px: 5,
+        py: 4,
       }}
       {...props}
     />

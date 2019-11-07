@@ -1,7 +1,7 @@
-import React from 'react'
+/** @jsx jsx */
 import Helmet from 'react-helmet'
+import { jsx } from 'theme-ui'
 import Layout from '../components/Layout'
-import theme from '../theme'
 
 function NotFoundPage() {
   return (
@@ -10,19 +10,21 @@ function NotFoundPage() {
         <title>Page Not Found | Feather</title>
       </Helmet>
       <div
-        css={{
+        sx={{
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          padding: `${theme.space[9]} ${theme.space[5]}`,
-          borderTop: `1px solid ${theme.colors.gray[2]}`,
+          py: 9,
+          px: 5,
+          borderTop: '1px solid',
+          bordercolor: 'gray.2',
         }}
       >
         <h1
           css={{
-            margin: 0,
-            fontSize: theme.fontSizes[6],
-            fontWeight: theme.fontWeights.normal,
+            m: 0,
+            fontSize: 6,
+            fontWeight: 'normal',
             textAlign: 'center',
           }}
         >

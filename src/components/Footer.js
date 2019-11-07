@@ -1,4 +1,5 @@
-import theme from '../theme'
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
 import logOutboundLink from '../utils/logOutboundLink'
 import Link from './Link'
 import OutboundLink from './OutboundLink'
@@ -6,12 +7,12 @@ import OutboundLink from './OutboundLink'
 function Footer() {
   return (
     <footer
-      css={{
+      sx={{
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        padding: theme.space[5],
-        fontSize: theme.fontSizes[1],
+        p: 5,
+        fontSize: 1,
       }}
     >
       <Link

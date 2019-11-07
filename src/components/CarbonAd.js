@@ -1,5 +1,6 @@
+/** @jsx jsx */
 import React from 'react'
-import theme from '../theme'
+import { jsx } from 'theme-ui'
 
 function CarbonAd(props) {
   const containerRef = React.useRef(null)
@@ -15,16 +16,15 @@ function CarbonAd(props) {
   return (
     <div
       ref={containerRef}
-      css={{
-        width: 400,
+      sx={{
         minHeight: 132,
-        padding: theme.space[4],
-        backgroundColor: theme.colors.gray[1],
-        borderRadius: theme.radii[1],
         '#carbonads': {
-          width: '100%',
-          fontSize: theme.fontSizes[1],
           position: 'relative',
+          padding: 4,
+          maxWidth: 400,
+          fontSize: 1,
+          backgroundColor: 'gray.1',
+          borderRadius: 1,
         },
         '.carbon-wrap': {
           display: 'flex',
@@ -35,13 +35,13 @@ function CarbonAd(props) {
           color: 'inherit',
         },
         '.carbon-text': {
-          marginLeft: theme.space[4],
-          marginBottom: theme.space[6],
+          ml: 4,
+          mb: 6,
         },
         '.carbon-poweredby': {
           position: 'absolute',
-          right: 0,
-          bottom: 0,
+          right: 4,
+          bottom: 4,
         },
       }}
       {...props}

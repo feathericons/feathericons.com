@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
 import { icons } from 'feather-icons'
 import { string } from 'prop-types'
 
@@ -12,7 +14,7 @@ function Icon({ name, ...props }) {
       fill="none"
       strokeLinecap="round"
       strokeLinejoin="round"
-      css={{ verticalAlign: 'text-bottom' }}
+      sx={{ verticalAlign: 'text-bottom' }}
       dangerouslySetInnerHTML={{ __html: icons[name].contents }}
       {...props}
     />

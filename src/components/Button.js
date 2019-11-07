@@ -1,21 +1,23 @@
+/** @jsx jsx */
 import { any } from 'prop-types'
-import theme from '../theme'
+import { jsx } from 'theme-ui'
 
 function Button({ as: Component, ...props }) {
   return (
     <Component
-      css={{
+      sx={{
         display: 'inline-block',
         margin: 0,
-        padding: `${theme.space[4]} ${theme.space[5]}`,
-        fontSize: theme.fontSizes[2],
-        fontWeight: theme.fontWeights.medium,
+        py: 4,
+        px: 5,
+        fontSize: 2,
+        fontWeight: 'medium',
         fontFamily: 'inherit',
-        lineHeight: theme.lineHeights.none,
+        lineHeight: 'none',
         textAlign: 'center',
         textDecoration: 'none',
         border: 0,
-        borderRadius: theme.radii[1],
+        borderRadius: 1,
         appearance: 'none',
         cursor: 'pointer',
         '&:disabled': {

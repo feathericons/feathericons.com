@@ -1,10 +1,9 @@
 import { Global } from '@emotion/core'
-import theme from '../theme'
 
 function GlobalStyles() {
   return (
     <Global
-      styles={{
+      styles={theme => ({
         '*, *:before, *:after': {
           boxSizing: 'inherit',
         },
@@ -17,7 +16,7 @@ function GlobalStyles() {
           color: theme.colors.gray[8],
           backgroundColor: theme.colors.gray[0],
         },
-      }}
+      })}
     />
   )
 }

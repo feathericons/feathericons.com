@@ -1,6 +1,7 @@
+/** @jsx jsx */
 import { icons } from 'feather-icons'
-import React from 'react'
 import { parse } from 'serialize-query-params'
+import { jsx } from 'theme-ui'
 import { StringParam, useQueryParam } from 'use-query-params'
 import Container from '../components/Container'
 import Footer from '../components/Footer'
@@ -9,7 +10,6 @@ import IconGrid from '../components/IconGrid'
 import Layout from '../components/Layout'
 import NoResults from '../components/NoResults'
 import SearchInput from '../components/SearchInput'
-import theme from '../theme'
 import useSearch from '../utils/useSearch'
 
 function IndexPage({ location }) {
@@ -24,10 +24,10 @@ function IndexPage({ location }) {
     <Layout>
       <Hero />
       <Container
-        css={{
+        sx={{
           position: 'sticky',
           top: 0,
-          boxShadow: `inset 0 16px 16px ${theme.colors.gray[0]}`,
+          boxShadow: theme => `inset 0 16px 16px ${theme.colors.gray[0]}`,
           zIndex: 1,
         }}
       >
