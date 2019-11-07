@@ -631,7 +631,7 @@
     "@babel/helper-plugin-utils" "^7.0.0"
     "@babel/plugin-syntax-jsx" "^7.2.0"
 
-"@babel/plugin-transform-react-jsx@^7.0.0", "@babel/plugin-transform-react-jsx@^7.3.0", "@babel/plugin-transform-react-jsx@^7.7.0":
+"@babel/plugin-transform-react-jsx@^7.0.0", "@babel/plugin-transform-react-jsx@^7.7.0":
   version "7.7.0"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-jsx/-/plugin-transform-react-jsx-7.7.0.tgz#834b0723ba78cd4d24d7d629300c2270f516d0b7"
   integrity sha512-mXhBtyVB1Ujfy+0L6934jeJcSXj/VCg6whZzEcgiiZHNS0PGC7vUCsZDQCxxztkpIdF+dY1fUMcjAgEOC3ZOMQ==
@@ -859,23 +859,6 @@
     esutils "^2.0.2"
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
-
-"@emotion/babel-plugin-jsx-pragmatic@^0.1.4":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@emotion/babel-plugin-jsx-pragmatic/-/babel-plugin-jsx-pragmatic-0.1.4.tgz#12fd120ecb202c6110dc98d3edabddafda1515f1"
-  integrity sha512-5LfpS5JWi0e+ss9nQdLByslCSjM2Gl72+WnUg60lJFvGk2ecr0tL86f5z8FbvlhpIhoIIIRBpFKMLr0BuIaLWg==
-  dependencies:
-    "@babel/plugin-syntax-jsx" "^7.2.0"
-
-"@emotion/babel-preset-css-prop@^10.0.22":
-  version "10.0.23"
-  resolved "https://registry.yarnpkg.com/@emotion/babel-preset-css-prop/-/babel-preset-css-prop-10.0.23.tgz#7c21a36c97c3ce9e96f5896b56f68b9bbac800bd"
-  integrity sha512-XG1s1SQF8twf/ufh+j3EdVjQW7SjcAPOdPZDxEsVVahoR1mF2/nWl4adc5ROppSr/P84QJEdquA6lmyZWcnaBQ==
-  dependencies:
-    "@babel/plugin-transform-react-jsx" "^7.3.0"
-    "@babel/runtime" "^7.5.5"
-    "@emotion/babel-plugin-jsx-pragmatic" "^0.1.4"
-    babel-plugin-emotion "^10.0.23"
 
 "@emotion/cache@^10.0.17":
   version "10.0.19"
@@ -1909,7 +1892,7 @@ babel-plugin-dynamic-import-node@^2.3.0:
   dependencies:
     object.assign "^4.1.0"
 
-babel-plugin-emotion@^10.0.22, babel-plugin-emotion@^10.0.23:
+babel-plugin-emotion@^10.0.22:
   version "10.0.23"
   resolved "https://registry.yarnpkg.com/babel-plugin-emotion/-/babel-plugin-emotion-10.0.23.tgz#040d40bf61dcab6d31dd6043d10e180240b8515b"
   integrity sha512-1JiCyXU0t5S2xCbItejCduLGGcKmF3POT0Ujbexog2MI4IlRcIn/kWjkYwCUZlxpON0O5FC635yPl/3slr7cKQ==
@@ -2356,11 +2339,6 @@ buffer@^4.3.0:
     base64-js "^1.0.2"
     ieee754 "^1.1.4"
     isarray "^1.0.0"
-
-builtin-modules@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/builtin-modules/-/builtin-modules-1.1.1.tgz#270f076c5a72c02f5b65a47df94c5fe3a278892f"
-  integrity sha1-Jw8HbFpywC9bZaR9+Uxf46J4iS8=
 
 builtin-modules@^3.0.0:
   version "3.1.0"
@@ -4001,7 +3979,7 @@ eslint-config-react-app@^5.0.2:
   dependencies:
     confusing-browser-globals "^1.0.9"
 
-eslint-import-resolver-node@^0.3.1, eslint-import-resolver-node@^0.3.2:
+eslint-import-resolver-node@^0.3.2:
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/eslint-import-resolver-node/-/eslint-import-resolver-node-0.3.2.tgz#58f15fb839b8d0576ca980413476aab2472db66a"
   integrity sha512-sfmTqJfPSizWu4aymbPr4Iidp5yKm8yDkHp+Ir3YiTHiiDfxh69mOUsmiqW6RZ9zRXFaF64GtYmN7e+8GHBv6Q==
@@ -4020,7 +3998,7 @@ eslint-loader@^2.2.1:
     object-hash "^1.1.4"
     rimraf "^2.6.1"
 
-eslint-module-utils@^2.1.1, eslint-module-utils@^2.4.0:
+eslint-module-utils@^2.4.0:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/eslint-module-utils/-/eslint-module-utils-2.4.1.tgz#7b4675875bf96b0dbf1b21977456e5bb1f5e018c"
   integrity sha512-H6DOj+ejw7Tesdgbfs4jeS4YMFrT8uI8xwd1gtQqXssaR0EQ26L+2O/w6wkYFy2MymON0fTwHmXBvvfLNZVZEw==
@@ -4050,23 +4028,7 @@ eslint-plugin-graphql@^3.1.0:
     graphql-config "^2.0.1"
     lodash "^4.11.1"
 
-eslint-plugin-import@2.8.0:
-  version "2.8.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.8.0.tgz#fa1b6ef31fcb3c501c09859c1b86f1fc5b986894"
-  integrity sha512-Rf7dfKJxZ16QuTgVv1OYNxkZcsu/hULFnC+e+w0Gzi6jMC3guQoWQgxYxc54IDRinlb6/0v5z/PxxIKmVctN+g==
-  dependencies:
-    builtin-modules "^1.1.1"
-    contains-path "^0.1.0"
-    debug "^2.6.8"
-    doctrine "1.5.0"
-    eslint-import-resolver-node "^0.3.1"
-    eslint-module-utils "^2.1.1"
-    has "^1.0.1"
-    lodash.cond "^4.3.0"
-    minimatch "^3.0.3"
-    read-pkg-up "^2.0.0"
-
-eslint-plugin-import@^2.18.2:
+eslint-plugin-import@2.18.2, eslint-plugin-import@^2.18.2:
   version "2.18.2"
   resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.18.2.tgz#02f1180b90b077b33d447a17a2326ceb400aceb6"
   integrity sha512-5ohpsHAiUBRNaBWAF08izwUGlbrJoJJ+W9/TBwsGoR1MnlgfwMIKrFeSjWbt6moabiXW9xNvtFz+97KHRfI4HQ==
@@ -5039,14 +5001,6 @@ gatsby-page-utils@^0.0.28:
     lodash "^4.17.15"
     micromatch "^3.1.10"
     slash "^3.0.0"
-
-gatsby-plugin-emotion@^4.1.0:
-  version "4.1.13"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-emotion/-/gatsby-plugin-emotion-4.1.13.tgz#303411b3ab9812e45039cee3e2904a54fc128036"
-  integrity sha512-NzH1y5pceX5wgqX2logCEBGcpAHz52quY0vUK4ZnzmmNkejEuQojbCSZAASbDLN5xGqFEI/ySNj9+xSjkCWQRw==
-  dependencies:
-    "@babel/runtime" "^7.6.3"
-    "@emotion/babel-preset-css-prop" "^10.0.22"
 
 gatsby-plugin-google-analytics@^2.1.12:
   version "2.1.24"
@@ -6976,11 +6930,6 @@ lockfile@^1.0.4:
   integrity sha512-cvbTwETRfsFh4nHsL1eGWapU1XFi5Ot9E85sWAwia7Y7EgB7vfqcZhTKZ+l7hCGxSPoushMv5GKhT5PdLv03WA==
   dependencies:
     signal-exit "^3.0.2"
-
-lodash.cond@^4.3.0:
-  version "4.5.2"
-  resolved "https://registry.yarnpkg.com/lodash.cond/-/lodash.cond-4.5.2.tgz#f471a1da486be60f6ab955d17115523dd1d255d5"
-  integrity sha1-9HGh2khr5g9quVXRcRVSPdHSVdU=
 
 lodash.every@^4.6.0:
   version "4.6.0"
