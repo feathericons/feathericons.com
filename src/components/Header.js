@@ -1,15 +1,13 @@
 /** @jsx jsx */
 import { version } from 'feather-icons/package.json'
 import { Link as GatsbyLink } from 'gatsby'
-import { jsx, useColorMode } from 'theme-ui'
+import { jsx } from 'theme-ui'
 import logOutboundLink from '../utils/logOutboundLink'
-import Button from './Button'
-import Icon from './Icon'
+import ColorModeToggle from './ColorModeToggle'
 import Link from './Link'
 import OutboundLink from './OutboundLink'
 
 function Header() {
-  const [colorMode, setColorMode] = useColorMode()
   return (
     <header
       sx={{
@@ -57,23 +55,7 @@ function Header() {
         GitHub
       </Link>
 
-      <Button
-        onClick={() => {
-          setColorMode(colorMode === 'default' ? 'dark' : 'default')
-        }}
-        sx={{
-          backgroundColor: 'transparent',
-          padding: 1,
-          color: 'icon',
-          marginLeft: 4,
-        }}
-      >
-        {colorMode === 'default' ? (
-          <Icon name="moon" sx={{ fill: 'currentColor' }} />
-        ) : (
-          <Icon name="sun" sx={{ fill: 'currentColor' }} />
-        )}
-      </Button>
+      <ColorModeToggle sx={{ marginLeft: 4 }} />
     </header>
   )
 }
