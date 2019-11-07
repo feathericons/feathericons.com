@@ -3,7 +3,6 @@ import { jsx } from 'theme-ui'
 import logDownload from '../utils/logDownload'
 import logOutboundLink from '../utils/logOutboundLink'
 import Button from './Button'
-import CarbonAd from './CarbonAd'
 import OutboundLink from './OutboundLink'
 
 function Hero() {
@@ -13,12 +12,8 @@ function Hero() {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        pt: [8, 9],
+        py: [8, 9],
         px: 5,
-        pb: [9, 10],
-        bg: 'background',
-        borderBottom: '1px solid',
-        borderColor: 'border',
       }}
     >
       <h1
@@ -65,12 +60,14 @@ function Hero() {
           sx={{
             bg: 'transparent',
             boxShadow: theme => `inset 0 0 0 1px ${theme.colors.border}`,
+            '&:hover': {
+              bg: 'background',
+            },
           }}
         >
           Download All
         </Button>
       </div>
-      <CarbonAd sx={{ mt: 8 }} />
     </div>
   )
 }

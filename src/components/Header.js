@@ -5,16 +5,19 @@ import { jsx } from 'theme-ui'
 import logOutboundLink from '../utils/logOutboundLink'
 import Link from './Link'
 import OutboundLink from './OutboundLink'
+import { useColorMode } from 'theme-ui'
+import Icon from './Icon'
+import Button from './Button'
 
 function Header() {
+  const [colorMode, setColorMode] = useColorMode()
   return (
-    <div
+    <header
       sx={{
         py: 4,
         px: 5,
         display: 'flex',
         alignItems: 'center',
-        backgroundColor: 'background',
       }}
     >
       <Link as={GatsbyLink} to="/" sx={{ fontSize: 4 }}>
@@ -33,8 +36,12 @@ function Header() {
           fontWeight: 'medium',
           textDecoration: 'none',
           color: 'inherit',
-          bg: 'muted',
+          border: '1px solid',
+          borderColor: 'border',
           borderRadius: 1,
+          '&:hover': {
+            bg: 'background',
+          },
         }}
       >
         v{version}
@@ -49,7 +56,25 @@ function Header() {
       >
         GitHub
       </Link>
-    </div>
+
+      <Button
+        onClick={e => {
+          setColorMode(colorMode === 'default' ? 'dark' : 'default')
+        }}
+        sx={{
+          bg: 'transparent',
+          p: 1,
+          color: 'icon',
+          ml: 4,
+        }}
+      >
+        {colorMode === 'default' ? (
+          <Icon name="moon" sx={{ fill: 'currentColor' }} />
+        ) : (
+          <Icon name="sun" sx={{ fill: 'currentColor' }} />
+        )}
+      </Button>
+    </header>
   )
 }
 

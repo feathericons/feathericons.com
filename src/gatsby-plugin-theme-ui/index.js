@@ -1,12 +1,25 @@
 import { colors } from '@primer/primitives'
 
 export default {
+  useColorSchemeMediaQuery: true,
   colors: {
     primary: '#0066ff',
     text: colors.gray[8],
     background: colors.white,
     muted: colors.gray[1],
-    border: colors.gray[2],
+    border: colors.gray[3],
+    icon: colors.gray[5],
+    iconSecondary: colors.gray[4],
+    modes: {
+      dark: {
+        text: colors.white,
+        background: colors.gray[8],
+        muted: colors.gray[9],
+        border: colors.gray[7],
+        icon: colors.gray[4],
+        iconSecondary: colors.gray[5],
+      },
+    },
   },
   space: [0, 4, 8, 12, 16, 24, 32, 40, 48, 64, 80, 96],
   fonts: {

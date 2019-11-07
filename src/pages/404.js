@@ -9,28 +9,18 @@ function NotFoundPage() {
       <Helmet>
         <title>Page Not Found | Feather</title>
       </Helmet>
-      <div
+      <h1
         sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
           py: 9,
           px: 5,
-          borderTop: '1px solid',
-          borderColor: 'border',
+          m: 0,
+          fontSize: 6,
+          fontWeight: 'normal',
+          textAlign: 'center',
         }}
       >
-        <h1
-          css={{
-            m: 0,
-            fontSize: 6,
-            fontWeight: 'normal',
-            textAlign: 'center',
-          }}
-        >
-          Page not found
-        </h1>
-      </div>
+        Page not found
+      </h1>
     </Layout>
   )
 }

@@ -3,7 +3,6 @@ import { icons } from 'feather-icons'
 import { parse } from 'serialize-query-params'
 import { jsx } from 'theme-ui'
 import { StringParam, useQueryParam } from 'use-query-params'
-import Container from '../components/Container'
 import Footer from '../components/Footer'
 import Hero from '../components/Hero'
 import IconGrid from '../components/IconGrid'
@@ -23,30 +22,40 @@ function IndexPage({ location }) {
   return (
     <Layout>
       <Hero />
-      <Container
+      <div
         sx={{
-          position: 'sticky',
-          top: 0,
-          boxShadow: theme => `inset 0 16px 16px ${theme.colors.muted}`,
-          zIndex: 1,
+          display: 'grid',
+          gridGap: 6,
+          py: 4,
+          px: 5,
+          mx: 'auto',
+          maxWidth: 1200,
         }}
       >
-        <SearchInput
-          placeholder={`Search ${
-            Object.keys(icons).length
-          } icons (Press "/" to focus)`}
-          value={query || ''}
-          onChange={event => setQuery(event.target.value)}
-        />
-      </Container>
-      <Container>
+        <div
+          sx={{
+            position: 'sticky',
+            top: 0,
+            pt: 4,
+            boxShadow: theme => `inset 0 16px 16px ${theme.colors.muted}`,
+            zIndex: 1,
+          }}
+        >
+          <SearchInput
+            placeholder={`Search ${
+              Object.keys(icons).length
+            } icons (Press "/" to focus)`}
+            value={query || ''}
+            onChange={event => setQuery(event.target.value)}
+          />
+        </div>
         {results.length > 0 ? (
           <IconGrid icons={results} />
         ) : (
           <NoResults query={query} />
         )}
-      </Container>
-      <Footer />
+        <Footer />
+      </div>
     </Layout>
   )
 }

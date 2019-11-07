@@ -31,7 +31,7 @@ function SearchInput({ placeholder, value, onChange, ...props }) {
           alignItems: 'center',
         }}
       >
-        <Icon name="search" />
+        <Icon name="search" sx={{ color: 'iconSecondary' }} />
       </div>
       <input
         ref={inputElement}
@@ -53,6 +53,7 @@ function SearchInput({ placeholder, value, onChange, ...props }) {
           border: 0,
           appearance: 'none',
           outline: 0,
+          bg: 'background',
           borderRadius: 1,
           // Removes the extra left padding added to search inputs on Safari
           '::-webkit-search-decoration': {
