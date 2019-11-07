@@ -1,13 +1,12 @@
 /** @jsx jsx */
 import { version } from 'feather-icons/package.json'
 import { Link as GatsbyLink } from 'gatsby'
-import { jsx } from 'theme-ui'
+import { jsx, useColorMode } from 'theme-ui'
 import logOutboundLink from '../utils/logOutboundLink'
+import Button from './Button'
+import Icon from './Icon'
 import Link from './Link'
 import OutboundLink from './OutboundLink'
-import { useColorMode } from 'theme-ui'
-import Icon from './Icon'
-import Button from './Button'
 
 function Header() {
   const [colorMode, setColorMode] = useColorMode()
