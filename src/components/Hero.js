@@ -3,6 +3,7 @@ import { jsx } from 'theme-ui'
 import logDownload from '../utils/logDownload'
 import logOutboundLink from '../utils/logOutboundLink'
 import Button from './Button'
+import CarbonAd from './CarbonAd'
 import OutboundLink from './OutboundLink'
 
 function Hero() {
@@ -68,6 +69,8 @@ function Hero() {
           Download all
         </Button>
       </div>
+
+      <CarbonAd sx={{ marginTop: 8 }} />
     </div>
   )
 }
