@@ -50,7 +50,7 @@ function Hero() {
             bg: 'primary',
           }}
         >
-          Get Started
+          Get started
         </Button>
         <Button
           as={OutboundLink}
@@ -65,7 +65,7 @@ function Hero() {
             },
           }}
         >
-          Download All
+          Download all
         </Button>
       </div>
     </div>
