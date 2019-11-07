@@ -1,7 +1,7 @@
-import { rgba } from 'polished'
+/** @jsx jsx */
 import { func, string } from 'prop-types'
 import React from 'react'
-import theme from '../theme'
+import { jsx } from 'theme-ui'
 import Icon from './Icon'
 
 function SearchInput({ placeholder, value, onChange, ...props }) {
@@ -22,16 +22,16 @@ function SearchInput({ placeholder, value, onChange, ...props }) {
   return (
     <div css={{ position: 'relative' }} {...props}>
       <div
-        css={{
+        sx={{
           position: 'absolute',
           top: 0,
           bottom: 0,
-          left: theme.space[4],
+          left: 4,
           display: 'flex',
           alignItems: 'center',
         }}
       >
-        <Icon name="search" color={theme.colors.gray[6]} />
+        <Icon name="search" sx={{ color: 'iconSecondary' }} />
       </div>
       <input
         ref={inputElement}
@@ -39,28 +39,27 @@ function SearchInput({ placeholder, value, onChange, ...props }) {
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        css={{
+        sx={{
           width: '100%',
           margin: 0,
-          padding: theme.space[4],
-          paddingLeft: '3.25rem',
+          padding: 4,
+          paddingLeft: 52,
           fontSize: 'inherit',
-          lineHeight: theme.lineHeights.none,
+          lineHeight: 'none',
           fontFamily: 'inherit',
           color: 'inherit',
-          background: theme.colors.white,
-          boxShadow: theme.shadows[1],
+          backgroundColor: 'background',
+          boxShadow: 1,
           border: 0,
-          borderRadius: 0,
           appearance: 'none',
           outline: 0,
-          borderRadius: theme.radii[1],
+          borderRadius: 1,
           // Removes the extra left padding added to search inputs on Safari
           '::-webkit-search-decoration': {
             display: 'none',
           },
           '&:focus': {
-            boxShadow: `0 0 0 3px ${rgba(theme.colors.primary[0], 0.5)}`,
+            boxShadow: theme => `0 0 0 3px ${theme.colors.primary}`,
           },
         }}
       />

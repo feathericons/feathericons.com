@@ -1,14 +1,15 @@
+/** @jsx jsx */
 import { any } from 'prop-types'
-import theme from '../theme'
+import { jsx } from 'theme-ui'
 
 function Link({ as: Component, ...props }) {
   return (
     <Component
-      css={{
+      sx={{
         color: 'inherit',
         textDecoration: 'none',
         '&:hover': {
-          color: theme.colors.primary[0],
+          textDecoration: 'underline',
         },
       }}
       {...props}

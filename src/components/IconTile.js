@@ -1,6 +1,6 @@
-import { rgba } from 'polished'
+/** @jsx jsx */
 import { func, string } from 'prop-types'
-import theme from '../theme'
+import { jsx } from 'theme-ui'
 import AspectRatioBox from './AspectRatioBox'
 import Icon from './Icon'
 
@@ -16,28 +16,28 @@ function IconTile({ name, onClick, ...props }) {
           onClick(event)
         }
       }}
-      css={{
+      sx={{
+        paddingBottom: 4,
         display: 'flex',
         flexDirection: 'column',
-        textAlign: 'center',
         alignItems: 'center',
         cursor: 'pointer',
+        backgroundColor: 'background',
+        borderRadius: 1,
+        boxShadow: 1,
         outline: 0,
-        backgroundColor: theme.colors.white,
-        borderRadius: theme.radii[1],
-        boxShadow: theme.shadows[1],
         '&:hover': {
-          boxShadow: theme.shadows[2],
+          boxShadow: 2,
         },
         '&:focus': {
-          boxShadow: `0 0 0 3px ${rgba(theme.colors.primary[0], 0.5)}`,
+          boxShadow: theme => `0 0 0 3px ${theme.colors.primary}`,
         },
       }}
       {...props}
     >
       <AspectRatioBox ratio={2 / 3}>
         <div
-          css={{
+          sx={{
             width: '100%',
             height: '100%',
             display: 'flex',
@@ -49,10 +49,9 @@ function IconTile({ name, onClick, ...props }) {
         </div>
       </AspectRatioBox>
       <span
-        css={{
-          fontSize: theme.fontSizes[1],
-          color: theme.colors.gray[8],
-          padding: ` 0 ${theme.space[4]} ${theme.space[4]}`,
+        sx={{
+          fontSize: 1,
+          paddingX: 4,
           whiteSpace: 'nowrap',
           overflow: 'hidden',
           textOverflow: 'ellipsis',

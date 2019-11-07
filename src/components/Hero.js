@@ -1,33 +1,29 @@
-import React from 'react'
-import theme from '../theme'
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
 import logDownload from '../utils/logDownload'
 import logOutboundLink from '../utils/logOutboundLink'
-import mediaQuery from '../utils/mediaQuery'
 import Button from './Button'
-import OutboundLink from './OutboundLink'
 import CarbonAd from './CarbonAd'
+import OutboundLink from './OutboundLink'
 
 function Hero() {
   return (
     <div
-      css={{
+      sx={{
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        padding: `${theme.space[8]} ${theme.space[5]} ${theme.space[9]}`,
-        backgroundColor: theme.colors.white,
-        borderBottom: `1px solid ${theme.colors.gray[2]}`,
-        [mediaQuery(theme.breakpoints.small)]: {
-          padding: `${theme.space[9]} ${theme.space[5]} ${theme.space[10]}`,
-        },
+        paddingY: [8, 9],
+        paddingX: 5,
       }}
     >
       <h1
-        css={{
-          margin: `0 0 ${theme.space[5]}`,
-          fontSize: theme.fontSizes[6],
-          fontWeight: theme.fontWeights.normal,
-          lineHeight: theme.lineHeights.tight,
+        sx={{
+          marginTop: 0,
+          marginBottom: 5,
+          fontSize: 6,
+          fontWeight: 'normal',
+          lineHeight: 'tight',
           textAlign: 'center',
         }}
       >
@@ -35,20 +31,14 @@ function Hero() {
       </h1>
 
       <div
-        css={{
+        sx={{
           display: 'flex',
-          flexDirection: 'column',
+          flexDirection: ['column', 'row'],
           justifyContent: 'center',
           width: '100%',
           '& > :not(:last-child)': {
-            marginBottom: theme.space[4],
-          },
-          [mediaQuery(theme.breakpoints.small)]: {
-            flexDirection: 'row',
-            '& > :not(:last-child)': {
-              marginRight: theme.space[4],
-              marginBottom: 0,
-            },
+            marginRight: [0, 4],
+            marginBottom: [5, 0],
           },
         }}
       >
@@ -56,34 +46,31 @@ function Hero() {
           as={OutboundLink}
           href="https://github.com/feathericons/feather#feather"
           onClick={() => logOutboundLink('get started')}
-          css={{
-            color: theme.colors.white,
-            backgroundColor: theme.colors.primary[0],
-            '&:hover': {
-              backgroundColor: theme.colors.primary[1],
-            },
+          sx={{
+            color: 'white',
+            backgroundColor: 'primary',
           }}
         >
-          Get Started
+          Get started
         </Button>
         <Button
           as={OutboundLink}
           href="/feather.zip"
           onClick={() => logDownload('all')}
           download
-          css={{
-            color: theme.colors.gray[8],
-            backgroundColor: 'transparent',
-            boxShadow: `inset 0 0 0 1px ${theme.colors.gray[4]}`,
+          sx={{
+            bg: 'transparent',
+            boxShadow: theme => `inset 0 0 0 1px ${theme.colors.border}`,
             '&:hover': {
-              backgroundColor: theme.colors.gray[0],
+              backgroundColor: 'background',
             },
           }}
         >
-          Download All
+          Download all
         </Button>
       </div>
-      <CarbonAd css={{ marginTop: theme.space[8] }} />
+
+      <CarbonAd sx={{ marginTop: 8 }} />
     </div>
   )
 }

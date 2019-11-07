@@ -1,15 +1,14 @@
+/** @jsx jsx */
 import { icons } from 'feather-icons'
-import React from 'react'
 import { parse } from 'serialize-query-params'
+import { jsx } from 'theme-ui'
 import { StringParam, useQueryParam } from 'use-query-params'
-import Container from '../components/Container'
 import Footer from '../components/Footer'
 import Hero from '../components/Hero'
 import IconGrid from '../components/IconGrid'
 import Layout from '../components/Layout'
 import NoResults from '../components/NoResults'
 import SearchInput from '../components/SearchInput'
-import theme from '../theme'
 import useSearch from '../utils/useSearch'
 
 function IndexPage({ location }) {
@@ -23,30 +22,40 @@ function IndexPage({ location }) {
   return (
     <Layout>
       <Hero />
-      <Container
-        css={{
-          position: 'sticky',
-          top: 0,
-          boxShadow: `inset 0 16px 16px ${theme.colors.gray[0]}`,
-          zIndex: 1,
+      <div
+        sx={{
+          display: 'grid',
+          gridGap: 6,
+          paddingY: 4,
+          paddingX: 5,
+          marginX: 'auto',
+          maxWidth: 1200,
         }}
       >
-        <SearchInput
-          placeholder={`Search ${
-            Object.keys(icons).length
-          } icons (Press "/" to focus)`}
-          value={query || ''}
-          onChange={event => setQuery(event.target.value)}
-        />
-      </Container>
-      <Container>
+        <div
+          sx={{
+            position: 'sticky',
+            top: 0,
+            paddingTop: 4,
+            boxShadow: theme => `inset 0 16px 16px ${theme.colors.muted}`,
+            zIndex: 1,
+          }}
+        >
+          <SearchInput
+            placeholder={`Search ${
+              Object.keys(icons).length
+            } icons (Press "/" to focus)`}
+            value={query || ''}
+            onChange={event => setQuery(event.target.value)}
+          />
+        </div>
         {results.length > 0 ? (
           <IconGrid icons={results} />
         ) : (
           <NoResults query={query} />
         )}
-      </Container>
-      <Footer />
+        <Footer />
+      </div>
     </Layout>
   )
 }

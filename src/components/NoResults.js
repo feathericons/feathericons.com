@@ -1,19 +1,20 @@
+/** @jsx jsx */
 import { string } from 'prop-types'
-import theme from '../theme'
+import { jsx } from 'theme-ui'
 
 function NoResults({ query }) {
   return (
     <div
-      css={{
+      sx={{
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        padding: `${theme.space[9]} ${theme.space[6]}`,
-        backgroundColor: theme.colors.gray[2],
+        justifyContent: 'center',
+        height: 160,
         wordBreak: 'break-word',
-        fontSize: theme.fontSizes[3],
+        fontSize: 3,
         textAlign: 'center',
-        borderRadius: theme.radii[1],
+        borderRadius: 1,
       }}
     >
       No results found for &ldquo;{query}&rdquo;
