@@ -14,7 +14,7 @@ function Header() {
         px: 5,
         display: 'flex',
         alignItems: 'center',
-        backgroundColor: 'white',
+        backgroundColor: 'elevated',
       }}
     >
       <Link as={GatsbyLink} to="/" sx={{ fontSize: 4 }}>
@@ -32,12 +32,9 @@ function Header() {
           lineHeight: 'tight',
           fontWeight: 'medium',
           textDecoration: 'none',
-          color: 'gray.7',
-          bg: 'gray.1',
+          color: 'inherit',
+          bg: 'background',
           borderRadius: 1,
-          '&:hover': {
-            bg: 'gray.2',
-          },
         }}
       >
         v{version}

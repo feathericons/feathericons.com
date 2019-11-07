@@ -22,7 +22,7 @@ function IconTile({ name, onClick, ...props }) {
         textAlign: 'center',
         alignItems: 'center',
         cursor: 'pointer',
-        bg: 'white',
+        bg: 'elevated',
         borderRadius: 1,
         boxShadow: 1,
         outline: 0,
@@ -30,7 +30,7 @@ function IconTile({ name, onClick, ...props }) {
           boxShadow: 2,
         },
         '&:focus': {
-          boxShadow: theme => `0 0 0 3px ${theme.colors.primary[0]}`,
+          boxShadow: theme => `0 0 0 3px ${theme.colors.primary}`,
         },
       }}
       {...props}
@@ -51,7 +51,6 @@ function IconTile({ name, onClick, ...props }) {
       <span
         sx={{
           fontSize: 1,
-          color: 'gray.8',
           px: 4,
           pb: 4,
           whiteSpace: 'nowrap',

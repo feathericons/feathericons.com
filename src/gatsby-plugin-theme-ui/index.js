@@ -1,3 +1,5 @@
+import { colors } from '@primer/primitives'
+
 export default {
   space: [0, 4, 8, 12, 16, 24, 32, 40, 48, 64, 80, 96],
   fonts: {
@@ -20,21 +22,11 @@ export default {
     loose: 2,
   },
   colors: {
-    primary: ['#0066ff', '#0055E6'],
-    white: '#ffffff',
-    black: '#000000',
-    gray: [
-      '#f8f9fa',
-      '#f1f3f5',
-      '#e9ecef',
-      '#dee2e6',
-      '#ced4da',
-      '#adb5bd',
-      '#868e96',
-      '#495057',
-      '#343a40',
-      '#212529',
-    ],
+    primary: '#0066ff',
+    text: colors.gray[8],
+    background: colors.gray[1],
+    elevated: colors.white,
+    border: colors.gray[2],
   },
   radii: [0, 4],
   shadows: [

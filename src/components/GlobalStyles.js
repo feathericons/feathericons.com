@@ -13,8 +13,8 @@ function GlobalStyles() {
           margin: 0,
           fontFamily: theme.fonts.sansSerif,
           lineHeight: theme.lineHeights.normal,
-          color: theme.colors.gray[8],
-          backgroundColor: theme.colors.gray[0],
+          color: theme.colors.text,
+          backgroundColor: theme.colors.background,
         },
       })}
     />

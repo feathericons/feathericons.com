@@ -17,6 +17,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.22",
     "@mdx-js/react": "^1.5.1",
+    "@primer/primitives": "^2.0.0",
     "classnames": "2.2.5",
     "copy-to-clipboard": "^3.0.8",
     "downloadjs": "1.4.7",

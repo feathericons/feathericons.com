@@ -27,7 +27,7 @@ function IndexPage({ location }) {
         sx={{
           position: 'sticky',
           top: 0,
-          boxShadow: theme => `inset 0 16px 16px ${theme.colors.gray[0]}`,
+          boxShadow: theme => `inset 0 16px 16px ${theme.colors.background}`,
           zIndex: 1,
         }}
       >

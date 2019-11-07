@@ -11,7 +11,6 @@ function NoResults({ query }) {
         alignItems: 'center',
         px: 9,
         py: 6,
-        backgroundColor: 'gray.2',
         wordBreak: 'break-word',
         fontSize: 3,
         textAlign: 'center',

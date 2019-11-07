@@ -17,7 +17,7 @@ function NotFoundPage() {
           py: 9,
           px: 5,
           borderTop: '1px solid',
-          bordercolor: 'gray.2',
+          borderColor: 'border',
         }}
       >
         <h1

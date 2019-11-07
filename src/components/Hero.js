@@ -16,9 +16,9 @@ function Hero() {
         pt: [8, 9],
         px: 5,
         pb: [9, 10],
-        backgroundColor: 'white',
+        bg: 'elevated',
         borderBottom: '1px solid',
-        borderColor: 'gray.2',
+        borderColor: 'border',
       }}
     >
       <h1
@@ -52,10 +52,7 @@ function Hero() {
           onClick={() => logOutboundLink('get started')}
           sx={{
             color: 'white',
-            bg: 'primary.0',
-            '&:hover': {
-              bg: 'primary.1',
-            },
+            bg: 'primary',
           }}
         >
           Get Started
@@ -66,12 +63,8 @@ function Hero() {
           onClick={() => logDownload('all')}
           download
           sx={{
-            color: 'gray.8',
             bg: 'transparent',
-            boxShadow: theme => `inset 0 0 0 1px ${theme.colors.gray[4]}`,
-            '&:hover': {
-              bg: 'gray.0',
-            },
+            boxShadow: theme => `inset 0 0 0 1px ${theme.colors.border}`,
           }}
         >
           Download All

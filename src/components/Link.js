@@ -9,7 +9,7 @@ function Link({ as: Component, ...props }) {
         color: 'inherit',
         textDecoration: 'none',
         '&:hover': {
-          color: 'primary.0',
+          color: 'primary',
         },
       }}
       {...props}

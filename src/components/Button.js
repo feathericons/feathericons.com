@@ -16,6 +16,7 @@ function Button({ as: Component, ...props }) {
         lineHeight: 'none',
         textAlign: 'center',
         textDecoration: 'none',
+        color: 'inherit',
         border: 0,
         borderRadius: 1,
         appearance: 'none',

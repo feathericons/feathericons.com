@@ -59,7 +59,7 @@ function SearchInput({ placeholder, value, onChange, ...props }) {
             display: 'none',
           },
           '&:focus': {
-            boxShadow: theme => `0 0 0 3px ${theme.colors.primary[0]}`,
+            boxShadow: theme => `0 0 0 3px ${theme.colors.primary}`,
           },
         }}
       />

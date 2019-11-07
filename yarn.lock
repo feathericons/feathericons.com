@@ -1069,6 +1069,11 @@
     string-width "^2.0.0"
     strip-ansi "^3"
 
+"@primer/primitives@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@primer/primitives/-/primitives-2.0.0.tgz#606e2f4fb02a865bb77364b5b5aaff519d13f271"
+  integrity sha512-+D/NH3VqUNiNn9E3o0cxg/YAw0Br3nXAha3aDfwweBgyoX3gdLFtxSeVOn2VWLFVxNc9wUsgmtYUZ1b4sFrhnQ==
+
 "@reach/router@^1.2.1":
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/@reach/router/-/router-1.2.1.tgz#34ae3541a5ac44fa7796e5506a5d7274a162be4e"
