@@ -26,8 +26,6 @@ function IndexPage({ location }) {
         sx={{
           display: 'grid',
           gridGap: 6,
-          paddingY: 4,
-          paddingX: 5,
           marginX: 'auto',
           maxWidth: 1200,
         }}
@@ -37,7 +35,8 @@ function IndexPage({ location }) {
             position: 'sticky',
             top: 0,
             paddingTop: 4,
-            boxShadow: theme => `inset 0 16px 16px ${theme.colors.muted}`,
+            paddingX: 5,
+            backgroundColor: 'muted',
             zIndex: 1,
           }}
         >
@@ -49,12 +48,16 @@ function IndexPage({ location }) {
             onChange={event => setQuery(event.target.value)}
           />
         </div>
-        {results.length > 0 ? (
-          <IconGrid icons={results} />
-        ) : (
-          <NoResults query={query} />
-        )}
-        <Footer />
+        <div sx={{ paddingX: 5 }}>
+          {results.length > 0 ? (
+            <IconGrid icons={results} />
+          ) : (
+            <NoResults query={query} />
+          )}
+        </div>
+        <div sx={{ paddingX: 5 }}>
+          <Footer />
+        </div>
       </div>
     </Layout>
   )
