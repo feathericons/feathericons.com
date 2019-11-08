@@ -8,8 +8,7 @@ export default {
     background: colors.white,
     muted: colors.gray[1],
     border: colors.gray[3],
-    icon: colors.gray[5],
-    iconSecondary: colors.gray[4],
+    icon: colors.gray[4],
     modes: {
       dark: {
         text: colors.white,
@@ -17,7 +16,6 @@ export default {
         muted: colors.gray[9],
         border: colors.gray[7],
         icon: colors.gray[4],
-        iconSecondary: colors.gray[5],
       },
     },
   },

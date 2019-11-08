@@ -31,7 +31,7 @@ function SearchInput({ placeholder, value, onChange, ...props }) {
           alignItems: 'center',
         }}
       >
-        <Icon name="search" sx={{ color: 'iconSecondary' }} />
+        <Icon name="search" sx={{ color: 'icon' }} />
       </div>
       <input
         ref={inputElement}
