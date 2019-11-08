@@ -3,7 +3,7 @@ import Fuse from 'fuse.js'
 import React from 'react'
 
 const fuse = new Fuse(Object.values(icons), {
-  threshold: 0.4,
+  threshold: 0.2,
   keys: ['name', 'tags'],
 })
 
