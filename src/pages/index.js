@@ -1,5 +1,7 @@
 /** @jsx jsx */
+import { get } from '@styled-system/css'
 import { icons } from 'feather-icons'
+import { rgba } from 'polished'
 import { parse } from 'serialize-query-params'
 import { jsx } from 'theme-ui'
 import { StringParam, useQueryParam } from 'use-query-params'
@@ -10,6 +12,15 @@ import Layout from '../components/Layout'
 import NoResults from '../components/NoResults'
 import SearchInput from '../components/SearchInput'
 import useSearch from '../utils/useSearch'
+
+// TODO: Remove `g` and `alpha` if `alpha` is added to @theme-ui/color.
+// Reference: https://github.com/system-ui/theme-ui/pull/441
+const g = (t, c) =>
+  get(t, `colors.${c}`, c)
+    .replace(/^var\(--(\w+)(.*?), /, '')
+    .replace(/\)/, '')
+
+const alpha = (c, n) => t => rgba(g(t, c), n)
 
 function IndexPage({ location }) {
   const [query, setQuery] = useQueryParam(
@@ -24,8 +35,6 @@ function IndexPage({ location }) {
       <Hero />
       <div
         sx={{
-          display: 'grid',
-          gridGap: 6,
           marginX: 'auto',
           maxWidth: 1200,
         }}
@@ -34,9 +43,12 @@ function IndexPage({ location }) {
           sx={{
             position: 'sticky',
             top: 0,
-            paddingTop: 4,
+            paddingY: 4,
             paddingX: 5,
-            backgroundColor: 'muted',
+            background: theme =>
+              `linear-gradient(${theme.colors.muted} 75%, ${alpha('muted', 0)(
+                theme,
+              )})`,
             zIndex: 1,
           }}
         >
@@ -48,14 +60,14 @@ function IndexPage({ location }) {
             onChange={event => setQuery(event.target.value)}
           />
         </div>
-        <div sx={{ paddingX: 5 }}>
+        <div sx={{ paddingY: 4, paddingX: 5 }}>
           {results.length > 0 ? (
             <IconGrid icons={results} />
           ) : (
             <NoResults query={query} />
           )}
         </div>
-        <div sx={{ paddingX: 5 }}>
+        <div sx={{ paddingY: 4, paddingX: 5 }}>
           <Footer />
         </div>
       </div>
