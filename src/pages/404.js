@@ -9,18 +9,24 @@ function NotFoundPage() {
       <Helmet>
         <title>Page Not Found | Feather</title>
       </Helmet>
-      <h1
+      <div
         sx={{
           paddingY: 9,
           paddingX: 5,
-          margin: 0,
-          fontSize: 6,
-          fontWeight: 'normal',
-          textAlign: 'center',
         }}
       >
-        Page not found
-      </h1>
+        <h1
+          sx={{
+            margin: 0,
+            fontSize: 6,
+            fontWeight: 'normal',
+            textAlign: 'center',
+          }}
+        >
+          Page not found
+        </h1>
+      </div>
+      \
     </Layout>
   )
 }
