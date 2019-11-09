@@ -18,6 +18,8 @@ function Hero() {
         alignItems: 'center',
         paddingY: [8, 9],
         paddingX: 5,
+        borderBottom: '1px solid',
+        borderColor: 'border',
       }}
     >
       <h1

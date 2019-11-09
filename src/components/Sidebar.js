@@ -4,7 +4,7 @@ import { jsx } from 'theme-ui'
 
 function Sidebar() {
   return (
-    <div sx={{ paddingY: 5, paddingX: 5 }}>
+    <div sx={{ paddingY: 5, paddingX: 4 }}>
       <form sx={{ display: 'grid', gridGap: 4 }}>
         <h2 sx={{ margin: 0, fontSize: 4, fontWeight: 'bold' }}>Customize</h2>
         <div>
