@@ -10,16 +10,13 @@ const fuse = new Fuse(Object.values(icons), {
 function useSearch(query) {
   const [results, setResults] = React.useState(Object.values(icons))
 
-  React.useEffect(
-    () => {
-      if (query.trim()) {
-        setResults(fuse.search(query.trim()))
-      } else {
-        setResults(Object.values(icons))
-      }
-    },
-    [query],
-  )
+  React.useEffect(() => {
+    if (query.trim()) {
+      setResults(fuse.search(query.trim()))
+    } else {
+      setResults(Object.values(icons))
+    }
+  }, [query])
 
   return results
 }
