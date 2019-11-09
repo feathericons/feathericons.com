@@ -4,7 +4,6 @@ import { jsx } from 'theme-ui'
 import Layout from '../components/Layout'
 
 function NotFoundPage() {
-  const foo = 0
   return (
     <Layout>
       <Helmet>
