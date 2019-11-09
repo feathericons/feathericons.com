@@ -1,10 +1,11 @@
 /** @jsx jsx */
 import { func, string } from 'prop-types'
 import { jsx } from 'theme-ui'
-import AspectRatioBox from './AspectRatioBox'
 import Icon from './Icon'
+import { useOptions } from './OptionsContext'
 
 function IconTile({ name, onClick, ...props }) {
+  const { options } = useOptions()
   return (
     <div
       role="button"
@@ -17,6 +18,8 @@ function IconTile({ name, onClick, ...props }) {
         }
       }}
       sx={{
+        width: '100%',
+        height: '100%',
         paddingBottom: 4,
         display: 'flex',
         flexDirection: 'column',
@@ -35,21 +38,28 @@ function IconTile({ name, onClick, ...props }) {
       }}
       {...props}
     >
-      <AspectRatioBox ratio={2 / 3}>
-        <div
-          sx={{
-            width: '100%',
-            height: '100%',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <Icon name={name} />
-        </div>
-      </AspectRatioBox>
+      <div
+        sx={{
+          flex: '1 1 auto',
+          width: '100%',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <Icon
+          name={name}
+          width={options.size}
+          height={options.size}
+          strokeWidth={options.strokeWidth}
+          stroke={options.strokeColor}
+          strokeLinecap={options.strokeLinecap}
+          strokeLinejoin={options.strokeLinejoin}
+        />
+      </div>
       <span
         sx={{
+          flex: '0 0 auto',
           fontSize: 1,
           paddingX: 4,
           whiteSpace: 'nowrap',

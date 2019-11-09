@@ -1,9 +1,11 @@
 /** @jsx jsx */
 import { Input, Label, Select, Slider } from '@rebass/forms'
 import { useFormik } from 'formik'
+import isEqual from 'lodash.isequal'
+import React from 'react'
 import { jsx } from 'theme-ui'
 import Button from './Button'
-import isEqual from 'lodash.isequal'
+import { useOptions } from './OptionsContext'
 
 const INITIAL_VALUES = {
   size: 24,
@@ -17,6 +19,10 @@ function Sidebar() {
   const { values, handleChange, handleReset } = useFormik({
     initialValues: INITIAL_VALUES,
   })
+
+  const { setOptions } = useOptions()
+
+  React.useEffect(() => setOptions(values), [setOptions, values])
 
   return (
     <div sx={{ paddingY: 5, paddingX: 4 }}>
