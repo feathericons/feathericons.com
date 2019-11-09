@@ -11,9 +11,10 @@ function ColorModeToggle(props) {
         setColorMode(colorMode === 'default' ? 'dark' : 'default')
       }}
       sx={{
-        backgroundColor: 'transparent',
         padding: 1,
+        lineHeight: 'none',
         color: 'icon',
+        backgroundColor: 'transparent',
       }}
       {...props}
     >

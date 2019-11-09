@@ -46,10 +46,6 @@ function Hero() {
           as={OutboundLink}
           href="https://github.com/feathericons/feather#feather"
           onClick={() => logOutboundLink('get started')}
-          sx={{
-            color: 'white',
-            backgroundColor: 'primary',
-          }}
         >
           Get started
         </Button>
@@ -58,13 +54,7 @@ function Hero() {
           href="/feather.zip"
           onClick={() => logDownload('all')}
           download
-          sx={{
-            bg: 'transparent',
-            boxShadow: theme => `inset 0 0 0 1px ${theme.colors.border}`,
-            '&:hover': {
-              backgroundColor: 'background',
-            },
-          }}
+          sx={{ variant: 'buttons.outline' }}
         >
           Download all
         </Button>

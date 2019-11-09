@@ -3,6 +3,7 @@ import { version } from 'feather-icons/package.json'
 import { Link as GatsbyLink } from 'gatsby'
 import { jsx } from 'theme-ui'
 import logOutboundLink from '../utils/logOutboundLink'
+import Button from './Button'
 import ColorModeToggle from './ColorModeToggle'
 import Link from './Link'
 import OutboundLink from './OutboundLink'
@@ -21,28 +22,20 @@ function Header() {
         Feather
       </Link>
 
-      <OutboundLink
+      <Button
+        as={OutboundLink}
         href="https://github.com/feathericons/feather/releases"
         onClick={() => logOutboundLink('release notes')}
         sx={{
+          variant: 'buttons.outline',
           paddingY: 1,
           paddingX: 2,
           marginLeft: 2,
           fontSize: 1,
-          lineHeight: 'tight',
-          fontWeight: 'medium',
-          textDecoration: 'none',
-          color: 'inherit',
-          border: '1px solid',
-          borderColor: 'border',
-          borderRadius: 1,
-          '&:hover': {
-            backgroundColor: 'background',
-          },
         }}
       >
         v{version}
-      </OutboundLink>
+      </Button>
 
       {/* Spacer */}
       <div sx={{ marginX: 'auto' }} />

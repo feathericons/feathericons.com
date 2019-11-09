@@ -29,9 +29,7 @@ export default {
   fontSizes: [12, 14, 16, 18, 20, 24, 32],
   fontWeights: {
     normal: 400,
-    medium: 500,
-    semibold: 600,
-    bold: 700,
+    bold: 500,
   },
   lineHeights: {
     none: 1,
@@ -46,4 +44,14 @@ export default {
     '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
   ],
   breakpoints: ['40em', '48em', '64em'],
+  buttons: {
+    outline: {
+      color: 'text',
+      backgroundColor: 'transparent',
+      boxShadow: theme => `inset 0 0 0 1px ${theme.colors.border}`,
+      '&:hover': {
+        backgroundColor: 'background',
+      },
+    },
+  },
 }
