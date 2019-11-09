@@ -60,7 +60,8 @@ export default {
       mb: 1,
     },
     field: {
-      bg: 'background',
+      paddingX: 3,
+      backgroundColor: 'background',
       borderColor: 'border',
       borderRadius: 1,
       ':focus': {

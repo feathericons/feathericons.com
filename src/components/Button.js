@@ -24,7 +24,7 @@ function Button({ as: Component, ...props }) {
         cursor: 'pointer',
         '&:disabled': {
           opacity: 0.5,
-          cursor: 'default',
+          pointerEvents: 'none',
         },
       }}
       {...props}
