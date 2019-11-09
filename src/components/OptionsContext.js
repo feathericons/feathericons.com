@@ -1,6 +1,6 @@
 import React from 'react'
 
-const OptionsContext = React.createContext(null)
+const OptionsContext = React.createContext({})
 
 export function OptionsProvider({ children }) {
   const [options, setOptions] = React.useState({})
