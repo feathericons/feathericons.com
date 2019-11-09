@@ -46,9 +46,10 @@ function IndexPage({ location }) {
             paddingY: 4,
             paddingX: 5,
             background: theme =>
-              `linear-gradient(${theme.colors.muted} 75%, ${alpha('muted', 0)(
-                theme,
-              )})`,
+              `linear-gradient(${theme.colors.muted} 75%, ${alpha(
+                'muted',
+                0,
+              )(theme)})`,
             zIndex: 1,
           }}
         >

@@ -1,20 +1,6 @@
 {
-  "parser": "babel-eslint",
-  "extends": ["eslint:recommended", "react-app", "prettier"],
-  "plugins": ["prettier"],
-  "rules": {
-    "prettier/prettier": [
-      "error",
-      {
-        "singleQuote": true,
-        "trailingComma": "all",
-        "semi": false
-      }
-    ],
-    "react/react-in-jsx-scope": "off",
-    "react/no-typos": "off"
-  },
-  "env": {
-    "browser": true
-  }
+  "extends": [
+    "react-app",
+    "plugin:prettier/recommended"
+  ]
 }
