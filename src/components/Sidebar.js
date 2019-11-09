@@ -136,7 +136,6 @@ function Sidebar() {
             <option>bevel</option>
           </Select>
         </div>
-        <pre>{JSON.stringify(values, null, 2)}</pre>
       </form>
     </div>
   )
