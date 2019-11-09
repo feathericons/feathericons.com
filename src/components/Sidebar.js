@@ -93,7 +93,7 @@ function Sidebar() {
           </div>
         </div>
         <div>
-          <Label htmlFor="strokeColor">Stroke color</Label>
+          <Label htmlFor="strokeColor">Color</Label>
           <div
             sx={{
               display: 'grid',
@@ -113,7 +113,7 @@ function Sidebar() {
           </div>
         </div>
         <div>
-          <Label htmlFor="strokeLinecap">Stroke linecap</Label>
+          <Label htmlFor="strokeLinecap">Cap</Label>
           <Select
             id="strokeLinecap"
             value={values.strokeLinecap}
@@ -125,7 +125,7 @@ function Sidebar() {
           </Select>
         </div>
         <div>
-          <Label htmlFor="strokeLinejoin">Stroke linejoin</Label>
+          <Label htmlFor="strokeLinejoin">Join</Label>
           <Select
             id="strokeLinejoin"
             value={values.strokeLinejoin}
