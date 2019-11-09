@@ -54,4 +54,29 @@ export default {
       },
     },
   },
+  forms: {
+    label: {
+      fontSize: 1,
+      mb: 1,
+    },
+    field: {
+      bg: 'background',
+      borderColor: 'border',
+      borderRadius: 1,
+      ':focus': {
+        borderColor: 'primary',
+        outline: 'none',
+        boxShadow: theme => `0 0 0 2px ${theme.colors.primary}`,
+      },
+    },
+    input: {
+      variant: 'forms.field',
+    },
+    select: {
+      variant: 'forms.field',
+    },
+    slider: {
+      backgroundColor: 'border',
+    },
+  },
 }

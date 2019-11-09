@@ -57,10 +57,9 @@ function IndexPage({ location }) {
             sx={{
               position: 'sticky',
               top: 0,
-              paddingY: 4,
-              paddingX: 5,
+              padding: 5,
               background: theme =>
-                `linear-gradient(${theme.colors.muted} 75%, ${alpha(
+                `linear-gradient(${theme.colors.muted} 50%, ${alpha(
                   'muted',
                   0,
                 )(theme)})`,
@@ -75,14 +74,14 @@ function IndexPage({ location }) {
               onChange={event => setQuery(event.target.value)}
             />
           </div>
-          <div sx={{ paddingY: 4, paddingX: 5 }}>
+          <div sx={{ paddingX: 5 }}>
             {results.length > 0 ? (
               <IconGrid icons={results} />
             ) : (
               <NoResults query={query} />
             )}
           </div>
-          <div sx={{ paddingY: 4, paddingX: 5 }}>
+          <div sx={{ padding: 5 }}>
             <Footer />
           </div>
         </div>

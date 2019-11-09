@@ -13,6 +13,7 @@
     "@emotion/core": "^10.0.22",
     "@mdx-js/react": "^1.5.1",
     "@primer/primitives": "^2.0.0",
+    "@rebass/forms": "^4.0.6",
     "@styled-system/css": "^5.0.23",
     "classnames": "2.2.5",
     "copy-to-clipboard": "^3.0.8",
