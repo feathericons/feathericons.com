@@ -7,6 +7,9 @@ function ColorModeToggle(props) {
   const [colorMode, setColorMode] = useColorMode()
   return (
     <Button
+      aria-label={
+        colorMode === 'default' ? 'Activate dark mode' : 'Activate light mode'
+      }
       onClick={() => {
         setColorMode(colorMode === 'default' ? 'dark' : 'default')
       }}
