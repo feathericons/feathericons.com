@@ -5,7 +5,7 @@
 
 This repo contains the source code for [feathericons.com](https://feathericons.com).
 
-## Project Setup
+## Local development
 
 ```shell
 # Download the repo
@@ -15,10 +15,10 @@ git clone https://github.com/feathericons/feathericons.com.git
 cd feathericons.com
 
 # Install the dependencies
-npm install
+yarn
 
 # Start local development
-npm run develop
+yarn develop
 ```
 
-> **Note:** This requires Node.js and npm to be set up locally, see [nodejs.org](https://nodejs.org) for more information.
+> **Note:** This requires Yarn to be set up locally. See https://yarnpkg.com for more information.
