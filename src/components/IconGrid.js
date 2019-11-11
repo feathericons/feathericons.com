@@ -20,7 +20,7 @@ function IconGrid({ icons }) {
   // Initialize numColumns to an arbitrary number.
   const [numColumns, setNumColumns] = React.useState(1)
   return (
-    <div sx={{ margin: -2 }}>
+    <div sx={{ margin: -2, minHeight: ROW_HEIGHT }}>
       <WindowScroller>
         {({ height, isScrolling, onChildScroll, scrollTop }) => (
           <AutoSizer
