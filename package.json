@@ -24,7 +24,7 @@
     "gatsby-plugin-manifest": "^2.2.0",
     "gatsby-plugin-react-helmet": "^3.1.0",
     "gatsby-plugin-theme-ui": "^0.2.43",
-    "gatsby-source-filesystem": "^2.1.0",
+    "gatsby-source-filesystem": "^2.1.36",
     "jszip": "^3.2.2",
     "polished": "^3.4.2",
     "react": "^16.8.6",
