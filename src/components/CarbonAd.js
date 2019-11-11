@@ -18,6 +18,7 @@ function CarbonAd(props) {
     <>
       <Helmet>
         <link rel="preconnect" href="https://cdn.carbonads.com" />
+        <link rel="preconnect" href="https://ad.doubleclick.net" />
       </Helmet>
       <div
         ref={containerRef}
