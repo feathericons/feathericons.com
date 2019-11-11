@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { func, string } from 'prop-types'
 import { jsx } from 'theme-ui'
-import AspectRatioBox from './AspectRatioBox'
 import Icon from './Icon'
 
 function IconTile({ name, onClick, ...props }) {
@@ -17,6 +16,8 @@ function IconTile({ name, onClick, ...props }) {
         }
       }}
       sx={{
+        width: '100%',
+        height: '100%',
         paddingBottom: 4,
         display: 'flex',
         flexDirection: 'column',
@@ -35,26 +36,22 @@ function IconTile({ name, onClick, ...props }) {
       }}
       {...props}
     >
-      <AspectRatioBox ratio={2 / 3}>
-        <div
-          sx={{
-            width: '100%',
-            height: '100%',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <Icon name={name} />
-        </div>
-      </AspectRatioBox>
+      <div
+        sx={{
+          flex: '1 1 auto',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <Icon name={name} />
+      </div>
       <span
         sx={{
           fontSize: 1,
           paddingX: 4,
-          whiteSpace: 'nowrap',
-          overflow: 'hidden',
-          textOverflow: 'ellipsis',
+          textAlign: 'center',
+          wordBreak: 'break-word',
         }}
       >
         {name}
