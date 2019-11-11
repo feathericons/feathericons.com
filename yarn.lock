@@ -10278,10 +10278,10 @@ url@^0.11.0:
     punycode "1.3.2"
     querystring "0.2.0"
 
-use-query-params@^0.4.3:
-  version "0.4.3"
-  resolved "https://registry.yarnpkg.com/use-query-params/-/use-query-params-0.4.3.tgz#1c6a582e41dc8bbe5bd92549ad00bccadbaf1ff8"
-  integrity sha512-dFwtmUKcE28by1/BL5e9KgAPri4xKVq8fVcU5tLnmU3JDdl7GCaI1jvxdw89VVAAsh/u0fSw7eS5gxdl99aW6Q==
+use-query-params@^0.4.4:
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/use-query-params/-/use-query-params-0.4.4.tgz#048a357c013db35d5d5f97bb246be8a1ad21e40b"
+  integrity sha512-Vd7FWfI0gvfDoV8XpLzDHhmHWvklbrIxZesC+wkzE4E6hsZlvOWQVXC/ACLqo/Guz0FburTPh3tn9jwHUF9vSw==
   dependencies:
     serialize-query-params "^0.1.4"
 

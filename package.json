@@ -31,7 +31,7 @@
     "react-dom": "^16.8.6",
     "react-helmet": "5.2.0",
     "theme-ui": "^0.2.46",
-    "use-query-params": "^0.4.3"
+    "use-query-params": "^0.4.4"
   },
   "devDependencies": {
     "eslint-config-prettier": "^6.5.0",
