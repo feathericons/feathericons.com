@@ -14,7 +14,7 @@ import { AutoSizer, List, WindowScroller } from 'react-virtualized'
 // to only render the icons that are visible on the screen.
 
 const ROW_HEIGHT = 160
-const MAX_COLUMN_WIDTH = 180
+const MAX_COLUMN_WIDTH = 160
 
 function IconGrid({ icons }) {
   // Initialize numColumns to an arbitrary number.
