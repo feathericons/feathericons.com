@@ -14,7 +14,7 @@
     "@mdx-js/react": "^1.5.1",
     "@primer/primitives": "^2.0.0",
     "@styled-system/css": "^5.0.23",
-    "classnames": "2.2.5",
+    "classnames": "2.2.6",
     "copy-to-clipboard": "^3.0.8",
     "downloadjs": "1.4.7",
     "feather-icons": "^4.24.1",
