@@ -15,7 +15,7 @@ import { useOptions } from './OptionsContext'
 // To avoid an excessive DOM size, we use react-virtualized
 // to only render the icons that are visible on the screen.
 
-const ROW_HEIGHT = 160
+const ROW_HEIGHT = 180
 const MAX_COLUMN_WIDTH = 160
 
 function IconGrid({ icons }) {
