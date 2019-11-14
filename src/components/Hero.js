@@ -6,10 +6,21 @@ import { jsx } from 'theme-ui'
 import logDownload from '../utils/logDownload'
 import logOutboundLink from '../utils/logOutboundLink'
 import Button from './Button'
-import CarbonAd from './CarbonAd'
+import { useOptions } from './OptionsContext'
 import OutboundLink from './OutboundLink'
 
 function Hero() {
+  const { options } = useOptions()
+
+  const attrs = {
+    width: options.size,
+    height: options.size,
+    stroke: options.strokeColor,
+    'stroke-width': options.strokeWidth,
+    'stroke-linecap': options.strokeLinecap,
+    'stroke-linejoin': options.strokeLinejoin,
+  }
+
   return (
     <div
       sx={{
@@ -18,8 +29,6 @@ function Hero() {
         alignItems: 'center',
         paddingY: [8, 9],
         paddingX: 5,
-        borderBottom: '1px solid',
-        borderColor: 'border',
       }}
     >
       <h1
@@ -56,7 +65,7 @@ function Hero() {
         </Button>
         <Button
           onClick={async () => {
-            const zip = await generateZip()
+            const zip = await generateZip(attrs)
             download(zip, 'feather.zip')
             logDownload('all')
           }}
@@ -65,8 +74,6 @@ function Hero() {
           Download all
         </Button>
       </div>
-
-      <CarbonAd sx={{ marginTop: 8 }} />
     </div>
   )
 }
