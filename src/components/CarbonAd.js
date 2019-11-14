@@ -17,8 +17,7 @@ function CarbonAd(props) {
     <div
       ref={containerRef}
       sx={{
-        width: 400,
-        maxWidth: '100%',
+        width: '100%',
         minHeight: 132,
         padding: 4,
         fontSize: 1,
