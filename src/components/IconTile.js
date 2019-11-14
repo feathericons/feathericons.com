@@ -41,7 +41,6 @@ function IconTile({ name, onClick, ...props }) {
       <div
         sx={{
           flex: '1 1 auto',
-          width: '100%',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -62,9 +61,8 @@ function IconTile({ name, onClick, ...props }) {
           flex: '0 0 auto',
           fontSize: 1,
           paddingX: 4,
-          whiteSpace: 'nowrap',
-          overflow: 'hidden',
-          textOverflow: 'ellipsis',
+          textAlign: 'center',
+          wordBreak: 'break-word',
         }}
       >
         {name}

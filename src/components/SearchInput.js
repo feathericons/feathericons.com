@@ -36,6 +36,7 @@ function SearchInput({ placeholder, value, onChange, ...props }) {
       <input
         ref={inputElement}
         type="search"
+        aria-label="Search"
         placeholder={placeholder}
         value={value}
         onChange={onChange}

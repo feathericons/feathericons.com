@@ -9,54 +9,64 @@ import logCopy from '../utils/logCopy'
 import logDownload from '../utils/logDownload'
 import IconTile from './IconTile'
 
-const MAX_COLUMN_WIDTH = 180
+// IconGrid might need to display a lot of icons (>200).
+// To avoid an excessive DOM size, we use react-virtualized
+// to only render the icons that are visible on the screen.
+
+const ROW_HEIGHT = 160
+const MAX_COLUMN_WIDTH = 160
 
 function IconGrid({ icons }) {
+  // Initialize numColumns to an arbitrary number.
   const [numColumns, setNumColumns] = React.useState(1)
   return (
-    <div sx={{ margin: -2 }}>
+    <div sx={{ margin: -2, minHeight: ROW_HEIGHT }}>
       <WindowScroller>
         {({ height, isScrolling, onChildScroll, scrollTop }) => (
           <AutoSizer
             disableHeight
             onResize={({ width }) =>
+              // Recompute the number of columns when the grid resizes.
+              // This function is also called on initial render.
               setNumColumns(Math.floor(width / MAX_COLUMN_WIDTH))
             }
           >
             {({ width }) => (
               <List
+                tabIndex={-1}
                 autoHeight
                 width={width}
                 height={height}
                 isScrolling={isScrolling}
                 onScroll={onChildScroll}
+                scrollTop={scrollTop}
                 rowCount={Math.ceil(icons.length / numColumns)}
-                rowHeight={160}
-                rowRenderer={({
-                  key, // Unique key within array of rows
-                  index, // Index of row within collection
-                  isScrolling, // The List is currently being scrolled
-                  isVisible, // This row is visible within the List (eg it is not an overscanned row)
-                  style, // Style object to be applied to row (to position it)
-                }) => (
+                rowHeight={ROW_HEIGHT}
+                rowRenderer={({ key, index: rowIndex, style }) => (
                   <div
                     key={key}
                     style={style}
                     sx={{
                       display: 'grid',
                       gridTemplateColumns: `repeat(${numColumns}, 1fr)`,
-                      justifyItems: 'strech',
+                      justifyItems: 'stretch',
+                      alignItems: 'stretch',
                     }}
                   >
-                    {Array.from({ length: numColumns }, (v, i) => {
-                      const icon = icons[index * numColumns + i]
+                    {// Render each column.
+                    Array.from({ length: numColumns }, (value, columnIndex) => {
+                      // Calculate the icon index using row and column indices.
+                      const icon = icons[rowIndex * numColumns + columnIndex]
+
+                      // The icon index we computed might be out of range.
+                      // If that's the case, render nothing.
                       if (!icon) {
                         return null
                       }
+
                       return (
-                        <div key={icon.name} sx={{ margin: 2 }}>
+                        <div key={icon.name} sx={{ padding: 2 }}>
                           <IconTile
-                            key={icon.name}
                             name={icon.name}
                             title={`Download ${icon.name}.svg`}
                             onClick={event => {
@@ -78,7 +88,6 @@ function IconGrid({ icons }) {
                     })}
                   </div>
                 )}
-                scrollTop={scrollTop}
               />
             )}
           </AutoSizer>
