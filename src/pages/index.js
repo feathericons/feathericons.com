@@ -13,7 +13,6 @@ import NoResults from '../components/NoResults'
 import SearchInput from '../components/SearchInput'
 import Sidebar from '../components/Sidebar'
 import useSearch from '../utils/useSearch'
-import React from 'react'
 
 // TODO: Remove `g` and `alpha` if `alpha` is added to @theme-ui/color.
 // Reference: https://github.com/system-ui/theme-ui/pull/441
@@ -25,12 +24,11 @@ const g = (t, c) =>
 const alpha = (c, n) => t => rgba(g(t, c), n)
 
 function IndexPage({ location }) {
-  // const [query, setQuery] = useQueryParam(
-  //   'query',
-  //   StringParam,
-  //   parse(location.search),
-  // )
-  const [query, setQuery] = React.useState('')
+  const [query, setQuery] = useQueryParam(
+    'query',
+    StringParam,
+    parse(location.search),
+  )
 
   const results = useSearch(query || '')
 
