@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import copy from 'copy-to-clipboard'
 import download from 'downloadjs'
+import isEmpty from 'lodash.isempty'
 import { arrayOf, func, shape, string } from 'prop-types'
 import React from 'react'
 import { AutoSizer, List, WindowScroller } from 'react-virtualized'
@@ -23,14 +24,16 @@ function IconGrid({ icons }) {
 
   const { options } = useOptions()
 
-  const attrs = {
-    width: options.size,
-    height: options.size,
-    stroke: options.strokeColor,
-    'stroke-width': options.strokeWidth,
-    'stroke-linecap': options.strokeLinecap,
-    'stroke-linejoin': options.strokeLinejoin,
-  }
+  const attrs = !isEmpty(options)
+    ? {
+        width: options.size,
+        height: options.size,
+        stroke: options.strokeColor,
+        'stroke-width': options.strokeWidth,
+        'stroke-linecap': options.strokeLinecap,
+        'stroke-linejoin': options.strokeLinejoin,
+      }
+    : {}
 
   return (
     <div sx={{ margin: -2, minHeight: ROW_HEIGHT }}>

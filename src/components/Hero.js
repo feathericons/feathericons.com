@@ -2,6 +2,7 @@
 import download from 'downloadjs'
 import { icons } from 'feather-icons'
 import JSZip from 'jszip'
+import isEmpty from 'lodash.isempty'
 import { jsx } from 'theme-ui'
 import logDownload from '../utils/logDownload'
 import logOutboundLink from '../utils/logOutboundLink'
@@ -12,14 +13,16 @@ import OutboundLink from './OutboundLink'
 function Hero() {
   const { options } = useOptions()
 
-  const attrs = {
-    width: options.size,
-    height: options.size,
-    stroke: options.strokeColor,
-    'stroke-width': options.strokeWidth,
-    'stroke-linecap': options.strokeLinecap,
-    'stroke-linejoin': options.strokeLinejoin,
-  }
+  const attrs = !isEmpty(options)
+    ? {
+        width: options.size,
+        height: options.size,
+        stroke: options.strokeColor,
+        'stroke-width': options.strokeWidth,
+        'stroke-linecap': options.strokeLinecap,
+        'stroke-linejoin': options.strokeLinejoin,
+      }
+    : {}
 
   return (
     <div
