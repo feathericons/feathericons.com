@@ -26,7 +26,6 @@ function NotFoundPage() {
           Page not found
         </h1>
       </div>
-      \
     </Layout>
   )
 }
