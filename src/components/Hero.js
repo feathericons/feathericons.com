@@ -2,14 +2,26 @@
 import download from 'downloadjs'
 import { icons } from 'feather-icons'
 import JSZip from 'jszip'
+import isEmpty from 'lodash.isempty'
 import { jsx } from 'theme-ui'
 import logDownload from '../utils/logDownload'
 import logOutboundLink from '../utils/logOutboundLink'
 import Button from './Button'
-import CarbonAd from './CarbonAd'
+import { useOptions } from './OptionsContext'
 import OutboundLink from './OutboundLink'
 
 function Hero() {
+  const { options } = useOptions()
+
+  const attrs = !isEmpty(options)
+    ? {
+        width: options.size,
+        height: options.size,
+        stroke: options.strokeColor,
+        'stroke-width': options.strokeWidth,
+      }
+    : {}
+
   return (
     <div
       sx={{
@@ -54,7 +66,7 @@ function Hero() {
         </Button>
         <Button
           onClick={async () => {
-            const zip = await generateZip()
+            const zip = await generateZip(attrs)
             download(zip, 'feather.zip')
             logDownload('all')
           }}
@@ -63,8 +75,6 @@ function Hero() {
           Download all
         </Button>
       </div>
-
-      <CarbonAd sx={{ marginTop: 8 }} />
     </div>
   )
 }

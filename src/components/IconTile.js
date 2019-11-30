@@ -2,8 +2,10 @@
 import { func, string } from 'prop-types'
 import { jsx } from 'theme-ui'
 import Icon from './Icon'
+import { useOptions } from './OptionsContext'
 
 function IconTile({ name, onClick, ...props }) {
+  const { options } = useOptions()
   return (
     <div
       role="button"
@@ -44,10 +46,17 @@ function IconTile({ name, onClick, ...props }) {
           justifyContent: 'center',
         }}
       >
-        <Icon name={name} />
+        <Icon
+          name={name}
+          width={options.size}
+          height={options.size}
+          strokeWidth={options.strokeWidth}
+          stroke={options.strokeColor}
+        />
       </div>
       <span
         sx={{
+          flex: '0 0 auto',
           fontSize: 1,
           paddingX: 4,
           textAlign: 'center',

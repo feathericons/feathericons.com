@@ -1,24 +1,38 @@
 /** @jsx jsx */
 import copy from 'copy-to-clipboard'
 import download from 'downloadjs'
+import isEmpty from 'lodash.isempty'
 import { arrayOf, func, shape, string } from 'prop-types'
+import React from 'react'
+import { AutoSizer, List, WindowScroller } from 'react-virtualized'
 import { jsx } from 'theme-ui'
 import logCopy from '../utils/logCopy'
 import logDownload from '../utils/logDownload'
 import IconTile from './IconTile'
-import React from 'react'
-import { AutoSizer, List, WindowScroller } from 'react-virtualized'
+import { useOptions } from './OptionsContext'
 
 // IconGrid might need to display a lot of icons (>200).
 // To avoid an excessive DOM size, we use react-virtualized
 // to only render the icons that are visible on the screen.
 
-const ROW_HEIGHT = 160
+const ROW_HEIGHT = 180
 const MAX_COLUMN_WIDTH = 160
 
 function IconGrid({ icons }) {
   // Initialize numColumns to an arbitrary number.
   const [numColumns, setNumColumns] = React.useState(1)
+
+  const { options } = useOptions()
+
+  const attrs = !isEmpty(options)
+    ? {
+        width: options.size,
+        height: options.size,
+        stroke: options.strokeColor,
+        'stroke-width': options.strokeWidth,
+      }
+    : {}
+
   return (
     <div sx={{ margin: -2, minHeight: ROW_HEIGHT }}>
       <WindowScroller>
@@ -71,11 +85,11 @@ function IconGrid({ icons }) {
                             title={`Download ${icon.name}.svg`}
                             onClick={event => {
                               if (event.shiftKey) {
-                                copy(icon.toSvg())
+                                copy(icon.toSvg(attrs))
                                 logCopy(icon.name)
                               } else {
                                 download(
-                                  icon.toSvg(),
+                                  icon.toSvg(attrs),
                                   `${icon.name}.svg`,
                                   'image/svg+xml',
                                 )

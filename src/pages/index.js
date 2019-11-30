@@ -11,6 +11,7 @@ import IconGrid from '../components/IconGrid'
 import Layout from '../components/Layout'
 import NoResults from '../components/NoResults'
 import SearchInput from '../components/SearchInput'
+import Sidebar from '../components/Sidebar'
 import useSearch from '../utils/useSearch'
 
 // TODO: Remove `g` and `alpha` if `alpha` is added to @theme-ui/color.
@@ -28,6 +29,7 @@ function IndexPage({ location }) {
     StringParam,
     parse(location.search),
   )
+
   const results = useSearch(query || '')
 
   return (
@@ -35,40 +37,56 @@ function IndexPage({ location }) {
       <Hero />
       <div
         sx={{
-          marginX: 'auto',
-          maxWidth: 1200,
+          display: 'grid',
+          gridTemplateColumns: [null, null, '1fr 360px'],
+          gridAutoFlow: 'dense',
+          paddingX: 2,
         }}
       >
         <div
           sx={{
-            position: 'sticky',
+            gridColumn: [null, null, 2],
+            position: [null, null, 'sticky'],
             top: 0,
-            padding: 5,
-            background: theme =>
-              `linear-gradient(${theme.colors.muted} 75%, ${alpha(
-                'muted',
-                0,
-              )(theme)})`,
-            zIndex: 1,
+            maxHeight: [null, null, '100vh'],
+            overflow: 'auto',
           }}
         >
-          <SearchInput
-            placeholder={`Search ${
-              Object.keys(icons).length
-            } icons (Press "/" to focus)`}
-            value={query || ''}
-            onChange={event => setQuery(event.target.value)}
-          />
+          <Sidebar />
         </div>
-        <div sx={{ paddingX: 5 }}>
-          {results.length > 0 ? (
-            <IconGrid icons={results} />
-          ) : (
-            <NoResults query={query} />
-          )}
-        </div>
-        <div sx={{ padding: 5 }}>
-          <Footer />
+        <div>
+          <div
+            sx={{
+              position: 'sticky',
+              top: 0,
+              paddingY: 5,
+              paddingX: 4,
+              background: theme =>
+                `linear-gradient(${theme.colors.muted} 50%, ${alpha(
+                  'muted',
+                  0,
+                )(theme)})`,
+              zIndex: 1,
+            }}
+          >
+            <SearchInput
+              placeholder={`Search ${
+                Object.keys(icons).length
+              } icons (Press "/" to focus)`}
+              value={query || ''}
+              onChange={event => setQuery(event.target.value)}
+            />
+          </div>
+          <div sx={{ paddingX: 4 }}>
+            {results.length > 0 ? (
+              <IconGrid icons={results} />
+            ) : (
+              <NoResults query={query} />
+            )}
+          </div>
+          <div sx={{ paddingY: 5, paddingX: 4 }}>
+            <Footer />
+          </div>
         </div>
       </div>
     </Layout>
