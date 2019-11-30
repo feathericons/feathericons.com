@@ -36,7 +36,7 @@
     "react-helmet": "5.2.0",
     "react-virtualized": "^9.21.1",
     "theme-ui": "^0.2.46",
-    "use-query-params": "^0.4.4"
+    "use-query-params": "^0.4.5"
   },
   "devDependencies": {
     "eslint-config-prettier": "^6.5.0",
