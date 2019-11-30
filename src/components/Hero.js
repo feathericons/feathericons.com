@@ -19,8 +19,6 @@ function Hero() {
         height: options.size,
         stroke: options.strokeColor,
         'stroke-width': options.strokeWidth,
-        'stroke-linecap': options.strokeLinecap,
-        'stroke-linejoin': options.strokeLinejoin,
       }
     : {}
 

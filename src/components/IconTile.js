@@ -52,8 +52,6 @@ function IconTile({ name, onClick, ...props }) {
           height={options.size}
           strokeWidth={options.strokeWidth}
           stroke={options.strokeColor}
-          strokeLinecap={options.strokeLinecap}
-          strokeLinejoin={options.strokeLinejoin}
         />
       </div>
       <span

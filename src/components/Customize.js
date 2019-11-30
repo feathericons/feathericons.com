@@ -11,8 +11,6 @@ const INITIAL_VALUES = {
   size: 24,
   strokeWidth: 2,
   strokeColor: 'currentColor',
-  strokeLinecap: 'round',
-  strokeLinejoin: 'round',
 }
 
 function Customize() {
@@ -108,30 +106,6 @@ function Customize() {
           ></Input>
           <div sx={{ backgroundColor: values.strokeColor, borderRadius: 1 }} />
         </div>
-      </div>
-      <div>
-        <Label htmlFor="strokeLinecap">Cap</Label>
-        <Select
-          id="strokeLinecap"
-          value={values.strokeLinecap}
-          onChange={handleChange}
-        >
-          <option value="butt">None</option>
-          <option value="round">Round</option>
-          <option value="square">Square</option>
-        </Select>
-      </div>
-      <div>
-        <Label htmlFor="strokeLinejoin">Join</Label>
-        <Select
-          id="strokeLinejoin"
-          value={values.strokeLinejoin}
-          onChange={handleChange}
-        >
-          <option value="miter">Miter</option>
-          <option value="round">Round</option>
-          <option value="bevel">Bevel</option>
-        </Select>
       </div>
     </form>
   )
