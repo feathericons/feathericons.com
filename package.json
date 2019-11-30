@@ -35,7 +35,7 @@
     "react-dom": "^16.8.6",
     "react-helmet": "5.2.0",
     "react-virtualized": "^9.21.1",
-    "theme-ui": "^0.2.46",
+    "theme-ui": "^0.2.49",
     "use-query-params": "^0.4.4"
   },
   "devDependencies": {
