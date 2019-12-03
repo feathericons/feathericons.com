@@ -735,10 +735,10 @@
     "@babel/plugin-transform-react-jsx-self" "^7.0.0"
     "@babel/plugin-transform-react-jsx-source" "^7.0.0"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2":
-  version "7.7.2"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.7.2.tgz#111a78002a5c25fc8e3361bedc9529c696b85a6a"
-  integrity sha512-JONRbXbTXc9WQE2mAZd1p0Z3DZ/6vaQIkgYMSTP3KjRCyd7rCZCcfhCyX+YjwcKxcZ82UrxbRD358bpExNgrjw==
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.4":
+  version "7.7.4"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.7.4.tgz#b23a856751e4bf099262f867767889c0e3fe175b"
+  integrity sha512-r24eVUUr0QqNZa+qrImUk8fn5SPhHq+IfYvIoIMg0do3GdK9sMdiLKP3GYVVaxpPKORgm8KRKaNTEhAjgIpLMw==
   dependencies:
     regenerator-runtime "^0.13.2"
 
@@ -4726,12 +4726,13 @@ gatsby-cli@^2.8.10:
     ink "^2.5.0"
     ink-spinner "^3.0.1"
 
-gatsby-core-utils@^1.0.18:
-  version "1.0.18"
-  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-1.0.18.tgz#7be8ca6dd684baac7b546412b436cc145d70678a"
-  integrity sha512-DaCWRYltwRjFlyDwCkHDizARZwosYMTyRS6cCBpZRC4CzHaKLpio1cKoxXhB0bUDxf+loHXWNMW1S3Z+GZ7FTw==
+gatsby-core-utils@^1.0.18, gatsby-core-utils@^1.0.22:
+  version "1.0.22"
+  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-1.0.22.tgz#e246c85db5223906f67251ebb0e4e2e4965d66d7"
+  integrity sha512-38W+lWb7pPiv7AjGxDx/MSWwmgnPtOejNHSxRcMXhrXNSWpiWCDoNTBM6UCXnbky82kUx4DPX5gXgw7u2s+/rA==
   dependencies:
     ci-info "2.0.0"
+    node-object-hash "^2.0.0"
 
 gatsby-graphiql-explorer@^0.2.27:
   version "0.2.27"
@@ -4770,15 +4771,15 @@ gatsby-plugin-google-analytics@^2.1.25:
   dependencies:
     "@babel/runtime" "^7.7.2"
 
-gatsby-plugin-manifest@^2.2.27:
-  version "2.2.27"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.2.27.tgz#19848ad1876362ac3a76981f77dca857b878ac68"
-  integrity sha512-c9TwM3GncLMIFUb3uM/d4Nq+RXtbd79gP2FA0lKnpRcK3wsnHVbUDh0iKF802ObrkVkoBUqwT0tFD8sLONsL/w==
+gatsby-plugin-manifest@^2.2.31:
+  version "2.2.31"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.2.31.tgz#ed68f9366416e5833de76673a3f6785c96875f82"
+  integrity sha512-kU49eQQ4HqIVjKa3aMOvKFoDIZD0MahHZg3KluNpgRDw89JgUMivfTrCoTYq364ZCjwRxqYVFIm2CFf5WPRkhQ==
   dependencies:
-    "@babel/runtime" "^7.7.2"
-    gatsby-core-utils "^1.0.18"
+    "@babel/runtime" "^7.7.4"
+    gatsby-core-utils "^1.0.22"
     semver "^5.7.1"
-    sharp "^0.23.2"
+    sharp "^0.23.3"
 
 gatsby-plugin-page-creator@^2.1.29:
   version "2.1.29"
@@ -7221,6 +7222,11 @@ node-libs-browser@^2.2.1:
     util "^0.11.0"
     vm-browserify "^1.0.1"
 
+node-object-hash@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/node-object-hash/-/node-object-hash-2.0.0.tgz#9971fcdb7d254f05016bd9ccf508352bee11116b"
+  integrity sha512-VZR0zroAusy1ETZMZiGeLkdu50LGjG5U1KHZqTruqtTyQ2wfWhHG2Ow4nsUbfTFGlaREgNHcCWoM/OzEm6p+NQ==
+
 node-pre-gyp@^0.12.0:
   version "0.12.0"
   resolved "https://registry.yarnpkg.com/node-pre-gyp/-/node-pre-gyp-0.12.0.tgz#39ba4bb1439da030295f899e3b520b7785766149"
@@ -8340,7 +8346,7 @@ postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.21, postcss@^7.0.5:
     source-map "^0.6.1"
     supports-color "^6.1.0"
 
-prebuild-install@^5.3.2:
+prebuild-install@^5.3.3:
   version "5.3.3"
   resolved "https://registry.yarnpkg.com/prebuild-install/-/prebuild-install-5.3.3.tgz#ef4052baac60d465f5ba6bf003c9c1de79b9da8e"
   integrity sha512-GV+nsUXuPW2p8Zy7SarF/2W/oiK8bFQgJcncoJ0d7kRpekEA0ftChjfEaF9/Y+QJEc/wFR7RAEa8lYByuUIe2g==
@@ -9363,16 +9369,16 @@ shallowequal@^1.0.1, shallowequal@^1.1.0:
   resolved "https://registry.yarnpkg.com/shallowequal/-/shallowequal-1.1.0.tgz#188d521de95b9087404fd4dcb68b13df0ae4e7f8"
   integrity sha512-y0m1JoUZSlPAjXVtPPW70aZWfIL/dSP7AFkRnniLCrK/8MDKog3TySTBmckD+RObVxH0v4Tox67+F14PdED2oQ==
 
-sharp@^0.23.2:
-  version "0.23.2"
-  resolved "https://registry.yarnpkg.com/sharp/-/sharp-0.23.2.tgz#5f8b77513aa1f7e4d0dd969a3904ced75486c1d7"
-  integrity sha512-BSo0tq6Jtzwa6GDKvVMNNPCP/HLczrFLGVcorYv7OtxlKx4UPHy7x9DdfT8F+PK7FCFDemVRwtsjWpvaJI9v6w==
+sharp@^0.23.3:
+  version "0.23.3"
+  resolved "https://registry.yarnpkg.com/sharp/-/sharp-0.23.3.tgz#549770a4c671b9bd221f00639452a3eb803a0ed1"
+  integrity sha512-pjT4zyviQteXMC1Z8USIiSwQFQbZTlU5J59/UoygE25hh+sSb7PSYI/MZ2MCB1COtxWQuoUAaG3TYIOLon26Mg==
   dependencies:
     color "^3.1.2"
     detect-libc "^1.0.3"
     nan "^2.14.0"
     npmlog "^4.1.2"
-    prebuild-install "^5.3.2"
+    prebuild-install "^5.3.3"
     semver "^6.3.0"
     simple-get "^3.1.0"
     tar "^5.0.5"
