@@ -31,7 +31,7 @@
     "lodash.isempty": "^4.4.0",
     "lodash.isequal": "^4.5.0",
     "polished": "^3.4.2",
-    "react": "^16.8.6",
+    "react": "^16.13.0",
     "react-dom": "^16.8.6",
     "react-helmet": "5.2.0",
     "react-virtualized": "^9.21.1",
