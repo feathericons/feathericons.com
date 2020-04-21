@@ -8,3 +8,15 @@ export const wrapRootElement = ({ element }) => (
     <OptionsProvider>{element}</OptionsProvider>
   </QueryParamProvider>
 )
+
+var scrollPos = [0, 0]
+export const shouldUpdateScroll = ({
+  prevRouterProps: { location: prevLoc },
+  getSavedScrollPosition,
+}) => {
+  const prevPos = getSavedScrollPosition(prevLoc)
+
+  if (prevLoc.search === '' && prevPos) scrollPos = prevPos
+
+  return scrollPos
+}
