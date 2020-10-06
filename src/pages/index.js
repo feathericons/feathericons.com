@@ -32,6 +32,29 @@ function IndexPage({ location }) {
 
   const results = useSearch(query || '')
 
+  /**
+   * @param {Function} func - The function that you want to execute after the debounce time
+   * @param {Number} wait - he amount of time you want the debounce function to wait after the last received action before executing func.
+   * @returns a function that, as long as it continues to be invoked, will not be triggered.
+   */
+  const debounce = (func, wait) => {
+    let timeout;
+
+    return function executedFunction(...args) {
+      const later = () => {
+        clearTimeout(timeout);
+        func(...args);
+      };
+
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+    };
+  };
+
+  const setQueryLater = debounce((word) => {
+    setQuery(word);
+  }, 500);
+
   return (
     <Layout>
       <Hero />
@@ -73,15 +96,14 @@ function IndexPage({ location }) {
               placeholder={`Search ${
                 Object.keys(icons).length
               } icons (Press "/" to focus)`}
-              value={query || ''}
-              onChange={event => setQuery(event.target.value)}
+              setQueryLater={setQueryLater}
             />
           </div>
           <div sx={{ paddingX: 4 }}>
             {results.length > 0 ? (
               <IconGrid icons={results} />
             ) : (
-              <NoResults query={query} />
+              <NoResults query={query || ''} />
             )}
           </div>
           <div sx={{ paddingY: 5, paddingX: 4 }}>
