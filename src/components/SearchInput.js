@@ -4,21 +4,30 @@ import React from 'react'
 import { jsx } from 'theme-ui'
 import Icon from './Icon'
 
-function SearchInput({ placeholder, value, onChange, ...props }) {
-  const inputElement = React.useRef(null)
+function SearchInput({ placeholder, setQueryLater, ...props }) {
+  const inputElement = React.useRef(null);
+  const [inputText, setInputText] = React.useState('');
 
+  const handleOnChange = (event) => {
+    setInputText(event.target.value);
+  }
+  
   function handleKeyDown(event) {
     if (event.key === '/' && inputElement.current !== document.activeElement) {
       event.preventDefault()
-      inputElement.current.focus()
+      inputElement.current.focus();
     }
   }
-
+  
   React.useEffect(() => {
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [])
 
+  React.useEffect(() => {
+    setQueryLater(inputElement.current.value);
+  }, [inputText]);
+  
   return (
     <div css={{ position: 'relative' }} {...props}>
       <div
@@ -38,8 +47,8 @@ function SearchInput({ placeholder, value, onChange, ...props }) {
         type="search"
         aria-label="Search"
         placeholder={placeholder}
-        value={value}
-        onChange={onChange}
+        value={inputText}
+        onChange={handleOnChange}
         sx={{
           width: '100%',
           margin: 0,
@@ -69,8 +78,7 @@ function SearchInput({ placeholder, value, onChange, ...props }) {
 }
 
 SearchInput.propTypes = {
-  value: string.isRequired,
-  onChange: func.isRequired,
+  setQueryLater: func.isRequired,
   placeholder: string.isRequired,
 }
 
