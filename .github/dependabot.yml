@@ -1,0 +1,45 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: eslint-config-prettier
+    versions:
+    - 7.2.0
+    - 8.0.0
+    - 8.1.0
+    - 8.2.0
+  - dependency-name: gatsby
+    versions:
+    - 2.31.1
+    - 2.32.0
+    - 2.32.10
+    - 2.32.11
+    - 2.32.2
+    - 2.32.3
+    - 2.32.4
+    - 2.32.6
+    - 2.32.8
+    - 2.32.9
+  - dependency-name: gatsby-source-filesystem
+    versions:
+    - 2.10.0
+    - 2.11.0
+  - dependency-name: gatsby-plugin-google-analytics
+    versions:
+    - 2.10.0
+  - dependency-name: gatsby-plugin-react-helmet
+    versions:
+    - 3.9.0
+  - dependency-name: use-query-params
+    versions:
+    - 1.1.9
+  - dependency-name: lodash
+    versions:
+    - 4.17.20
+  - dependency-name: elliptic
+    versions:
+    - 6.5.3
