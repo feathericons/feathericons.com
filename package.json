@@ -27,7 +27,7 @@
     "gatsby-plugin-react-helmet": "^3.1.14",
     "gatsby-plugin-theme-ui": "^0.2.43",
     "gatsby-source-filesystem": "^2.1.0",
-    "jszip": "^3.2.2",
+    "jszip": "^3.7.0",
     "lodash.isempty": "^4.4.0",
     "lodash.isequal": "^4.5.0",
     "polished": "^3.4.2",
