@@ -7,17 +7,17 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-theme-ui',
-    {
-      resolve: 'gatsby-plugin-manifest',
-      options: {
-        name: 'Feather',
-        short_name: 'Feather',
-        description: 'Simply beautiful open source icons',
-        start_url: '/',
-        theme_color: `#06f`,
-        background_color: `#fff`,
-      },
-    },
+    // {
+    //   resolve: 'gatsby-plugin-manifest',
+    //   options: {
+    //     name: 'Feather',
+    //     short_name: 'Feather',
+    //     description: 'Simply beautiful open source icons',
+    //     start_url: '/',
+    //     theme_color: `#06f`,
+    //     background_color: `#fff`,
+    //   },
+    // },
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
